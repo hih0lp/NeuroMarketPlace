@@ -51,9 +51,9 @@ namespace PetProjectC_NeuroWeb.Modules.AuthorizationModule.Core
         public static async Task<TokenDTO> RefreshToken(string refreshToken, string accessToken)
         {
             var decodedAccessToken = DecodeToken(accessToken);
-            var decodedRefreshToken = DecodeToken(refreshToken);
+            //var decodedRefreshToken = DecodeToken(refreshToken);
 
-            var refreshTokenClaims = new List<Claim>();
+            //var refreshTokenClaims = new List<Claim>();
             var accessTokenClaims = new List<Claim>();
 
             foreach (var claim in decodedAccessToken)
@@ -61,10 +61,10 @@ namespace PetProjectC_NeuroWeb.Modules.AuthorizationModule.Core
                 accessTokenClaims.Add(new Claim(claim.Key, claim.Value));
             }
 
-            foreach (var claim in decodedRefreshToken)
-            {
-                refreshTokenClaims.Add(new Claim(claim.Key, claim.Value));
-            }
+            //foreach (var claim in decodedRefreshToken)
+            //{
+            //    refreshTokenClaims.Add(new Claim(claim.Key, claim.Value));
+            //}
 
             var user = await UserTokenService.GetUserByRefreshTokenAsync(refreshToken);
 

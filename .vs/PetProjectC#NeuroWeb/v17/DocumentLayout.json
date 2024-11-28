@@ -146,8 +146,7 @@
               "RelativeToolTip": "Modules\\AuthorizationModule\\Core\\UserTokenService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T11:42:29.286Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-03T11:42:29.286Z"
             },
             {
               "$type": "Document",
@@ -159,8 +158,7 @@
               "RelativeToolTip": "Modules\\ProductModule\\Core\\ProductOperationsService.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAuwEsAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-02T15:23:25.772Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-02T15:23:25.772Z"
             },
             {
               "$type": "Document",
@@ -208,8 +206,7 @@
               "RelativeToolTip": "Modules\\TokenModule\\TokenModule.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-02T13:57:14.788Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-02T13:57:14.788Z"
             },
             {
               "$type": "Document",
@@ -241,9 +238,9 @@
               "Title": "TokenOperations.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\Modules\\AuthorizationModule\\Core\\TokenOperations.cs",
               "RelativeDocumentMoniker": "Modules\\AuthorizationModule\\Core\\TokenOperations.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\Modules\\AuthorizationModule\\Core\\TokenOperations.cs",
-              "RelativeToolTip": "Modules\\AuthorizationModule\\Core\\TokenOperations.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAADcAAAA5AAAA",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\Modules\\AuthorizationModule\\Core\\TokenOperations.cs*",
+              "RelativeToolTip": "Modules\\AuthorizationModule\\Core\\TokenOperations.cs*",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-02T13:35:07.452Z",
               "EditorCaption": ""
@@ -258,8 +255,7 @@
               "RelativeToolTip": "Modules\\AuthorizationModule\\Core\\UserAuthorizationService.cs",
               "ViewState": "AQIAABIAAAAAAAAAAAAAwCcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-02T13:33:15.8Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-02T13:33:15.8Z"
             }
           ]
         }

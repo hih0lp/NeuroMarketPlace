@@ -6,7 +6,7 @@ namespace PetProjectC_NeuroWeb.Modules.AuthorizationModule
     {
         public IServiceCollection RegisterService(IServiceCollection services)
         {
-            services.AddTransient<UserAuthorizationService>();
+            //services.AddTransient<UserAuthorizationService>();
             //services.AddTransient<TokenService>();
             return services;
         }

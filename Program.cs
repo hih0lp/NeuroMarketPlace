@@ -44,7 +44,10 @@ builder.Services.RegisterModules();
 
 var app = builder.Build();
 
-
+var staticFilesOptions = new FileServerOptions();
+staticFilesOptions.DefaultFilesOptions.DefaultFileNames.Clear();
+staticFilesOptions.DefaultFilesOptions.DefaultFileNames.Add("/documents/LoginPage.html");
+app.UseFileServer(staticFilesOptions);
 
 app.Run();
 

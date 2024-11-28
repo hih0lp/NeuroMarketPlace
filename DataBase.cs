@@ -14,9 +14,10 @@ namespace PetProjectC_NeuroWeb
         public DbSet<Product> Products { get; set; }
         public DbSet<User> Users { get; set; }
 
-        public override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseMySql(); //input path
+            optionsBuilder.UseMySql("server=localhost; user=root; password=aternosru123; database=database;", 
+                ServerVersion.AutoDetect("server=localhost; user=root; password=aternosru123; database=database;")); //input path
         }
     }
 }

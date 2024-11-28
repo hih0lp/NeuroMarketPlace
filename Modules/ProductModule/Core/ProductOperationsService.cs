@@ -4,9 +4,9 @@ using PetProjectC_NeuroWeb.Modules.AuthorizationModule.Core;
 
 namespace PetProjectC_NeuroWeb.Modules.ProductModule.Core
 {
-    public class ProductOperationsService
+    public static class ProductOperationsService
     {
-        public async Task AddProductToCatalog(HttpContext context)
+        public static async Task AddProductToCatalog(HttpContext context)
         {
             var form = context.Request.Form;
 
@@ -40,7 +40,7 @@ namespace PetProjectC_NeuroWeb.Modules.ProductModule.Core
             }            
         }
 
-        public async Task<Product> GetProductById(string productId)
+        public static async Task<Product> GetProductById(string productId)
         {
             var db = new DataBase();
             
@@ -56,7 +56,7 @@ namespace PetProjectC_NeuroWeb.Modules.ProductModule.Core
             
         }
 
-        public async Task AddProductToUserCart(string accessJWTToken, string productId)
+        public static async Task AddProductToUserCart(string accessJWTToken, string productId)
         {
             var userClaims = TokenOperations.DecodeToken(accessJWTToken);
             var userId = userClaims["userId"];

@@ -31,3 +31,12 @@ C:\Users\User\source\repos\PetProjectC#NeuroWeb\obj\Debug\net8.0\refint\PetProje
 C:\Users\User\source\repos\PetProjectC#NeuroWeb\obj\Debug\net8.0\PetProjectC#NeuroWeb.pdb
 C:\Users\User\source\repos\PetProjectC#NeuroWeb\obj\Debug\net8.0\PetProjectC#NeuroWeb.genruntimeconfig.cache
 C:\Users\User\source\repos\PetProjectC#NeuroWeb\obj\Debug\net8.0\ref\PetProjectC#NeuroWeb.dll
+C:\Users\User\source\repos\PetProjectC#NeuroWeb\bin\Debug\net8.0\PetProjectC#NeuroWeb.staticwebassets.runtime.json
+C:\Users\User\source\repos\PetProjectC#NeuroWeb\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\User\source\repos\PetProjectC#NeuroWeb\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\User\source\repos\PetProjectC#NeuroWeb\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\User\source\repos\PetProjectC#NeuroWeb\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\User\source\repos\PetProjectC#NeuroWeb\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\User\source\repos\PetProjectC#NeuroWeb\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\User\source\repos\PetProjectC#NeuroWeb\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\User\source\repos\PetProjectC#NeuroWeb\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll

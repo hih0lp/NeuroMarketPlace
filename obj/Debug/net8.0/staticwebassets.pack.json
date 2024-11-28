@@ -1,0 +1,65 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\documents\\LoginPage.html",
+      "PackagePath": "staticwebassets\\documents\\LoginPage.html"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\images\\Estate_House.svg",
+      "PackagePath": "staticwebassets\\images\\Estate_House.svg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\images\\catalog1.svg",
+      "PackagePath": "staticwebassets\\images\\catalog1.svg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\images\\catalog2.svg",
+      "PackagePath": "staticwebassets\\images\\catalog2.svg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\images\\catalog3.svg",
+      "PackagePath": "staticwebassets\\images\\catalog3.svg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\images\\catalog4.svg",
+      "PackagePath": "staticwebassets\\images\\catalog4.svg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\images\\catalog5.svg",
+      "PackagePath": "staticwebassets\\images\\catalog5.svg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\images\\catalog_yellow.svg",
+      "PackagePath": "staticwebassets\\images\\catalog_yellow.svg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\images\\lupa.svg",
+      "PackagePath": "staticwebassets\\images\\lupa.svg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\images\\new_y.svg",
+      "PackagePath": "staticwebassets\\images\\new_y.svg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\styles\\LoginPageStyle.css",
+      "PackagePath": "staticwebassets\\styles\\LoginPageStyle.css"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.PetProjectC#NeuroWeb.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.PetProjectC#NeuroWeb.props",
+      "PackagePath": "build\\PetProjectC#NeuroWeb.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.PetProjectC#NeuroWeb.props",
+      "PackagePath": "buildMultiTargeting\\PetProjectC#NeuroWeb.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.PetProjectC#NeuroWeb.props",
+      "PackagePath": "buildTransitive\\PetProjectC#NeuroWeb.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

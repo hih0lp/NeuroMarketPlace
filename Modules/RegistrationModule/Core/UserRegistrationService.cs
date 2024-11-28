@@ -6,7 +6,7 @@ using System.Text;
 using System.Security.Cryptography;
 using PetProjectC_NeuroWeb.Modules.UserModule.UserModule.DataTransferObject;
 using Microsoft.EntityFrameworkCore.Storage.Json;
-using PetProjectC_NeuroWeb.Modules.UserModule.UserModule.Core;
+using PetProjectC_NeuroWeb.Modules.UserModule.Core;
 using PetProjectC_NeuroWeb.Modules.RegistrationModule.Ports;
 using PetProjectC_NeuroWeb.Modules.HashModule.Ports;
 using PetProjectC_NeuroWeb.Modules.HashModule.Core;
@@ -19,9 +19,9 @@ namespace PetProjectC_NeuroWeb.Modules.RegistrationModule.Services
     //summary
 
 
-    public class UserRegistrationService : IUserRegistrationService
+    public static class UserRegistrationService
     {
-        public async Task UserRegistrationAsync(HttpContext context, IHashService hashService)
+        public static async Task UserRegistrationAsync(HttpContext context, IHashService hashService)
         {
             JsonSerializerOptions options = new JsonSerializerOptions();
             options.Converters.Add(new UserJSONConverter());
@@ -38,7 +38,7 @@ namespace PetProjectC_NeuroWeb.Modules.RegistrationModule.Services
 
                     User user = new User(userDTO.login!, Convert.ToBase64String(salt), hashedPassword, id);
 
-                    using (var db = new UserDataBase())
+                    using (var db = new DataBase())
                     {
                         var users = db.Users.ToList();
                         var isUserEmpty = users.FirstOrDefault(u => u.Login == userDTO.login);
@@ -59,7 +59,7 @@ namespace PetProjectC_NeuroWeb.Modules.RegistrationModule.Services
             }
         }
 
-        private byte[] GenerateSalt()
+        private static byte[] GenerateSalt()
         {
 
             const int SALTLENGTH = 64;

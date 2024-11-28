@@ -15,9 +15,9 @@ using PetProjectC_NeuroWeb.Modules.AuthorizationModule.DTO;
 
 namespace PetProjectC_NeuroWeb.Modules.AuthorizationModule.Core.Core
 {
-    public class UserAuthorizationService
+    public static class UserAuthorizationService
     {
-        public async Task<TokenDTO> UserAuthorizationAsync(HttpContext context, IHashService hashService)
+        public static async Task<TokenDTO> UserAuthorizationAsync(HttpContext context, IHashService hashService)
         {
             JsonSerializerOptions options = new JsonSerializerOptions();
             options.Converters.Add(new UserJSONConverter());
@@ -61,7 +61,7 @@ namespace PetProjectC_NeuroWeb.Modules.AuthorizationModule.Core.Core
 
 
 
-        private byte[] GenerateSalt()
+        private static byte[] GenerateSalt()
         {
 
             const int SALTLENGTH = 64;

@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+body {
+    background-size: 100vw 100vh;
+}
+
+header {
+    display: flex;
+    height: 10.5vh;
+    box-shadow: 0px 0.4vh 0.4vh #00000066;
+    font-family: "Geologica";
+}
+
+.img_estate {
+    align-self: center;
+    height: 6.5vh;
+    width: 14.65vw;
+    margin: 0 0 0 3.5vh;
+}
+
+.img_catalog {
+    align-self: center;
+    margin: 3.5vh;
+    height: 4vh;
+    width: 5vw;
+}
+
+.input {
+    display: flex;
+    width: 35vw;
+    height: 4vh;
+    align-self: center;
+    background-color: rgba(240, 240, 240, 1);
+    border-radius: 2vh;
+    box-shadow: 0 -0.2vh 0.4vh rgba(0, 0, 0, 0.35);
+    margin: 0 2vw 0 0;
+}
+
+.lupa {
+    align-self: center;
+    height: 3.2vh;
+    width: 3.2vw;
+}
+
+.a {
+    text-decoration: none;
+    display: flex;
+}
+
+.adiv {
+    align-self: center;
+    color: black;
+    font-size: 2.5vh;
+    margin:2vh;
+}
+
+.ny {
+    margin: -15vh 0 0 5vw;
+    height: 80vh;
+    width: 90vw;
+}

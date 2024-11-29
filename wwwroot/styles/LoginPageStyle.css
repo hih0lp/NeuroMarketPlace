@@ -10,14 +10,29 @@ html {
 }
 
 body {
-    background-size: 100vw 100vh;
+    min-width: 320px;
+}
+
+html, body {
+    height: 100%;
+}
+
+.wrapper {
+    min-height: 100%;
 }
 
 header {
     display: flex;
     height: 10.5vh;
+    width: 100vw;
     box-shadow: 0px 0.4vh 0.4vh #00000066;
     font-family: "Geologica";
+}
+
+footer {
+    background-color: rgba(116, 116, 116, 1);
+    height: 100px;
+    margin: 10vh 0 0 0;
 }
 
 .img_estate {
@@ -64,7 +79,19 @@ header {
 }
 
 .ny {
-    margin: -15vh 0 0 5vw;
+    margin: -17vh 0 0 4.5vw;
     height: 80vh;
     width: 90vw;
+}
+
+.links {
+    height: 25vh;
+    width: 18.5vw;
+    margin: -8vh 0 0 0 ;
+}
+
+.links_nefor {
+    height: 25vh;
+    width: 18.5vw;
+    margin: 0 1.55vh 0 6.55vh;
 }

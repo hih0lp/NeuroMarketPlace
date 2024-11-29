@@ -2,9 +2,9 @@
 
 namespace PetProjectC_NeuroWeb.Modules.CartModule.Core
 {
-    public class Cart
+    public class Order
     {
-        public Cart(List<string> productsList)
+        public Order(List<string> productsList)
         {
             _productList = productsList;
         }

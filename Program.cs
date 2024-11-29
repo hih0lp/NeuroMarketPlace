@@ -7,6 +7,7 @@ using PetProjectC_NeuroWeb.Modules.UserModule.UserModule;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using Microsoft.AspNetCore.Rewrite;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddAuthorization();
@@ -39,7 +40,9 @@ TokenOperations.tokenOptions = tokenOptions;
 builder.Services.RegisterModules();
 
 
-
+var options = new RewriteOptions()
+    .AddRewrite("products/addproduct", );
+    
 
 
 var app = builder.Build();

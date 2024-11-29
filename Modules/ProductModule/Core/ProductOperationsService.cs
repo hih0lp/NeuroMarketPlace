@@ -21,22 +21,31 @@ namespace PetProjectC_NeuroWeb.Modules.ProductModule.Core
                     await file.CopyToAsync(ms);
                 }
 
-                byte[] imagesBytes = ms.ToArray();
+                byte[] imagesBytes = ms.ToArray(); //массив байтов-картинок
                 List<string> listImages = new List<string>();
-
+                StreamWriter sw = new StreamWriter($"products/{productId}/image.txt");//создание папки по артиклю и запись картинки в байтовом
+                
 
                 foreach (var image in imagesBytes)
                 {
-                    listImages.Add(Convert.ToString(image));
+                    /*listImages.Add(Convert.ToString(image));*/ //добавление картинок в массив байтов
+                    image.ToString();
+                    sw.WriteLine(image);//запись в файл
                 }
+
+                sw.Close();
 
                 using(var db = new DataBase())
                 {
                     var products = db.Products.ToList();
-                    Product product = new Product(productId, listImages, descriptionImage);
+                    Product product = new Product(productId, descriptionImage);
                     products.Add(product);
                     db.SaveChanges();
                 }
+
+                
+
+                
             }            
         }
 
@@ -79,3 +88,5 @@ namespace PetProjectC_NeuroWeb.Modules.ProductModule.Core
         }
     }
 }
+
+//создать отдельную папку с артиклем предмета, там будет лежать картинка битовая. В БД будет лежать описание и характеристика

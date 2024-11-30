@@ -1,6 +1,7 @@
 ﻿using System.Runtime.Serialization.Formatters.Binary;
 using Microsoft.Extensions.Configuration.UserSecrets;
 using PetProjectC_NeuroWeb.Modules.AuthorizationModule.Core;
+using PetProjectC_NeuroWeb.Modules.OrderModule.DTO;
 
 namespace PetProjectC_NeuroWeb.Modules.ProductModule.Core
 {
@@ -10,41 +11,46 @@ namespace PetProjectC_NeuroWeb.Modules.ProductModule.Core
         {
             var form = context.Request.Form;
 
-            string productId = Guid.NewGuid().ToString();
-            var descriptionImage = form["description"].ToString();
-            var files = form.Files;
-
-            using(var ms = new MemoryStream())
+            if(form != null)
             {
-                foreach (var file in files)
+                string productId = Guid.NewGuid().ToString(); //артикль предмета
+                var descriptionImage = form["description"].ToString();
+                var files = form.Files;
+
+                using (var ms = new MemoryStream())
                 {
-                    await file.CopyToAsync(ms);
+                    foreach (var file in files)
+                    {
+                        await file.CopyToAsync(ms);
+                    }
+
+                    byte[] imagesBytes = ms.ToArray(); //массив байтов-картинок
+                    List<string> listImages = new List<string>();
+                    StreamWriter sw = new StreamWriter($"products/{productId}/image.txt");//создание папки по артиклю и запись картинки в байтовом
+
+
+                    foreach (var image in imagesBytes)
+                    {
+                        /*listImages.Add(Convert.ToString(image));*/ //добавление картинок в массив байтов
+                        image.ToString();
+                        sw.WriteLine(image);//запись в файл
+                    }
+
+                    sw.Close();
+
+                    using (var db = new DataBase())
+                    {
+                        var products = db.Products.ToList();
+                        Product product = new Product(productId, descriptionImage);
+                        products.Add(product);
+                        db.SaveChanges(); //сохранение характеристик товара в БД
+                    }
+
+
+                    await context.Response.SendFileAsync($"{productId}"); //отправление папки с артиклем продукта на js
                 }
 
-                byte[] imagesBytes = ms.ToArray(); //массив байтов-картинок
-                List<string> listImages = new List<string>();
-                StreamWriter sw = new StreamWriter($"products/{productId}/image.txt");//создание папки по артиклю и запись картинки в байтовом
-                
-
-                foreach (var image in imagesBytes)
-                {
-                    /*listImages.Add(Convert.ToString(image));*/ //добавление картинок в массив байтов
-                    image.ToString();
-                    sw.WriteLine(image);//запись в файл
-                }
-
-                sw.Close();
-
-                using(var db = new DataBase())
-                {
-                    var products = db.Products.ToList();
-                    Product product = new Product(productId, descriptionImage);
-                    products.Add(product);
-                    db.SaveChanges();
-                }
-
-                
-
+            
                 
             }            
         }

@@ -40,8 +40,8 @@ TokenOperations.tokenOptions = tokenOptions;
 builder.Services.RegisterModules();
 
 
-var options = new RewriteOptions()
-    .AddRewrite("products/addproduct", );
+//var options = new RewriteOptions()
+//    .AddRewrite("products/addproduct", );
     
 
 

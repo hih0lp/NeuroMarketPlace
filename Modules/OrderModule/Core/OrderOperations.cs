@@ -11,8 +11,6 @@ namespace PetProjectC_NeuroWeb.Modules.OrderModule.Core
             {
                 var findinguser = db.Users.ToList().FirstOrDefault(user => user.Id == userId);
                 findinguser!.ProductsList.Add(article);
-
-
             }
         }
 

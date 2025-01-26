@@ -45,6 +45,10 @@
       "PackagePath": "staticwebassets\\styles\\LoginPageStyle.css"
     },
     {
+      "Id": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\styles\\LoginPageStyle.js",
+      "PackagePath": "staticwebassets\\styles\\LoginPageStyle.js"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.PetProjectC#NeuroWeb.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

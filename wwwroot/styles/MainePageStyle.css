@@ -4,11 +4,6 @@
     box-sizing: border-box;
 }
 
-html {
-    overflow: scroll;
-    overflow-x: hidden;
-}
-
 body {
     min-width: 320px;
 }
@@ -22,17 +17,13 @@ html, body {
 }
 
 header {
+    background-color: white;
     display: flex;
     height: 10.5vh;
     width: 100vw;
     box-shadow: 0px 0.4vh 0.4vh #00000066;
     font-family: "Geologica";
-}
-
-footer {
-    background-color: rgba(116, 116, 116, 1);
-    height: 100px;
-    margin: 10vh 0 0 0;
+    position: fixed;
 }
 
 .img_estate {
@@ -51,7 +42,7 @@ footer {
 
 .input {
     display: flex;
-    width: 35vw;
+    width: 80vh;
     height: 4vh;
     align-self: center;
     background-color: rgba(240, 240, 240, 1);
@@ -66,6 +57,7 @@ footer {
     width: 3.2vw;
 }
 
+
 .a {
     text-decoration: none;
     display: flex;
@@ -78,20 +70,55 @@ footer {
     margin:2vh;
 }
 
+.ny1 {
+    display: flex;
+    justify-content: center;
+
+
+}
 .ny {
-    margin: -17vh 0 0 4.5vw;
     height: 80vh;
     width: 90vw;
+    /* align-content: start; */
 }
 
 .links {
-    height: 25vh;
-    width: 18.5vw;
-    margin: -8vh 0 0 0 ;
+    height: 26vh;
+    width: 19vw;
 }
 
-.links_nefor {
+/* .links_nefor {
     height: 25vh;
     width: 18.5vw;
     margin: 0 1.55vh 0 6.55vh;
+} */ 
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: start;
+}
+
+.span {
+    display: flex;
+    font-size: 2.5vh;
+    font-family: "Geologica";
+    margin: 10vh 0 0 0;
+}
+
+.links2 {
+    height: 30vh;
+    width: 20vw;
+}
+
+.elka {
+    flex-direction: column;
+}
+
+.content2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+   
 }

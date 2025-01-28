@@ -23,11 +23,8 @@ namespace PetProjectC_NeuroWeb.Modules.SessionModule.Converter
 
                 foreach (var product in productsList)
                 {
-                    writer.WritePropertyName("name");
-                    writer.WriteRawValue(product.Name!);
-
-                    writer.WritePropertyName("review");
-                    writer.WriteRawValue(product.Comment.Review);
+                    writer.WriteString("name", product.Name);
+                    writer.WriteString("review", product.Comment.Review);
                 }
             }
 

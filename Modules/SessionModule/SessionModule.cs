@@ -1,6 +1,7 @@
 ﻿using PetProjectC_NeuroWeb.Modules.HashModule.Ports;
 using PetProjectC_NeuroWeb.Modules.UserModule.UserModule.ConvertersModule;
 using System.Text.Json;
+using PetProjectC_NeuroWeb.Modules.SessionModule.DTO;
 using PetProjectC_NeuroWeb.Modules.SessionModule.Converter;
 
 namespace PetProjectC_NeuroWeb.Modules.SessionModule
@@ -20,7 +21,29 @@ namespace PetProjectC_NeuroWeb.Modules.SessionModule
                     JsonSerializerOptions options = new JsonSerializerOptions();
                     options.Converters.Add(new ParserJSONConverter());
 
-                    return context.Response.WriteAsJsonAsync(options);
+                    //database request
+
+                    //crewate dt0o
+
+                    using (var db = new DataBase())
+                    {
+                        string[] namesList = null!;
+                        string[] reviewsList = null;
+                        string[] idsList = null!;
+
+                        var products = db.Products.ToList();
+
+                        foreach (var product in products)
+                        {
+                            namesList.Append(product.Name);
+                            reviewsList.Append(product.Comment.Review);
+                            idsList.Append(product.Id);
+                        }
+
+                        var productsData = new PicturesDTO(namesList, reviewsList, idsList);
+
+                        context.Response.WriteAsJsonAsync<PicturesDTO>(productsData, options);
+                    }
                 });
 
             return endpoints;

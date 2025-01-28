@@ -17,15 +17,10 @@ namespace PetProjectC_NeuroWeb.Modules.SessionModule.Converter
         {
             writer.WriteStartArray();
 
-            using (var db = new DataBase())
+            for (int i = 0; i < value.names.Length; i++)
             {
-                var productsList = db.Products.ToList();
-
-                foreach (var product in productsList)
-                {
-                    writer.WriteString("name", product.Name);
-                    writer.WriteString("review", product.Comment.Review);
-                }
+                writer.WriteString("name", value.names[i]);
+                writer.WriteString("review", value.reviews[i]);
             }
 
             writer.WriteEndArray();

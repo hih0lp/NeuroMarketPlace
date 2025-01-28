@@ -14,8 +14,8 @@ namespace PetProjectC_NeuroWeb.Modules.SessionModule.Core
         public void ParsePage(string connectionString)
         {
             string _connectionString = connectionString;
-            var filesInfo = new DirectoryInfo(Path.Combine(Directory.GetCurrentDirectory(), "images")).GetFiles();
-            int filesLength = new DirectoryInfo(Path.Combine(Directory.GetCurrentDirectory(), "images")).GetFiles().Length; //количество файлов в папке images
+            var filesInfo = new DirectoryInfo(Path.Combine(Directory.GetCurrentDirectory(), "images", "productImages")).GetFiles();
+            int filesLength = new DirectoryInfo(Path.Combine(Directory.GetCurrentDirectory(), "images", "productImages")).GetFiles().Length; //количество файлов в папке images
             int numberOfFile = 0;
 
             List<string> fileNames = new List<string>();
@@ -195,7 +195,7 @@ namespace PetProjectC_NeuroWeb.Modules.SessionModule.Core
 
 
                                 //findingProduct = newProduct;
-                                File.WriteAllBytes(Path.Combine(Directory.GetCurrentDirectory(), "images", fileNames[numberOfFile]), response.Content.ReadAsByteArray());
+                                File.WriteAllBytes(Path.Combine(Directory.GetCurrentDirectory(), "images", "productImages",fileNames[numberOfFile]), response.Content.ReadAsByteArray());
                                 numberOfFile++;
 
                                 db.SaveChanges();

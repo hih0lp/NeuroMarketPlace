@@ -11,13 +11,13 @@ namespace PetProjectC_NeuroWeb.Modules.ProductModule
         }
         public IEndpointRouteBuilder MapEndpoints(IEndpointRouteBuilder endpoints)
         {
-            endpoints.MapPost("products/addproduct", 
-            [Authorize]
-            (HttpContext context) => ProductOperationsService.AddProductToCatalog(context));
+            //endpoints.MapPost("products/addproduct", 
+            //[Authorize]
+            //(HttpContext context) => ProductOperationsService.AddProductToCatalog(context));
 
-            endpoints.MapPost("products/addproducttousercart",
-                [Authorize]
-            (string accessJWTToken, string productId) => ProductOperationsService.AddProductToUserCart(accessJWTToken, productId));
+            //endpoints.MapPost("products/addproducttousercart",
+            //    [Authorize]
+            //(string accessJWTToken, string productId) => ProductOperationsService.AddProductToUserCart(accessJWTToken, productId));
 
 
             return endpoints;

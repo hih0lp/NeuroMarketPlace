@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mVFyyprQkSK3c6py5moKEoYwSpK8/4RigDQ0K4qhVr8=",
+  "Hash": "O30/NSig0SSrvqM+0tYMzndmsw2ejt4bJDZ0PLuOvVw=",
   "Source": "PetProjectC#NeuroWeb",
   "BasePath": "_content/PetProjectC#NeuroWeb",
   "Mode": "Default",
@@ -34,6 +34,44 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\documents\\LoginPage.html"
+    },
+    {
+      "Identity": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\documents\\MainePage.html",
+      "SourceId": "PetProjectC#NeuroWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\",
+      "BasePath": "_content/PetProjectC#NeuroWeb",
+      "RelativePath": "documents/MainePage.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\documents\\MainePage.html"
+    },
+    {
+      "Identity": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\documents\\RegistPage.html",
+      "SourceId": "PetProjectC#NeuroWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\",
+      "BasePath": "_content/PetProjectC#NeuroWeb",
+      "RelativePath": "documents/RegistPage.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\documents\\RegistPage.html"
     },
     {
       "Identity": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\images\\catalog_yellow.svg",
@@ -188,6 +226,25 @@
       "OriginalItemSpec": "wwwroot\\images\\lupa.svg"
     },
     {
+      "Identity": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\images\\Mask group.svg",
+      "SourceId": "PetProjectC#NeuroWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\",
+      "BasePath": "_content/PetProjectC#NeuroWeb",
+      "RelativePath": "images/Mask group.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Mask group.svg"
+    },
+    {
       "Identity": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\images\\new_y.svg",
       "SourceId": "PetProjectC#NeuroWeb",
       "SourceType": "Discovered",
@@ -207,12 +264,12 @@
       "OriginalItemSpec": "wwwroot\\images\\new_y.svg"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\styles\\LoginPageStyle.css",
+      "Identity": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\styles\\LoginPage.css",
       "SourceId": "PetProjectC#NeuroWeb",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\",
       "BasePath": "_content/PetProjectC#NeuroWeb",
-      "RelativePath": "styles/LoginPageStyle.css",
+      "RelativePath": "styles/LoginPage.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -223,15 +280,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\styles\\LoginPageStyle.css"
+      "OriginalItemSpec": "wwwroot\\styles\\LoginPage.css"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\styles\\LoginPageStyle.js",
+      "Identity": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\styles\\MainePageStyle.css",
       "SourceId": "PetProjectC#NeuroWeb",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\",
       "BasePath": "_content/PetProjectC#NeuroWeb",
-      "RelativePath": "styles/LoginPageStyle.js",
+      "RelativePath": "styles/MainePageStyle.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -242,7 +299,26 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\styles\\LoginPageStyle.js"
+      "OriginalItemSpec": "wwwroot\\styles\\MainePageStyle.css"
+    },
+    {
+      "Identity": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\styles\\RegistPageStyle.css",
+      "SourceId": "PetProjectC#NeuroWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\",
+      "BasePath": "_content/PetProjectC#NeuroWeb",
+      "RelativePath": "styles/RegistPageStyle.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\styles\\RegistPageStyle.css"
     }
   ]
 }

@@ -16,12 +16,11 @@ using PetProjectC_NeuroWeb.Modules.HashModule.Core;
 
 namespace PetProjectC_NeuroWeb.Modules.RegistrationModule.Services
 {
-    //summary
 
 
-    public static class UserRegistrationService
+    public class UserRegistrationService : IUserRegistrationService
     {
-        public static async Task UserRegistrationAsync(HttpContext context, IHashService hashService)
+        public  async Task UserRegistrationAsync(HttpContext context, IHashService hashService)
         {
             JsonSerializerOptions options = new JsonSerializerOptions();
             options.Converters.Add(new UserJSONConverter());
@@ -59,7 +58,7 @@ namespace PetProjectC_NeuroWeb.Modules.RegistrationModule.Services
             }
         }
 
-        private static byte[] GenerateSalt()
+        private byte[] GenerateSalt()
         {
 
             const int SALTLENGTH = 64;

@@ -5,8 +5,20 @@
       "PackagePath": "staticwebassets\\documents\\LoginPage.html"
     },
     {
+      "Id": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\documents\\MainePage.html",
+      "PackagePath": "staticwebassets\\documents\\MainePage.html"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\documents\\RegistPage.html",
+      "PackagePath": "staticwebassets\\documents\\RegistPage.html"
+    },
+    {
       "Id": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\images\\Estate_House.svg",
       "PackagePath": "staticwebassets\\images\\Estate_House.svg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\images\\Mask group.svg",
+      "PackagePath": "staticwebassets\\images\\Mask group.svg"
     },
     {
       "Id": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\images\\catalog1.svg",
@@ -41,12 +53,16 @@
       "PackagePath": "staticwebassets\\images\\new_y.svg"
     },
     {
-      "Id": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\styles\\LoginPageStyle.css",
-      "PackagePath": "staticwebassets\\styles\\LoginPageStyle.css"
+      "Id": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\styles\\LoginPage.css",
+      "PackagePath": "staticwebassets\\styles\\LoginPage.css"
     },
     {
-      "Id": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\styles\\LoginPageStyle.js",
-      "PackagePath": "staticwebassets\\styles\\LoginPageStyle.js"
+      "Id": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\styles\\MainePageStyle.css",
+      "PackagePath": "staticwebassets\\styles\\MainePageStyle.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\styles\\RegistPageStyle.css",
+      "PackagePath": "staticwebassets\\styles\\RegistPageStyle.css"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.PetProjectC#NeuroWeb.Microsoft.AspNetCore.StaticWebAssets.props",

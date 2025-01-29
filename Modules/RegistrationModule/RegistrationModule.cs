@@ -7,7 +7,7 @@ namespace PetProjectC_NeuroWeb.Modules.RegistrationModule
     {
         public IServiceCollection RegisterService(IServiceCollection services)
         {
-            services.AddTransient<IUserRegistrationService>();
+            //services.AddTransient<IUserRegistrationService>();
             return services;
         }
         public IEndpointRouteBuilder MapEndpoints(IEndpointRouteBuilder endpoints)

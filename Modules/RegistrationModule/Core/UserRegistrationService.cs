@@ -18,9 +18,9 @@ namespace PetProjectC_NeuroWeb.Modules.RegistrationModule.Services
 {
 
 
-    public class UserRegistrationService : IUserRegistrationService
+    public static class UserRegistrationService 
     {
-        public  async Task UserRegistrationAsync(HttpContext context, IHashService hashService)
+        public static async Task UserRegistrationAsync(HttpContext context, IHashService hashService)
         {
             JsonSerializerOptions options = new JsonSerializerOptions();
             options.Converters.Add(new UserJSONConverter());
@@ -58,7 +58,7 @@ namespace PetProjectC_NeuroWeb.Modules.RegistrationModule.Services
             }
         }
 
-        private byte[] GenerateSalt()
+        private static byte[] GenerateSalt()
         {
 
             const int SALTLENGTH = 64;

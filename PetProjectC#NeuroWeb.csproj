@@ -18,7 +18,6 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\images\productImages\" />
-    <Folder Include="wwwroot\products\" />
   </ItemGroup>
 
 </Project>

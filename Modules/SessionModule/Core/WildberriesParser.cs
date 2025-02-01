@@ -8,10 +8,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace PetProjectC_NeuroWeb.Modules.SessionModule.Core
 {
-    public class PageParserWildberries
+    public static class PageParserWildberries
     {
 
-        public void ParsePage(string connectionString)
+        public static void ParsePage(string connectionString)
         {
             string _connectionString = connectionString;
             var filesInfo = new DirectoryInfo(Path.Combine(Directory.GetCurrentDirectory(), "images", "productImages")).GetFiles();
@@ -278,7 +278,7 @@ namespace PetProjectC_NeuroWeb.Modules.SessionModule.Core
 
 
 
-        private string FindComment(IWebDriver driver, IJavaScriptExecutor exec, string id, string productCard)
+        private static string FindComment(IWebDriver driver, IJavaScriptExecutor exec, string id, string productCard)
         {
 
             Thread.Sleep(5000);

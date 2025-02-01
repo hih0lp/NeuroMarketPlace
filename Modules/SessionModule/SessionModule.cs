@@ -3,6 +3,7 @@ using PetProjectC_NeuroWeb.Modules.UserModule.UserModule.ConvertersModule;
 using System.Text.Json;
 using PetProjectC_NeuroWeb.Modules.SessionModule.DTO;
 using PetProjectC_NeuroWeb.Modules.SessionModule.Converter;
+using PetProjectC_NeuroWeb.Modules.SessionModule.Core;
 
 namespace PetProjectC_NeuroWeb.Modules.SessionModule
 {
@@ -45,6 +46,9 @@ namespace PetProjectC_NeuroWeb.Modules.SessionModule
                         context.Response.WriteAsJsonAsync<PicturesDTO>(productsData, options);
                     }
                 });
+
+            endpoints.Map("sessionmodule/startparse",
+                    () => PageParserWildberries.ParsePage("https://www.wildberries.ru/catalog/mebel/mebel-dlya-kuhni/stulya-i-taburety"));
 
             return endpoints;
         }

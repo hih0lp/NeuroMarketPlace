@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WBParser")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e4cc146a2e53a43e1215869f9415429afe3b4fc7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a7b8cd7573b2185a3b6d462f1594c8d7fad9282b")]
 [assembly: System.Reflection.AssemblyProductAttribute("WBParser")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WBParser")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

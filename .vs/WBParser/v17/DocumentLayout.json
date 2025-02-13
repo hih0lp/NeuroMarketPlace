@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\sanya\\source\\repos\\WBParser\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8078C126-BF7E-4FC3-9FA0-77D1FCAB5EFF}|WBParser.csproj|c:\\users\\sanya\\source\\repos\\wbparser\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8078C126-BF7E-4FC3-9FA0-77D1FCAB5EFF}|WBParser.csproj|solutionrelative:category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8078C126-BF7E-4FC3-9FA0-77D1FCAB5EFF}|WBParser.csproj|c:\\users\\sanya\\source\\repos\\wbparser\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8078C126-BF7E-4FC3-9FA0-77D1FCAB5EFF}|WBParser.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{8078C126-BF7E-4FC3-9FA0-77D1FCAB5EFF}|WBParser.csproj|c:\\users\\sanya\\source\\repos\\wbparser\\categoryconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8078C126-BF7E-4FC3-9FA0-77D1FCAB5EFF}|WBParser.csproj|solutionrelative:categoryconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8078C126-BF7E-4FC3-9FA0-77D1FCAB5EFF}|WBParser.csproj|c:\\users\\sanya\\source\\repos\\wbparser\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8078C126-BF7E-4FC3-9FA0-77D1FCAB5EFF}|WBParser.csproj|solutionrelative:category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,11 +26,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "CategoryConverter.cs",
               "DocumentMoniker": "C:\\Users\\sanya\\source\\repos\\WBParser\\CategoryConverter.cs",
               "RelativeDocumentMoniker": "CategoryConverter.cs",
@@ -38,12 +38,11 @@
               "RelativeToolTip": "CategoryConverter.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABwAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-13T15:01:37.839Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-13T15:01:37.839Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Category.cs",
               "DocumentMoniker": "C:\\Users\\sanya\\source\\repos\\WBParser\\Category.cs",
               "RelativeDocumentMoniker": "Category.cs",
@@ -56,7 +55,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "CategoryEndpoints.cs",
               "DocumentMoniker": "C:\\Users\\sanya\\source\\repos\\WBParser\\CategoryEndpoints.cs",
               "RelativeDocumentMoniker": "CategoryEndpoints.cs",
@@ -64,12 +63,11 @@
               "RelativeToolTip": "CategoryEndpoints.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAAAAkAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-13T14:32:24.591Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-13T14:32:24.591Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\sanya\\source\\repos\\WBParser\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",

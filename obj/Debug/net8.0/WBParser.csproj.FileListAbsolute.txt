@@ -23,3 +23,4 @@ C:\Users\sanya\source\repos\WBParser\obj\Debug\net8.0\refint\WBParser.dll
 C:\Users\sanya\source\repos\WBParser\obj\Debug\net8.0\WBParser.pdb
 C:\Users\sanya\source\repos\WBParser\obj\Debug\net8.0\WBParser.genruntimeconfig.cache
 C:\Users\sanya\source\repos\WBParser\obj\Debug\net8.0\ref\WBParser.dll
+C:\Users\sanya\source\repos\WBParser\obj\Debug\net8.0\WBParser.sourcelink.json

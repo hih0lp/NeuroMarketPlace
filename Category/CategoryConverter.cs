@@ -1,7 +1,7 @@
 ﻿using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace WBParser
+namespace WBParser.Category
 {
     public class CategoryConverter : JsonConverter<List<Category>>
     {
@@ -9,9 +9,9 @@ namespace WBParser
         {
             List<Category>? categories = new List<Category>();
 
-            while (reader.Read()) 
+            while (reader.Read())
             {
-                if(reader.TokenType == JsonTokenType.PropertyName)
+                if (reader.TokenType == JsonTokenType.PropertyName)
                 {
                     string propertyName = reader.GetString()!;
                     reader.Read();
@@ -33,11 +33,11 @@ namespace WBParser
                 }
             }
             return categories;
-            //throw new NotImplementedException();
         }
 
         public override void Write(Utf8JsonWriter writer, List<Category> value, JsonSerializerOptions options)
         {
+
             throw new NotImplementedException();
         }
     }

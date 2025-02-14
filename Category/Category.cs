@@ -1,14 +1,22 @@
 ﻿using System.Net;
 using System.Text.Json;
 
-namespace WBParser
+namespace WBParser.Category
 {
-    public class CategoryEndpoints
+    public class Category
     {
-        public async static Task GetCategories(HttpContext context)
+        public Category(int id)
         {
-            // /catalog/dom/mebel
+            Id = id;
+        }
 
+        public int Id { get; set; }
+        public string Name { get; set; } = null!;
+        public string Url { get; set; } = null!;
+        public string ShardKey { get; set; } = null!;
+
+        public async static Task<List<Category>> ParseCategories()
+        {
             var jsonOptions = new JsonSerializerOptions();
 
             jsonOptions.Converters.Add(new CategoryConverter());
@@ -25,7 +33,7 @@ namespace WBParser
             HttpResponseMessage response = await client.SendAsync(request);
             response.EnsureSuccessStatusCode();
 
-            var responseBody = await response.Content.ReadFromJsonAsync<List<Category>>(jsonOptions);
+            return await response.Content.ReadFromJsonAsync<List<Category>>(jsonOptions);
         }
     }
 }

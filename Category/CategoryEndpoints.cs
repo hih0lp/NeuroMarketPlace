@@ -6,9 +6,7 @@ namespace WBParser.Category
     public class CategoryEndpoints
     {
         public async static Task GetCategories(HttpContext context)
-        {
-            // /catalog/dom/mebel
-
+        { 
             var jsonOptions = new JsonSerializerOptions();
 
             jsonOptions.Converters.Add(new CategoryConverter());
@@ -20,11 +18,14 @@ namespace WBParser.Category
 
             foreach (var category in categories)
             {
-                if (category.Url.Contains("/catalog/dom/mebel"))
+                if (category.Url.Contains("/catalog/dom/mebel/"))
                 {
                     furnitureCategories.Add(category);
                 }
             }
+
+
+            await context.Response.WriteAsJsonAsync(furnitureCategories);
         }
     }
 }

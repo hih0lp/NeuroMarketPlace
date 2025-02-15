@@ -29,6 +29,9 @@ namespace WBParser.Category
                         case "shardkey":
                             categories.Last().ShardKey = reader.GetString();
                             break;
+                        case "childrenonly":
+                            categories.Last().ChildrenOnly = reader.GetBoolean();
+                            break;
                     }
                 }
             }
@@ -37,8 +40,17 @@ namespace WBParser.Category
 
         public override void Write(Utf8JsonWriter writer, List<Category> value, JsonSerializerOptions options)
         {
+            writer.WriteStartArray();
 
-            throw new NotImplementedException();
+            foreach (var category in value)
+            {
+                writer.WriteNumber("id", category.Id);
+                writer.WriteString("name", category.Name);
+                writer.WriteString("url", category.Url);
+                writer.WriteBoolean("childrenOnly", category.ChildrenOnly);
+            }
+
+            writer.WriteEndArray();
         }
     }
 }

@@ -9,11 +9,12 @@ namespace WBParser.Category
         {
             Id = id;
         }
-
+        
         public int Id { get; set; }
         public string Name { get; set; } = null!;
         public string Url { get; set; } = null!;
         public string ShardKey { get; set; } = null!;
+        public bool ChildrenOnly { get; set; }
 
         public async static Task<List<Category>> ParseCategories()
         {

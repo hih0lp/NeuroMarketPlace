@@ -1,33 +1,30 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using PetProjectC_NeuroWeb.Modules.ProductModule.Core;
-using PetProjectC_NeuroWeb.Modules.UserModule.Core;
+﻿using Microsoft.EntityFrameworkCore;
+using System.Data.Common;
+using NeuroWeb.Models;
 
-namespace PetProjectC_NeuroWeb
+namespace NeuroWeb
 {
     public class DataBase : DbContext
     {
         public DataBase()
         {
-            Database.EnsureCreated();               
+            Database.EnsureCreated();
         }
-        public DbSet<Product> Products { get; set; }
-        public DbSet<User> Users { get; set; }
-        public DbSet<Comment> Reviews { get; set; }
+
+        public DbSet<CategoryModel> CategoryModels { get; set; }
+        public DbSet<ProductModel> ProductModels { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseMySql("server=localhost; user=root; password=aternosru123; database=database;", 
-                ServerVersion.AutoDetect("server=localhost; user=root; password=aternosru123; database=database;")); 
+            optionsBuilder.UseMySql("server=localhost; user=root; password=aternosru123; database=DBTEST", 
+                ServerVersion.AutoDetect("server=localhost; user=root; password=aternosru123; database=DBTEST"));
         }
-
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Product>()
-                .HasOne(p => p.Comment)
-                .WithOne(r => r.Product)
-                .HasForeignKey<Comment>(r => r.ProductId);
+            modelBuilder.Entity<CategoryModel>()
+                .HasOne(p => p.)
+                .WithMany<SubCategoryModel>(s => s.); //добавить связь
         }
     }
 }

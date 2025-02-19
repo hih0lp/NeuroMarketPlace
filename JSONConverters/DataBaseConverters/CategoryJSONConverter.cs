@@ -2,16 +2,17 @@
 using System.Text.Json;
 using NeuroWeb.Models;
 
-namespace WBParser.JSONConverters.DataBaseConverters
+namespace NeuroWeb.JSONConverters.DataBaseConverters
 {
-    public class CategoryJSONConverter : JsonConverter<CategoryModel>
+    public class CategoryJSONConverter : JsonConverter<CategoryDTOModel>
     {
-        public override CategoryModel? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+        public override CategoryDTOModel? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {
             var id = 0;
             var name = "Undefined";
             var relationRef = "Undefined";
             var isChildrenOnly = true;
+            var categoryName = "Undefined";
 
             while (reader.Read())
             {
@@ -39,16 +40,20 @@ namespace WBParser.JSONConverters.DataBaseConverters
                             isChildrenOnly = reader.GetBoolean();
                             break;
 
+                        case "categoryName":
+                            categoryName = reader.GetString();
+                            break;
+
                         default:
                             break;
                     }
                 }
             }
 
-            return new CategoryModel(id, name, relationRef, isChildrenOnly);
+            return new CategoryDTOModel(id, name, relationRef, isChildrenOnly);
         }
 
-        public override void Write(Utf8JsonWriter writer, CategoryModel value, JsonSerializerOptions options)
+        public override void Write(Utf8JsonWriter writer, CategoryDTOModel value, JsonSerializerOptions options)
         { }
 
 

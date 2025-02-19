@@ -11,8 +11,8 @@ namespace NeuroWeb
             Database.EnsureCreated();
         }
 
-        public DbSet<CategoryModel> CategoryModels { get; set; }
-        public DbSet<ProductModel> ProductModels { get; set; }
+        public DbSet<DataBaseCategoryModel> CategoryModels { get; set; }
+        public DbSet<DataBaseProductModel> ProductModels { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -22,9 +22,10 @@ namespace NeuroWeb
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<CategoryModel>()
-                .HasOne(p => p.)
-                .WithMany<SubCategoryModel>(s => s.); //добавить связь
+            modelBuilder.Entity<DataBaseProductModel>()
+                .HasOne(p => p.category)
+                .WithMany(s => s.products)
+                .HasForeignKey(e => e.categoryName); //добавить связь
         }
     }
 }

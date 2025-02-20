@@ -16,16 +16,17 @@ namespace NeuroWeb
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseMySql("server=localhost; user=root; password=aternosru123; database=DBTEST", 
-                ServerVersion.AutoDetect("server=localhost; user=root; password=aternosru123; database=DBTEST"));
+            optionsBuilder.UseMySql("server=localhost; user=root; password=aternosru123; database=DBTEST;", 
+                ServerVersion.AutoDetect("server=localhost; user=root; password=aternosru123; database=DBTEST;"));
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<DataBaseProductModel>()
-                .HasOne(p => p.category)
-                .WithMany(s => s.products)
-                .HasForeignKey(e => e.categoryName); //добавить связь
+                .HasOne(p => p.Category)
+                .WithMany(s => s.Products)
+                .HasForeignKey(e => e.categoryName)
+                .HasPrincipalKey(r => r.Name); 
         }
     }
 }

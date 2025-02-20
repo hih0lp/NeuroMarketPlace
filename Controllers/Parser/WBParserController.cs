@@ -8,53 +8,60 @@ namespace PetProjectC_NeuroWeb.Controllers.Parser
 {
     public class WBParserController : Controller
     {
-        public async Task<StatusCodeResult> PutCategoryInDB()
+        public async Task PutCategoryInDB()
         {
             JsonSerializerOptions options = new JsonSerializerOptions();
             options.Converters.Add(new CategoryJSONConverter());
 
             
             HttpClient client = new HttpClient();
-            HttpResponseMessage response = await client.GetAsync("insert");//вставить адрес
+            HttpResponseMessage response = await client.GetAsync("http://gavno.somee.com/wildberries/categories");//вставить адрес
 
 
             if (response.IsSuccessStatusCode)
             {
-                CategoryDTOModel categoryDTO = await response.Content.ReadFromJsonAsync<CategoryDTOModel>(options);
 
-                if (categoryDTO != null)
+                List<CategoryDTOModel> categoryDTOList = await response.Content.ReadFromJsonAsync<List<CategoryDTOModel>>(options);
+
+                foreach (var categoryDTO in categoryDTOList)
                 {
-                    using (var db = new DataBase())
+                    if (categoryDTO != null)
                     {
-                        var categoryList = db.CategoryModels.ToList();
-                        var category = categoryList.FirstOrDefault(s => s.name == categoryDTO.name);
-
-                        if (category != null)
+                        using (var db = new DataBase())
                         {
-                            return StatusCode(401);
+
+                            var categoryList = db.CategoryModels.ToList();
+
+
+
+                            var category = categoryList.FirstOrDefault(s => s.Name == categoryDTO.name);
+
+
+                            if (category == null)
+                            {
+                                Console.WriteLine(1111);
+
+                                List<DataBaseProductModel> list = null!;
+
+                                DataBaseCategoryModel DBCategoryModel = new DataBaseCategoryModel(
+                                    categoryDTO.id,
+                                    categoryDTO.name,
+                                    categoryDTO.relationRef,
+                                    categoryDTO.isChildrenOnly,
+                                    null);
+
+                                db.CategoryModels.Add(DBCategoryModel);
+                                await db.SaveChangesAsync();
+
+                            }
                         }
-
-                        else
-                        {
-                            DataBaseCategoryModel DBCategoryModel = new DataBaseCategoryModel(
-                                categoryDTO.id,
-                                categoryDTO.name,
-                                categoryDTO.relationRef,
-                                category.isChildrenOnly,
-                                null);
-
-                            db.CategoryModels.Add(DBCategoryModel);
-                            await db.SaveChangesAsync();
-
-                            return StatusCode(200);
-                        }
-
                     }
                 }
 
+                
+
             }
 
-            return StatusCode(400);
 
             //HttpClient client = new HttpClient();
 

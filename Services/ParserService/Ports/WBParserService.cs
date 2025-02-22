@@ -1,19 +1,20 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using NeuroWeb.JSONConverters.DataBaseConverters;
 using NeuroWeb.Models;
+using PetProjectC_NeuroWeb.Services.ParserService.Interface;
 using System.Text.Json;
-using NeuroWeb.JSONConverters.DataBaseConverters;
+using PetProjectC_NeuroWeb;
 using NeuroWeb;
 
-namespace PetProjectC_NeuroWeb.Controllers.Parser
+namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
 {
-    public class WBParserController : Controller
+    public class WBParserService : IParserService
     {
-        public async Task PutCategoryInDB()
+        public async void AddCategoryInDB(object state)
         {
             JsonSerializerOptions options = new JsonSerializerOptions();
             options.Converters.Add(new CategoryJSONConverter());
 
-            
+
             HttpClient client = new HttpClient();
             HttpResponseMessage response = await client.GetAsync("http://gavno.somee.com/wildberries/categories");//вставить адрес
 
@@ -57,23 +58,13 @@ namespace PetProjectC_NeuroWeb.Controllers.Parser
                         }
                     }
                 }
-
-                
-
             }
-
-
-            //HttpClient client = new HttpClient();
-
-            //HttpResponseMessage response = await client.GetAsync();//вставить адрес
-
-            //var categoryJSON = await response.Content.ReadFromJsonAsync<JsonResult>();
-
-            //return categoryJSON;
         }
+
+        public async Task AddProductInDB()
+        {
+
+        }
+
     }
-
-
-
-
 }

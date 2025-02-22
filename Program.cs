@@ -4,9 +4,16 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using Microsoft.AspNetCore.Rewrite;
+using PetProjectC_NeuroWeb.Services.ParserService.Interface;
+using PetProjectC_NeuroWeb.Services.TimeService.Ports;
+
+
+
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
+builder.Services.AddTransient<IParserService>();
+builder.Services.AddTransient<TimeService>();
 
 
 //var options = new RewriteOptions()
@@ -15,6 +22,7 @@ builder.Services.AddControllersWithViews();
 
 
 var app = builder.Build();
+app.Services.GetService<TimeService>();
 
 app.MapControllerRoute(
     name: "default",

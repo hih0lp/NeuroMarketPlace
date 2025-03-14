@@ -4,9 +4,9 @@ using NeuroWeb.Models;
 
 namespace PetProjectC_NeuroWeb.JSONConverters.DataBaseConverters
 {
-    public class ProductsJSONConverter : JsonConverter<ProductDTOModel>
+    public class ProductsJSONConverter : JsonConverter<List<ProductDTOModel>>
     {
-        public override ProductDTOModel? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+        public override List<ProductDTOModel>? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {
             List<ProductDTOModel> models = new List<ProductDTOModel>();
 
@@ -64,10 +64,11 @@ namespace PetProjectC_NeuroWeb.JSONConverters.DataBaseConverters
                     }
                 }
             }
+            return models;
         }
 
 
-        public override void Write(Utf8JsonWriter writer, ProductDTOModel value, JsonSerializerOptions options)
+        public override void Write(Utf8JsonWriter writer, List<ProductDTOModel> value, JsonSerializerOptions options)
         {
             throw new NotImplementedException();
         }

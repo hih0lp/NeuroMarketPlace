@@ -22,7 +22,7 @@ namespace NeuroWeb.JSONConverters.DataBaseConverters
                     reader.Read();
 
 
-                    switch (propertyName.ToLower())
+                    switch (propertyName)
                     {
                         case "id":
                             models.Add(new CategoryDTOModel());

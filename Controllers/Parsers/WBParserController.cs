@@ -15,7 +15,7 @@ namespace PetProjectC_NeuroWeb.Controllers.Parsers
 
             
             HttpClient client = new HttpClient();
-            HttpResponseMessage response = await client.GetAsync("http://gavno.somee.com/wildberries/categories");//вставить адрес
+            HttpResponseMessage response = await client.GetAsync("http://gavno.somee.com/wildberries/categories");
 
 
             if (response.IsSuccessStatusCode)
@@ -31,9 +31,6 @@ namespace PetProjectC_NeuroWeb.Controllers.Parsers
                         {
 
                             var categoryList = db.CategoryModels.ToList();
-
-
-
                             var category = categoryList.FirstOrDefault(s => s.Name == categoryDTO.name);
 
 

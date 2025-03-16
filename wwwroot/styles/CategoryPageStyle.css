@@ -1,0 +1,246 @@
+:root {
+    --text-color: #333;
+    --primary-color: rgba(245, 102, 129, 1);
+    --primary-hover-color: rgb(231, 87, 114);
+    --border-radius: 5px;
+    --font-size-small: 1.8vh;
+    --font-size-medium: 2vh;
+    --header-padding: 1vh 2vw;
+    --link-gap: 2vw;
+    --shadow-color: rgba(0, 0, 0, 0.25);
+  }
+  
+  
+  * {
+    overflow-x: hidden;
+  }
+  
+  body {
+    margin: 0;
+    font-family: sans-serif;
+  }
+  
+  .header {
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--header-padding);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    box-sizing: border-box;
+    box-shadow: 0 0.2em 0.5em rgba(0, 0, 0, 0.1);
+    width: 100vw; 
+  }
+  
+  .logo {
+    max-width: 15vw;
+  }
+  
+  .logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  
+  .search-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin-left: 2vw;
+    margin-right: 2vw;
+  }
+  
+  .search-container {
+    display: flex;
+    align-items: center;
+    border: 0.1vh solid #ccc;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    width: 100%;
+    max-width: 40vw;
+  }
+  
+  .search-input {
+    flex: 1;
+    padding: 1vh 1.5vw;
+    border: none;
+    outline: none;
+    font-size: var(--font-size-small);
+  }
+  
+  .search-button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1vh 1.5vw;
+    border: none;
+    cursor: pointer;
+    font-size: var(--font-size-small);
+  }
+  
+  .search-button:hover {
+    background-color: var(--primary-hover-color);
+  }
+  
+  .links {
+    display: flex;
+    gap: var(--link-gap);
+  }
+  
+  .links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: var(--font-size-medium);
+  }
+  
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .logo {
+        max-width: 40vw;
+    }
+  
+    .search-wrapper {
+      width: 100%;
+      justify-content: center; 
+      margin-left: 0;
+      margin-right: 0;
+    }
+  
+    .search-container {
+      max-width: 80vw;
+    }
+  
+    .links {
+      flex-direction: row;
+      justify-content: center; 
+      gap: 5vw; 
+      width: 100%;
+    }
+  }
+  
+  
+  .container2 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      width: 90%;
+      margin: 0 auto;
+      padding: 20px;
+  }
+  
+  .item {
+      box-sizing: border-box;
+      text-align: center;
+      margin: 10px;  
+      box-shadow: 0 0.4em 1em var(--shadow-color);
+      border-radius: 0.8vw;
+  }
+  
+  
+  .item img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      transform: scale(0.8);
+  }
+  
+  
+  @media (min-width: 992px) { 
+      .item {
+          width: calc(25% - 20px); 
+  }
+  }
+  
+  
+  @media (min-width: 768px) and (max-width: 991px) { 
+      .item {
+          width: calc(33.33% - 20px); 
+      }
+  }
+  
+  
+  @media (max-width: 767px) { 
+      .item {
+          width: calc(50% - 20px);  
+      }
+      .container2 {
+          padding: 10px;  
+      }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  :root {
+    --text-color: #333;
+    --font-size-medium: 2.5vh;
+    --logo-max-width: 50vw;
+  }
+  
+  
+  
+  
+  
+  
+  
+  main {
+    padding: 2vh 0; 
+  }
+  
+  .content-wrapper2 {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .logo-container2 {
+    margin-bottom: 2vh;
+  }
+  
+  .logo-container2 img {
+    max-width: var(--logo-max-width);
+    height: auto;
+    display: flex;
+  }
+  
+  .catalog-text2 {
+    font-size: var(--font-size-medium);
+    color: var(--text-color);
+    margin-top: 2vw;
+    font-weight: 600;
+    letter-spacing: 0%;
+    font-size: 1.8vw;
+  }
+  
+  
+  @media (max-width: 768px) {
+    :root {
+      --logo-max-width: 80vw;
+      --font-size-medium: 3vh;
+    }
+  }
+  
+  .ded {
+    font-weight: 600;
+    font-size: 1.8vw;
+    letter-spacing: 0%;
+    text-align: center;
+    padding: 0.9vw;
+  
+  }
+  

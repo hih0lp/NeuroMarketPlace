@@ -4,11 +4,11 @@ using NeuroWeb.Models;
 
 namespace NeuroWeb.JSONConverters.DataBaseConverters
 {
-    public class CategoryJSONConverter : JsonConverter<List<CategoryDTOModel>>
+    public class CategoryJSONConverter : JsonConverter<List<CategoryParserDTOModel>>
     {
-        public override List<CategoryDTOModel>? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+        public override List<CategoryParserDTOModel>? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {
-            List<CategoryDTOModel> models = new List<CategoryDTOModel>();
+            List<CategoryParserDTOModel> models = new List<CategoryParserDTOModel>();
             var id = 0;
             var name = "Undefined";
             var relationRef = "Undefined";
@@ -25,7 +25,7 @@ namespace NeuroWeb.JSONConverters.DataBaseConverters
                     switch (propertyName)
                     {
                         case "id":
-                            models.Add(new CategoryDTOModel());
+                            models.Add(new CategoryParserDTOModel());
                             id = reader.GetInt32();
                             models.Last().id = id;
                             break;
@@ -52,7 +52,7 @@ namespace NeuroWeb.JSONConverters.DataBaseConverters
             return models;
         }
 
-        public override void Write(Utf8JsonWriter writer, List<CategoryDTOModel> value, JsonSerializerOptions options)
+        public override void Write(Utf8JsonWriter writer, List<CategoryParserDTOModel> value, JsonSerializerOptions options)
         { }
 
 

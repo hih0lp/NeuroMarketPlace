@@ -24,7 +24,7 @@ namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
             if (response.IsSuccessStatusCode)
             {
 
-                List<CategoryDTOModel> categoryDTOList = await response.Content.ReadFromJsonAsync<List<CategoryDTOModel>>(options);
+                List<CategoryParserDTOModel> categoryDTOList = await response.Content.ReadFromJsonAsync<List<CategoryDTOModel>>(options);
 
                 foreach (var categoryDTO in categoryDTOList)
                 {
@@ -49,8 +49,7 @@ namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
                                     categoryDTO.id,
                                     categoryDTO.name,
                                     categoryDTO.relationRef,
-                                    categoryDTO.isChildrenOnly,
-                                    null);
+                                    categoryDTO.isChildrenOnly);
 
                                 db.CategoryModels.Add(DBCategoryModel);
                                 await db.SaveChangesAsync();
@@ -105,8 +104,7 @@ namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
                                 productDTO.categoryName,
                                 productDTO.url,
                                 productDTO.price,
-                                productDTO.pictureUrl,
-                                null);
+                                productDTO.pictureUrl);
 
                             db.ProductModels.Add(DBProductModel);
                             await db.SaveChangesAsync();

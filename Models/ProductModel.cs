@@ -20,7 +20,7 @@ namespace NeuroWeb.Models
     public class DataBaseProductModel
     {
         public DataBaseProductModel() { }
-        public DataBaseProductModel(int id, string name, string brand, double reviewRating, string categoryName, string url, int price, string pictureUrl, DataBaseCategoryModel? category)
+        public DataBaseProductModel(int id, string name, string brand, double reviewRating, string categoryName, string url, int price, string pictureUrl)
         {
             _id = id;
             _name = name;
@@ -30,7 +30,6 @@ namespace NeuroWeb.Models
             _url = url;
             _price = price;
             _pictureUrl = pictureUrl;
-            _category = category;
         }
 
         private int _id;
@@ -41,7 +40,6 @@ namespace NeuroWeb.Models
         private string _url;
         private int _price;
         private string _pictureUrl;
-        private DataBaseCategoryModel? _category;
 
 
         public int Id { get => _id; set => _id = value; }
@@ -52,7 +50,6 @@ namespace NeuroWeb.Models
         public string Url { get => _url; set => _url = value; }
         public int Price { get => _price; set => _price = value; }
         public string PictureUrl { get => _pictureUrl; set => _pictureUrl = value; }
-        public DataBaseCategoryModel Category { get => _category; set => _category = value; }
 
     }
 

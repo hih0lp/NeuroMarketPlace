@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qsTEIRUydVt/YC7GmCQPxFCa409WJrGRhhUgeG3egI4=",
+  "Hash": "c25Z8ZaUCtTAAaNSDkEZnYVGiTiveceuZcWGvDlv0no=",
   "Source": "PetProjectC#NeuroWeb",
   "BasePath": "_content/PetProjectC#NeuroWeb",
   "Mode": "Default",
@@ -15,5 +15,82 @@
       "Pattern": "**"
     }
   ],
-  "Assets": []
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\images\\Estate_House.svg",
+      "SourceId": "PetProjectC#NeuroWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\",
+      "BasePath": "_content/PetProjectC#NeuroWeb",
+      "RelativePath": "images/Estate_House.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Estate_House.svg"
+    },
+    {
+      "Identity": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\images\\Frame 2.svg",
+      "SourceId": "PetProjectC#NeuroWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\",
+      "BasePath": "_content/PetProjectC#NeuroWeb",
+      "RelativePath": "images/Frame 2.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Frame 2.svg"
+    },
+    {
+      "Identity": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\images\\детдом.svg",
+      "SourceId": "PetProjectC#NeuroWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\",
+      "BasePath": "_content/PetProjectC#NeuroWeb",
+      "RelativePath": "images/детдом.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\детдом.svg"
+    },
+    {
+      "Identity": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\styles\\CategoryPageStyle.css",
+      "SourceId": "PetProjectC#NeuroWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\",
+      "BasePath": "_content/PetProjectC#NeuroWeb",
+      "RelativePath": "styles/CategoryPageStyle.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\styles\\CategoryPageStyle.css"
+    }
+  ]
 }

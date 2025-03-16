@@ -19,6 +19,11 @@
   <ItemGroup>
     <Folder Include="Controllers\DateTime\" />
     <Folder Include="wwwroot\" />
+    <Folder Include="wwwroot\documents\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\CategoryPage\CategoryPage.cshtml" />
   </ItemGroup>
 
 </Project>

@@ -69,8 +69,6 @@ namespace PetProjectC_NeuroWeb.JSONConverters.DataBaseConverters
 
 
         public override void Write(Utf8JsonWriter writer, List<ProductDTOModel> value, JsonSerializerOptions options)
-        {
-            throw new NotImplementedException();
-        }
+        { }
     }
 }

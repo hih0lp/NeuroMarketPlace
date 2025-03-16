@@ -11,8 +11,20 @@
       "RelativeMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|solutionrelative:jsonconverters\\databaseconverters\\productsjsonconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|c:\\users\\user\\source\\repos\\petprojectc#neuroweb\\jsonconverters\\databaseconverters\\categoryjsonconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|solutionrelative:jsonconverters\\databaseconverters\\categoryjsonconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|c:\\users\\user\\source\\repos\\petprojectc#neuroweb\\jsonconverters\\clientconverters\\categoryclientjsonconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|solutionrelative:jsonconverters\\clientconverters\\categoryclientjsonconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|c:\\users\\user\\source\\repos\\petprojectc#neuroweb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|c:\\users\\user\\source\\repos\\petprojectc#neuroweb\\services\\parserservice\\ports\\wbparserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|solutionrelative:services\\parserservice\\ports\\wbparserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|c:\\users\\user\\source\\repos\\petprojectc#neuroweb\\jsonconverters\\databaseconverters\\categorydbjsonconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|solutionrelative:jsonconverters\\databaseconverters\\categorydbjsonconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|c:\\users\\user\\source\\repos\\petprojectc#neuroweb\\models\\categorymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,20 +35,12 @@
       "RelativeMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|solutionrelative:models\\productmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|c:\\users\\user\\source\\repos\\petprojectc#neuroweb\\services\\parserservice\\ports\\wbparserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|solutionrelative:services\\parserservice\\ports\\wbparserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|c:\\users\\user\\source\\repos\\petprojectc#neuroweb\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|solutionrelative:database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|c:\\users\\user\\source\\repos\\petprojectc#neuroweb\\services\\timeservice\\ports\\timeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|solutionrelative:services\\timeservice\\ports\\timeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|c:\\users\\user\\source\\repos\\petprojectc#neuroweb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|c:\\users\\user\\source\\repos\\petprojectc#neuroweb\\views\\categorypage\\categorypage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -54,63 +58,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 224,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ProductModel.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\Models\\ProductModel.cs",
-              "RelativeDocumentMoniker": "Models\\ProductModel.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\Models\\ProductModel.cs",
-              "RelativeToolTip": "Models\\ProductModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACgAAAAbAAAA",
+              "DocumentIndex": 2,
+              "Title": "CategoryClientJSONConverter.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\JSONConverters\\ClientConverters\\CategoryClientJSONConverter.cs",
+              "RelativeDocumentMoniker": "JSONConverters\\ClientConverters\\CategoryClientJSONConverter.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\JSONConverters\\ClientConverters\\CategoryClientJSONConverter.cs",
+              "RelativeToolTip": "JSONConverters\\ClientConverters\\CategoryClientJSONConverter.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAABEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-16T14:24:40.639Z",
+              "WhenOpened": "2025-03-16T15:34:31.525Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "DataBase.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\DataBase.cs",
-              "RelativeDocumentMoniker": "DataBase.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\DataBase.cs",
-              "RelativeToolTip": "DataBase.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-16T14:24:28.809Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "CategoryModel.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\Models\\CategoryModel.cs",
               "RelativeDocumentMoniker": "Models\\CategoryModel.cs",
               "ToolTip": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\Models\\CategoryModel.cs",
               "RelativeToolTip": "Models\\CategoryModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAfAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-16T14:16:16.649Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CategoryJSONConverter.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\JSONConverters\\DataBaseConverters\\CategoryJSONConverter.cs",
-              "RelativeDocumentMoniker": "JSONConverters\\DataBaseConverters\\CategoryJSONConverter.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\JSONConverters\\DataBaseConverters\\CategoryJSONConverter.cs",
-              "RelativeToolTip": "JSONConverters\\DataBaseConverters\\CategoryJSONConverter.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADkAAAAAAAAA",
+              "DocumentIndex": 5,
+              "Title": "CategoryDBJSONConverter.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\JSONConverters\\DataBaseConverters\\CategoryDBJSONConverter.cs",
+              "RelativeDocumentMoniker": "JSONConverters\\DataBaseConverters\\CategoryDBJSONConverter.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\JSONConverters\\DataBaseConverters\\CategoryDBJSONConverter.cs",
+              "RelativeToolTip": "JSONConverters\\DataBaseConverters\\CategoryDBJSONConverter.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABUAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-16T14:06:26.101Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
@@ -120,20 +111,20 @@
               "RelativeDocumentMoniker": "JSONConverters\\DataBaseConverters\\ProductsJSONConverter.cs",
               "ToolTip": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\JSONConverters\\DataBaseConverters\\ProductsJSONConverter.cs",
               "RelativeToolTip": "JSONConverters\\DataBaseConverters\\ProductsJSONConverter.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEcAAAALAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-16T12:21:08.57Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "WBParserService.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\Services\\ParserService\\Ports\\WBParserService.cs",
               "RelativeDocumentMoniker": "Services\\ParserService\\Ports\\WBParserService.cs",
               "ToolTip": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\Services\\ParserService\\Ports\\WBParserService.cs",
               "RelativeToolTip": "Services\\ParserService\\Ports\\WBParserService.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAAABoAAAArAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAB7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-15T14:21:06.339Z",
               "EditorCaption": ""
@@ -146,14 +137,51 @@
               "RelativeDocumentMoniker": "Controllers\\CategoryPage\\CategoryPageController.cs",
               "ToolTip": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\Controllers\\CategoryPage\\CategoryPageController.cs",
               "RelativeToolTip": "Controllers\\CategoryPage\\CategoryPageController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAABPAAAA",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAQwBUAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-16T13:44:08.243Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAACcAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T14:14:14.965Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DataBase.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\DataBase.cs",
+              "RelativeDocumentMoniker": "DataBase.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\DataBase.cs",
+              "RelativeToolTip": "DataBase.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-16T14:24:28.809Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "ProductModel.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\Models\\ProductModel.cs",
+              "RelativeDocumentMoniker": "Models\\ProductModel.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\Models\\ProductModel.cs",
+              "RelativeToolTip": "Models\\ProductModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACgAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-16T14:24:40.639Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "TimeService.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\Services\\TimeService\\Ports\\TimeService.cs",
               "RelativeDocumentMoniker": "Services\\TimeService\\Ports\\TimeService.cs",
@@ -161,12 +189,11 @@
               "RelativeToolTip": "Services\\TimeService\\Ports\\TimeService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAB1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T14:20:22.575Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-15T14:20:22.575Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "CategoryPage.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\Views\\CategoryPage\\CategoryPage.cshtml",
               "RelativeDocumentMoniker": "Views\\CategoryPage\\CategoryPage.cshtml",
@@ -178,7 +205,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "IParserService.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\Services\\ParserService\\Interface\\IParserService.cs",
               "RelativeDocumentMoniker": "Services\\ParserService\\Interface\\IParserService.cs",
@@ -187,18 +214,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAuwAUAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-15T14:21:16.135Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAACcAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T14:14:14.965Z"
             }
           ]
         }

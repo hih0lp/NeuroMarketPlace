@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PetProjectC#NeuroWeb")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+32297dbd3c46a0d9d776179276a681742e5e8d7d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+83e2614be45520590185b1377997871113a718a5")]
 [assembly: System.Reflection.AssemblyProductAttribute("PetProjectC#NeuroWeb")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PetProjectC#NeuroWeb")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

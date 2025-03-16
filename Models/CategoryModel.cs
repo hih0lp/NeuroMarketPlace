@@ -11,7 +11,12 @@
     }
 
 
-
+    public class CategoryClientDTOModel
+    {
+        public CategoryClientDTOModel() { }
+        public string name;
+        public string pictureUrl;
+    }
 
     public class DataBaseCategoryModel
     {

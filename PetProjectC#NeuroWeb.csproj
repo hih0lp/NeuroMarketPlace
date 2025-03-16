@@ -17,7 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\DateTime\" />
     <Folder Include="wwwroot\" />
     <Folder Include="wwwroot\documents\" />
   </ItemGroup>

@@ -14,7 +14,7 @@ namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
         public async void AddCategoryInDB(object state)
         {
             JsonSerializerOptions options = new JsonSerializerOptions();
-            options.Converters.Add(new CategoryJSONConverter());
+            options.Converters.Add(new CategoryDBJSONConverter());
 
 
             HttpClient client = new HttpClient();
@@ -24,7 +24,7 @@ namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
             if (response.IsSuccessStatusCode)
             {
 
-                List<CategoryParserDTOModel> categoryDTOList = await response.Content.ReadFromJsonAsync<List<CategoryDTOModel>>(options);
+                List<CategoryParserDTOModel> categoryDTOList = await response.Content.ReadFromJsonAsync<List<CategoryParserDTOModel>>(options);
 
                 foreach (var categoryDTO in categoryDTOList)
                 {

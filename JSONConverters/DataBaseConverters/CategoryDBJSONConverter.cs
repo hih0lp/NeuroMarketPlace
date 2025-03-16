@@ -4,7 +4,7 @@ using NeuroWeb.Models;
 
 namespace NeuroWeb.JSONConverters.DataBaseConverters
 {
-    public class CategoryJSONConverter : JsonConverter<List<CategoryParserDTOModel>>
+    public class CategoryDBJSONConverter : JsonConverter<List<CategoryParserDTOModel>>
     {
         public override List<CategoryParserDTOModel>? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {

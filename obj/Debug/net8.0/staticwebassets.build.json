@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "WX+onJGkpOwLcc5BPw5fbK/zUK0esSS7vj8rvHFpOSk=",
+  "Hash": "Zatg4kR1YOGnqTE5Bf2SLEltp3ixS6XF4hmfxMjRDt4=",
   "Source": "PetProjectC#NeuroWeb",
   "BasePath": "_content/PetProjectC#NeuroWeb",
   "Mode": "Default",
@@ -72,6 +72,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\Frame 2.svg"
+    },
+    {
+      "Identity": "c:\\Users\\shaki\\NeuroMarketPlace\\wwwroot\\js\\CategoryPageCatalog.js",
+      "SourceId": "PetProjectC#NeuroWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "c:\\Users\\shaki\\NeuroMarketPlace\\wwwroot\\",
+      "BasePath": "_content/PetProjectC#NeuroWeb",
+      "RelativePath": "js/CategoryPageCatalog.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\CategoryPageCatalog.js"
     },
     {
       "Identity": "c:\\Users\\shaki\\NeuroMarketPlace\\wwwroot\\styles\\CategoryPageStyle.css",

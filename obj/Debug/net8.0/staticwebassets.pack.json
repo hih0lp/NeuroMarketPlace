@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\images\\детдом.svg"
     },
     {
+      "Id": "c:\\Users\\shaki\\NeuroMarketPlace\\wwwroot\\js\\CategoryPageCatalog.js",
+      "PackagePath": "staticwebassets\\js\\CategoryPageCatalog.js"
+    },
+    {
       "Id": "c:\\Users\\shaki\\NeuroMarketPlace\\wwwroot\\styles\\CategoryPageStyle.css",
       "PackagePath": "staticwebassets\\styles\\CategoryPageStyle.css"
     },

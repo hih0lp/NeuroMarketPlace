@@ -97,8 +97,13 @@ async function GetCategories() {
         if (!response.ok) {
             throw new Error(`Fetch Categories Err: ${response.status}`);
         }
-        const objects = await response.json();
-        return objects;
+        const data = await response.json();
+        if (data && Array.isArray(data.categories)) {
+            return data.categories;
+        } else {
+            console.error("GetCategories Err: Invalid JSON format.  Missing 'categories' array.");
+            return [];
+        }
     } catch (error) {
         console.error(`GetCategories Err: ${error}`);
         return [];

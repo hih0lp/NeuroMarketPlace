@@ -6,6 +6,7 @@ using NeuroWeb.Models;
 using PetProjectC_NeuroWeb.JSONConverters.ClientConverters;
 using PetProjectC_NeuroWeb.JSONConverters.ClientConverters;
 using System.Text.Json;
+using static System.Net.WebRequestMethods;
 
 namespace PetProjectC_NeuroWeb.Controllers.CategoryPage
 {
@@ -35,9 +36,12 @@ namespace PetProjectC_NeuroWeb.Controllers.CategoryPage
 
                 foreach (var category in categories)
                 {
-                    var pictureUrl = products.FirstOrDefault(s => s.CategoryName == category.Name)!.PictureUrl;
+                    //string pictureUrl = " ";
+
+
+
                     categoryDTO.name = category.Name;
-                    categoryDTO.pictureUrl = pictureUrl;
+                    categoryDTO.pictureUrl = "https://basket-12.wbbasket.ru/vol1731/part173167/173167093/images/big/1.webp";
 
                     categoryDTOList.Add(categoryDTO);
                 }
@@ -45,11 +49,6 @@ namespace PetProjectC_NeuroWeb.Controllers.CategoryPage
                 //return await context.Response.WriteAsJsonAsync(categoryDTOList, options);
                 return Json(categoryDTOList, options);
             }
-
-
-
-
-            
         }
 
     }

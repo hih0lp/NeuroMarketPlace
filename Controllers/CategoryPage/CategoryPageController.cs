@@ -32,17 +32,20 @@ namespace PetProjectC_NeuroWeb.Controllers.CategoryPage
                 var categories = db.CategoryModels.ToList();
 
                 List<CategoryClientDTOModel> categoryDTOList = new List<CategoryClientDTOModel>();
-                CategoryClientDTOModel categoryDTO = new CategoryClientDTOModel();
+                
 
                 foreach (var category in categories)
                 {
-                    //string pictureUrl = " ";
 
+                    //Console.WriteLine(category.Name);
 
+                    //var pictureUrl = products.FirstOrDefault(s => s.CategoryName == category.Name)!.PictureUrl;
+                    //categoryDTO.name = category.Name;
+                    //categoryDTO.pictureUrl = pictureUrl;
+                    CategoryClientDTOModel categoryDTO = new CategoryClientDTOModel();
 
                     categoryDTO.name = category.Name;
                     categoryDTO.pictureUrl = "https://basket-12.wbbasket.ru/vol1731/part173167/173167093/images/big/1.webp";
-
                     categoryDTOList.Add(categoryDTO);
                 }
 
@@ -50,6 +53,5 @@ namespace PetProjectC_NeuroWeb.Controllers.CategoryPage
                 return Json(categoryDTOList, options);
             }
         }
-
     }
 }

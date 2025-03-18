@@ -20,6 +20,7 @@
     />
   </head>
   <body>
+    <script src="~/js/CategoryPageCatalog.js" defer></script>
     <header class="header">
       <a href="#" class="logo">
         <img src="../images/Estate_House.svg" alt="Логотип" />
@@ -48,7 +49,7 @@
         <p class="catalog-text2">Каталог мебели</p>
       </div>
     </main>
-
+    
     <div class='container2' id="category-container">
       <div class="item" id="example">
         <div class="ded" class="category-name">
@@ -59,73 +60,5 @@
       </div>
       <!-- здесь был Никита-->
     </div>
-
-    <!-- ху№ню ниже написал Азат -->
-    <script type="text/javascript">
-        document.addEventListener('DOMContentLoaded', () => {
-
-        const categoryContainer = document.getElementById('category-container');
-        const categoryTemplate = document.querySelector('.category-template');
-
-        if (!categoryContainer || !categoryTemplate) {
-          console.error("Не найден контейнер категорий или шаблон категории!");
-          return;
-        }
-
-        async function fetchCategories() {
-          try {
-            const response = await fetch('CategoryPage/GetCategories');
-            if (!response.ok) {
-              throw new Error(`HTTP error! Status: ${response.status}`);
-            }
-            const categories = await response.json();
-            return categories;
-          } catch (error) {
-            console.error("Ошибка при загрузке категорий:", error);
-            return [];
-          }
-        }
-
-        async function createCategoryElement(category) {
-          const categoryDiv = categoryTemplate.cloneNode(true);
-          categoryDiv.classList.remove('category-template');
-          categoryDiv.style.display = '';
-
-          const categoryImage = categoryDiv.querySelector('.category-image');
-          const categoryName = categoryDiv.querySelector('.category-name');
-
-          if (!categoryImage || !categoryName) {
-            console.error("Не найден элемент изображения или имени категории в шаблоне!");
-            return null;
-          }
-
-          categoryImage.src = category.pictureUrl;
-          categoryImage.alt = category.name;
-          categoryName.textContent = category.name;
-
-          return categoryDiv;
-        }
-
-
-        async function displayCategories() {
-          const categories = await fetchCategories();
-
-          if (categories.length === 0) {
-            console.warn("Нет категорий для отображения.");
-            return;
-          }
-
-          for (const category of categories) {
-            const categoryElement = await createCategoryElement(category);
-
-            if (categoryElement) {
-              categoryContainer.appendChild(categoryElement);
-            }
-          }
-        }
-
-        displayCategories();
-      });
-    </script>
   </body>
 </html>

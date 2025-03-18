@@ -6,12 +6,14 @@ async function GetCategories() {
             throw new Error(`Fetch Categories Err: ${response.status}`);
         }
         const objects = await response.json();
+        console.log(objects)
         return objects;
     } catch (error) {
         console.error(`GetCategories Err: ${error}`);
         return [];
     }
 }
+
 
 async function GetImg(furl) {
     if (!furl) {

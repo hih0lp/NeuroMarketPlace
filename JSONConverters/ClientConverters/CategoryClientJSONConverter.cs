@@ -22,7 +22,7 @@ namespace PetProjectC_NeuroWeb.JSONConverters.ClientConverters
                 writer.WriteString("name", category.name);
                 writer.WriteString("pictureUrl", category.pictureUrl);
             } 
-        
+            writer.WriteEndArray();
         }
 
 

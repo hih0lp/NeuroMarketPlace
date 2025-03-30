@@ -19,7 +19,7 @@ namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
 
             HttpClient client = new HttpClient();
             HttpResponseMessage response = await client.GetAsync("https://localhost:7259/wildberries/categories");
-
+                
 
             if (response.IsSuccessStatusCode)
             {
@@ -68,15 +68,9 @@ namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
             JsonSerializerOptions options = new JsonSerializerOptions();
             options.Converters.Add(new ProductsJSONConverter());
 
-            //HttpClientHandler handler = new HttpClientHandler()
-            //{
-            //    AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate
-            //};
-
             HttpClient client = new HttpClient();
-            client.Timeout = TimeSpan.FromMinutes(35);
+            client.Timeout = TimeSpan.FromDays(1);
 
-            //HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Connect, "https://localhost:7259/wildberries/products");
             HttpResponseMessage response = await client.GetAsync("https://localhost:7259/wildberries/products");
 
 
@@ -87,15 +81,16 @@ namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
                 
                 foreach (var productDTO in productsDTOList)
                 {
+                    
+
                     using (var db = new DataBase())
                     {
                         var productsList = db.ProductModels.ToList();
 
                         var product = productsList.FirstOrDefault(s => s.Name == productDTO.name);
 
-                        if (product == null)
+                        if (product == null && productDTO.url != null)
                         {
-                            Console.WriteLine(111111);
                             DataBaseProductModel DBProductModel = new DataBaseProductModel(
                                 productDTO.id,
                                 productDTO.name,

@@ -6,6 +6,7 @@ using NeuroWeb.Models;
 using PetProjectC_NeuroWeb.JSONConverters.ClientConverters;
 using PetProjectC_NeuroWeb.JSONConverters.ClientConverters;
 using System.Text.Json;
+//using Microsoft
 using static System.Net.WebRequestMethods;
 
 namespace PetProjectC_NeuroWeb.Controllers.CategoryPage
@@ -20,7 +21,7 @@ namespace PetProjectC_NeuroWeb.Controllers.CategoryPage
 
 
         [HttpGet]
-        public async Task<JsonResult> GetCategories()
+        public async Task<JsonResult> GetCategories(bool isMainCategory = true)
         {
 
             JsonSerializerOptions options = new JsonSerializerOptions();
@@ -32,18 +33,33 @@ namespace PetProjectC_NeuroWeb.Controllers.CategoryPage
                 var categories = db.CategoryModels.ToList();
 
                 List<CategoryClientDTOModel> categoryDTOList = new List<CategoryClientDTOModel>();
-                CategoryClientDTOModel categoryDTO = new CategoryClientDTOModel();
+                
 
                 foreach (var category in categories)
-                {
-                    //string pictureUrl = " ";
-
-
+                { 
+                    CategoryClientDTOModel categoryDTO = new CategoryClientDTOModel();
 
                     categoryDTO.name = category.Name;
                     categoryDTO.pictureUrl = "https://basket-12.wbbasket.ru/vol1731/part173167/173167093/images/big/1.webp";
+                    
+                    //categoryDTO.pictureUrl = products.Where(p => p.CategoryName == category.Name).FirstOrDefault().PictureUrl; //это верно
 
-                    categoryDTOList.Add(categoryDTO);
+                    if (isMainCategory)
+                    {
+                        if (category.IsChildrenOnly)
+                        {
+                            categoryDTOList.Add(categoryDTO);
+                        }
+                    }
+
+                    else if (!category.IsChildrenOnly)
+                    {
+                        categoryDTOList.Add(categoryDTO);
+                    }
+
+                    
+
+                    
                 }
 
                 //return await context.Response.WriteAsJsonAsync(categoryDTOList, options);
@@ -51,5 +67,9 @@ namespace PetProjectC_NeuroWeb.Controllers.CategoryPage
             }
         }
 
+        //Убрать логику в модель 
+
+
+        
     }
 }

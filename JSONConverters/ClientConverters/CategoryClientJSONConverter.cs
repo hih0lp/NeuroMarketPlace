@@ -14,17 +14,23 @@ namespace PetProjectC_NeuroWeb.JSONConverters.ClientConverters
            
 
         public override void Write(Utf8JsonWriter writer, List<CategoryClientDTOModel> value, JsonSerializerOptions options)
-        { 
+        {
+            writer.WriteStartObject();
+
+            writer.WritePropertyName("categories");
+
             writer.WriteStartArray();
 
             foreach (var category in value)
             {
+                writer.WriteStartObject();
                 writer.WriteString("name", category.name);
                 writer.WriteString("pictureUrl", category.pictureUrl);
+                writer.WriteEndObject();
             } 
             writer.WriteEndArray();
+
+            writer.WriteEndObject();
         }
-
-
     }
 }

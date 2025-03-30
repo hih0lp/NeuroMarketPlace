@@ -126,7 +126,7 @@
   
   
   .container2 {
-      visibility: hidden;
+      display: none;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;

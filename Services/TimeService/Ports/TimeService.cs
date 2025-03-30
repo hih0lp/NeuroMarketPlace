@@ -11,18 +11,10 @@ namespace PetProjectC_NeuroWeb.Services.TimeService.Ports
         {
            foreach (var parserService in parserServices)
            {
-                Timer timer = new Timer(new TimerCallback(parserService.AddCategoryInDB), null, 0, 60480000);
+                Timer categoriesTimer = new Timer(new TimerCallback(parserService.AddCategoryInDB), null, 0, 60480000);
+                Timer productsTimer = new Timer(new TimerCallback(parserService.AddProductsInDB), null, 0, 60480000);
            }
-        }
-
-        //public async Task GetRequest()
-        //{
-        //    foreach (var service in _parserServices)
-        //    {
-                
-        //    }
-        //}
-        
+        }     
         
     }
 }

@@ -3,6 +3,6 @@
     public interface IParserService
     {
         public void AddCategoryInDB(object state);
-        public Task AddProductInDB();
+        public void AddProductsInDB(object state);
     }
 }

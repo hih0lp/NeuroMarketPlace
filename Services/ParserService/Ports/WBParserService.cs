@@ -1,10 +1,10 @@
-﻿using NeuroWeb.JSONConverters.DataBaseConverters;
+﻿using PetProjectC_NeuroWeb.JSONConverters.WildberriesJSONConverter.ClientConverters;
+using PetProjectC_NeuroWeb.JSONConverters.WildberriesJSONConverter.DataBaseConverters;
 using NeuroWeb.Models;
 using PetProjectC_NeuroWeb.Services.ParserService.Interface;
 using System.Text.Json;
 using PetProjectC_NeuroWeb;
 using NeuroWeb;
-using PetProjectC_NeuroWeb.JSONConverters.DataBaseConverters;
 using System.Net;
 
 namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
@@ -14,7 +14,7 @@ namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
         public async void AddCategoryInDB(object state)
         {
             JsonSerializerOptions options = new JsonSerializerOptions();
-            options.Converters.Add(new CategoryDBJSONConverter());
+            options.Converters.Add(new WBCategoryDBJSONConverter());
 
 
             HttpClient client = new HttpClient();
@@ -24,7 +24,7 @@ namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
             if (response.IsSuccessStatusCode)
             {
 
-                List<CategoryParserDTOModel> categoryDTOList = await response.Content.ReadFromJsonAsync<List<CategoryParserDTOModel>>(options);
+                List<CategoryModel> categoryDTOList = await response.Content.ReadFromJsonAsync<List<CategoryModel>>(options); //DTO категорий (парсер)
 
                 foreach (var categoryDTO in categoryDTOList)
                 {
@@ -37,7 +37,7 @@ namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
 
 
 
-                            var category = categoryList.FirstOrDefault(s => s.Name == categoryDTO.name);
+                            var category = categoryList.FirstOrDefault(s => s.Name == categoryDTO.Name);
 
 
                             if (category == null)
@@ -46,10 +46,10 @@ namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
                                 //List<DataBaseProductModel> list = null!;
 
                                 DataBaseCategoryModel DBCategoryModel = new DataBaseCategoryModel(
-                                    categoryDTO.id,
-                                    categoryDTO.name,
-                                    categoryDTO.relationRef,
-                                    categoryDTO.isChildrenOnly);
+                                    categoryDTO.Id,
+                                    categoryDTO.Name,
+                                    categoryDTO.RelationRef,
+                                    categoryDTO.IsChildrenOnly);
 
                                 db.CategoryModels.Add(DBCategoryModel);
                                 await db.SaveChangesAsync();
@@ -66,7 +66,7 @@ namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
         public async void AddProductsInDB(object state)
         {
             JsonSerializerOptions options = new JsonSerializerOptions();
-            options.Converters.Add(new ProductsJSONConverter());
+            options.Converters.Add(new WBProductsJSONConverter());
 
             HttpClient client = new HttpClient();
             client.Timeout = TimeSpan.FromDays(1);

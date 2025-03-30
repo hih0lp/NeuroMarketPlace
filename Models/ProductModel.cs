@@ -53,4 +53,16 @@ namespace NeuroWeb.Models
 
     }
 
+    /*public*/ class Product
+    {
+        public Product() { }
+
+
+
+
+        public async Task PutProductsInDBAsync()
+        {
+
+        }
+    }
 }

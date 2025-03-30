@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using NeuroWeb.Models;
 using System.Text.Json;
-using NeuroWeb.JSONConverters.DataBaseConverters;
 using NeuroWeb;
 
 namespace PetProjectC_NeuroWeb.Controllers.Parsers

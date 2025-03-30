@@ -2,9 +2,9 @@
 using System.Text.Json;
 using NeuroWeb.Models;
 
-namespace PetProjectC_NeuroWeb.JSONConverters.DataBaseConverters
+namespace PetProjectC_NeuroWeb.JSONConverters.WildberriesJSONConverter.DataBaseConverters
 {
-    public class ProductsJSONConverter : JsonConverter<List<ProductDTOModel>>
+    public class WBProductsJSONConverter : JsonConverter<List<ProductDTOModel>>
     {
         public override List<ProductDTOModel>? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {
@@ -26,7 +26,7 @@ namespace PetProjectC_NeuroWeb.JSONConverters.DataBaseConverters
                     var propertyName = reader.GetString();
                     reader.Read();
 
-                    switch(propertyName)
+                    switch (propertyName)
                     {
                         case "id":
                             models.Add(new ProductDTOModel());
@@ -52,7 +52,7 @@ namespace PetProjectC_NeuroWeb.JSONConverters.DataBaseConverters
                         case "url":
                             url = reader.GetString();
                             models.Last().url = url;
-                            break;                          
+                            break;
                         case "price":
                             price = reader.GetInt32();
                             models.Last().price = price;
@@ -69,6 +69,6 @@ namespace PetProjectC_NeuroWeb.JSONConverters.DataBaseConverters
 
 
         public override void Write(Utf8JsonWriter writer, List<ProductDTOModel> value, JsonSerializerOptions options)
-        {  }
+        { }
     }
 }

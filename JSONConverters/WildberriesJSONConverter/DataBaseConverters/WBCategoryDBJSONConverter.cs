@@ -2,13 +2,13 @@
 using System.Text.Json;
 using NeuroWeb.Models;
 
-namespace NeuroWeb.JSONConverters.DataBaseConverters
+namespace PetProjectC_NeuroWeb.JSONConverters.WildberriesJSONConverter.DataBaseConverters
 {
-    public class CategoryDBJSONConverter : JsonConverter<List<CategoryParserDTOModel>>
+    public class WBCategoryDBJSONConverter : JsonConverter<List<CategoryModel>>
     {
-        public override List<CategoryParserDTOModel>? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+        public override List<CategoryModel>? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {
-            List<CategoryParserDTOModel> models = new List<CategoryParserDTOModel>();
+            List<CategoryModel> models = new List<CategoryModel>();
             var id = 0;
             var name = "Undefined";
             var relationRef = "Undefined";
@@ -25,24 +25,24 @@ namespace NeuroWeb.JSONConverters.DataBaseConverters
                     switch (propertyName)
                     {
                         case "id":
-                            models.Add(new CategoryParserDTOModel());
+                            models.Add(new CategoryModel());
                             id = reader.GetInt32();
-                            models.Last().id = id;
+                            models.Last().Id = id;
                             break;
 
                         case "name":
                             name = reader.GetString();
-                            models.Last().name = name;
+                            models.Last().Name = name;
                             break;
 
                         case "url":
                             relationRef = reader.GetString();
-                            models.Last().relationRef = relationRef;
+                            models.Last().RelationRef = relationRef;
                             break;
 
                         case "childrenOnly":
                             isChildrenOnly = reader.GetBoolean();
-                            models.Last().isChildrenOnly = isChildrenOnly;
+                            models.Last().IsChildrenOnly = isChildrenOnly;
                             break;
 
                     }
@@ -52,7 +52,7 @@ namespace NeuroWeb.JSONConverters.DataBaseConverters
             return models;
         }
 
-        public override void Write(Utf8JsonWriter writer, List<CategoryParserDTOModel> value, JsonSerializerOptions options)
+        public override void Write(Utf8JsonWriter writer, List<CategoryModel> value, JsonSerializerOptions options)
         { }
 
 

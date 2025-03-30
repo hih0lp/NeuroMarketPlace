@@ -1,10 +1,11 @@
-﻿using NeuroWeb.JSONConverters.DataBaseConverters;
+﻿using PetProjectC_NeuroWeb.JSONConverters.WildberriesJSONConverter.ClientConverters;
+using PetProjectC_NeuroWeb.JSONConverters.WildberriesJSONConverter.DataBaseConverters;
 using NeuroWeb.Models;
 using PetProjectC_NeuroWeb.Services.ParserService.Interface;
 using System.Text.Json;
 using PetProjectC_NeuroWeb;
 using NeuroWeb;
-using PetProjectC_NeuroWeb.JSONConverters.DataBaseConverters;
+using System.Net;
 
 namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
 {
@@ -13,17 +14,17 @@ namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
         public async void AddCategoryInDB(object state)
         {
             JsonSerializerOptions options = new JsonSerializerOptions();
-            options.Converters.Add(new CategoryJSONConverter());
+            options.Converters.Add(new WBCategoryDBJSONConverter());
 
 
             HttpClient client = new HttpClient();
-            HttpResponseMessage response = await client.GetAsync("http://gavno.somee.com/wildberries/categories");
-
+            HttpResponseMessage response = await client.GetAsync("https://localhost:7259/wildberries/categories");
+                
 
             if (response.IsSuccessStatusCode)
             {
 
-                List<CategoryDTOModel> categoryDTOList = await response.Content.ReadFromJsonAsync<List<CategoryDTOModel>>(options);
+                List<CategoryModel> categoryDTOList = await response.Content.ReadFromJsonAsync<List<CategoryModel>>(options); //DTO категорий (парсер)
 
                 foreach (var categoryDTO in categoryDTOList)
                 {
@@ -36,7 +37,7 @@ namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
 
 
 
-                            var category = categoryList.FirstOrDefault(s => s.Name == categoryDTO.name);
+                            var category = categoryList.FirstOrDefault(s => s.Name == categoryDTO.Name);
 
 
                             if (category == null)
@@ -45,11 +46,10 @@ namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
                                 //List<DataBaseProductModel> list = null!;
 
                                 DataBaseCategoryModel DBCategoryModel = new DataBaseCategoryModel(
-                                    categoryDTO.id,
-                                    categoryDTO.name,
-                                    categoryDTO.relationRef,
-                                    categoryDTO.isChildrenOnly,
-                                    null);
+                                    categoryDTO.Id,
+                                    categoryDTO.Name,
+                                    categoryDTO.RelationRef,
+                                    categoryDTO.IsChildrenOnly);
 
                                 db.CategoryModels.Add(DBCategoryModel);
                                 await db.SaveChangesAsync();
@@ -61,47 +61,52 @@ namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
             }
         }
 
-        public async Task AddProductInDB()
+
+
+        public async void AddProductsInDB(object state)
         {
             JsonSerializerOptions options = new JsonSerializerOptions();
-            options.Converters.Add(new ProductsJSONConverter());
+            options.Converters.Add(new WBProductsJSONConverter());
 
             HttpClient client = new HttpClient();
-            HttpResponseMessage response = await client.GetAsync("http://gavno.somee.com/wildberries/products");
+            client.Timeout = TimeSpan.FromDays(1);
+
+            HttpResponseMessage response = await client.GetAsync("https://localhost:7259/wildberries/products");
+
 
             if (response.IsSuccessStatusCode)
             {
                 List<ProductDTOModel> productsDTOList = await response.Content.ReadFromJsonAsync<List<ProductDTOModel>>(options);
 
-                if (productsDTOList != null && productsDTOList.Count > 0)
+                
+                foreach (var productDTO in productsDTOList)
                 {
-                    foreach (var productDTO in productsDTOList)
+                    
+
+                    using (var db = new DataBase())
                     {
-                        using (var db = new DataBase())
+                        var productsList = db.ProductModels.ToList();
+
+                        var product = productsList.FirstOrDefault(s => s.Name == productDTO.name);
+
+                        if (product == null && productDTO.url != null)
                         {
-                            var productsList = db.ProductModels.ToList();
+                            DataBaseProductModel DBProductModel = new DataBaseProductModel(
+                                productDTO.id,
+                                productDTO.name,
+                                productDTO.brand,
+                                productDTO.reviewRating,
+                                productDTO.categoryName,
+                                productDTO.url,
+                                productDTO.price,
+                                productDTO.pictureUrl);
 
-                            var product = productsList.FirstOrDefault(s => s.Name == productDTO.name);
-
-                            if (product == null)
-                            {
-                                DataBaseProductModel DBProductModel = new DataBaseProductModel(
-                                    productDTO.id,
-                                    productDTO.name,
-                                    productDTO.brand,
-                                    productDTO.reviewRating,
-                                    productDTO.categoryName,
-                                    productDTO.url,
-                                    productDTO.price,
-                                    productDTO.pictureUrl,
-                                    null);
-
-                                db.ProductModels.Add(DBProductModel);
-                                db.SaveChanges();
-                            } 
+                            db.ProductModels.Add(DBProductModel);
+                            await db.SaveChangesAsync();
                         }
                     }
                 }
+                
             }
         }
 

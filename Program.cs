@@ -5,28 +5,40 @@ using System.Security.Claims;
 using System.Text;
 using Microsoft.AspNetCore.Rewrite;
 using PetProjectC_NeuroWeb.Services.ParserService.Interface;
+using PetProjectC_NeuroWeb.Services.ParserService.Ports;
 using PetProjectC_NeuroWeb.Services.TimeService.Ports;
+using System.Text;
 
 
 
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
-builder.Services.AddTransient<IParserService>();
+builder.Services.AddTransient<IParserService, WBParserService>();
 builder.Services.AddTransient<TimeService>();
 
 
-//var options = new RewriteOptions()
-//    .AddRewrite("products/addproduct", );
     
 
 
 var app = builder.Build();
-app.Services.GetService<TimeService>();
+app.Services.GetService<TimeService>(); //парсер для категорий и продуктов
+
 
 app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=WBParser}/{action=PutCategoryInDB}/{id?}");
+name: "default",
+    pattern: "{controller=CategoryPage}/{action=CategoryPage}/{id?}");
+
+
+
+app.UseStaticFiles();
+
+
+//var staticFilesOptions = new FileServerOptions();
+//staticFilesOptions.DefaultFilesOptions.DefaultFileNames.Clear();
+//staticFilesOptions.DefaultFilesOptions.DefaultFileNames.Add("/documents/CategoryPage.cshtml");
+//app.UseFileServer(staticFilesOptions);
+
 
 app.Run();
 

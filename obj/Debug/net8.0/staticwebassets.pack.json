@@ -1,68 +1,24 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\documents\\LoginPage.html",
-      "PackagePath": "staticwebassets\\documents\\LoginPage.html"
-    },
-    {
-      "Id": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\documents\\MainePage.html",
-      "PackagePath": "staticwebassets\\documents\\MainePage.html"
-    },
-    {
-      "Id": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\documents\\RegistPage.html",
-      "PackagePath": "staticwebassets\\documents\\RegistPage.html"
-    },
-    {
       "Id": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\images\\Estate_House.svg",
       "PackagePath": "staticwebassets\\images\\Estate_House.svg"
     },
     {
-      "Id": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\images\\Mask group.svg",
-      "PackagePath": "staticwebassets\\images\\Mask group.svg"
+      "Id": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\images\\Frame 2.svg",
+      "PackagePath": "staticwebassets\\images\\Frame 2.svg"
     },
     {
-      "Id": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\images\\catalog1.svg",
-      "PackagePath": "staticwebassets\\images\\catalog1.svg"
+      "Id": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\images\\детдом.svg",
+      "PackagePath": "staticwebassets\\images\\детдом.svg"
     },
     {
-      "Id": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\images\\catalog2.svg",
-      "PackagePath": "staticwebassets\\images\\catalog2.svg"
+      "Id": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\js\\CategoryPageCatalog.js",
+      "PackagePath": "staticwebassets\\js\\CategoryPageCatalog.js"
     },
     {
-      "Id": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\images\\catalog3.svg",
-      "PackagePath": "staticwebassets\\images\\catalog3.svg"
-    },
-    {
-      "Id": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\images\\catalog4.svg",
-      "PackagePath": "staticwebassets\\images\\catalog4.svg"
-    },
-    {
-      "Id": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\images\\catalog5.svg",
-      "PackagePath": "staticwebassets\\images\\catalog5.svg"
-    },
-    {
-      "Id": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\images\\catalog_yellow.svg",
-      "PackagePath": "staticwebassets\\images\\catalog_yellow.svg"
-    },
-    {
-      "Id": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\images\\lupa.svg",
-      "PackagePath": "staticwebassets\\images\\lupa.svg"
-    },
-    {
-      "Id": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\images\\new_y.svg",
-      "PackagePath": "staticwebassets\\images\\new_y.svg"
-    },
-    {
-      "Id": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\styles\\LoginPage.css",
-      "PackagePath": "staticwebassets\\styles\\LoginPage.css"
-    },
-    {
-      "Id": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\styles\\MainePageStyle.css",
-      "PackagePath": "staticwebassets\\styles\\MainePageStyle.css"
-    },
-    {
-      "Id": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\styles\\RegistPageStyle.css",
-      "PackagePath": "staticwebassets\\styles\\RegistPageStyle.css"
+      "Id": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\styles\\CategoryPageStyle.css",
+      "PackagePath": "staticwebassets\\styles\\CategoryPageStyle.css"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.PetProjectC#NeuroWeb.Microsoft.AspNetCore.StaticWebAssets.props",

@@ -20,13 +20,13 @@ namespace NeuroWeb
                 ServerVersion.AutoDetect("server=localhost; user=root; password=aternosru123; database=DBTEST;"));
         }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<DataBaseProductModel>()
-                .HasOne(p => p.Category)
-                .WithMany(s => s.Products)
-                .HasForeignKey(e => e.categoryName)
-                .HasPrincipalKey(r => r.Name); 
-        }
+        //protected override void OnModelCreating(ModelBuilder modelBuilder)
+        //{
+        //    modelBuilder.Entity<DataBaseProductModel>()
+        //        .HasOne(p => p.Category)
+        //        .WithMany(s => s.Products)
+        //        .HasForeignKey(e => e.CategoryName)
+        //        .HasPrincipalKey(r => r.Name); 
+        //}
     }
 }

@@ -22,7 +22,7 @@ builder.Services.AddTransient<TimeService>();
 
 
 var app = builder.Build();
-//app.Services.GetService<TimeService>();
+app.Services.GetService<TimeService>(); //парсер для категорий и продуктов
 
 
 app.MapControllerRoute(

@@ -45,3 +45,5 @@
         public bool IsChildrenOnly { get { return _isChildrenOnly; } set { _isChildrenOnly = value; } }
     }
 }
+
+//Сделать логику здесь и перенести ее из контроллера

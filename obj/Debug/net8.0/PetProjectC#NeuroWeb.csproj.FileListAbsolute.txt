@@ -54,3 +54,4 @@ C:\Users\User\source\repos\PetProjectC#NeuroWeb\obj\Debug\net8.0\PetProjectC#Neu
 C:\Users\User\source\repos\PetProjectC#NeuroWeb\obj\Debug\net8.0\ref\PetProjectC#NeuroWeb.dll
 C:\Users\User\source\repos\PetProjectC#NeuroWeb\obj\Debug\net8.0\PetProjectC#NeuroWeb.RazorAssemblyInfo.cache
 C:\Users\User\source\repos\PetProjectC#NeuroWeb\obj\Debug\net8.0\PetProjectC#NeuroWeb.RazorAssemblyInfo.cs
+C:\Users\User\source\repos\PetProjectC#NeuroWeb\bin\Debug\net8.0\libman.json

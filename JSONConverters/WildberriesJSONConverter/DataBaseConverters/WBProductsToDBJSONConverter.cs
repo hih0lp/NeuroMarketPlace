@@ -4,7 +4,7 @@ using NeuroWeb.Models;
 
 namespace PetProjectC_NeuroWeb.JSONConverters.WildberriesJSONConverter.DataBaseConverters
 {
-    public class WBProductsJSONConverter : JsonConverter<List<ProductDTOModel>>
+    public class WBProductsToDBJSONConverter : JsonConverter<List<ProductDTOModel>>
     {
         public override List<ProductDTOModel>? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {

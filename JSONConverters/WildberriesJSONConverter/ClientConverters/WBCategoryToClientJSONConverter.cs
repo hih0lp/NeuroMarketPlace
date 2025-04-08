@@ -4,7 +4,7 @@ using System.Text.Json;
 
 namespace PetProjectC_NeuroWeb.JSONConverters.WildberriesJSONConverter.ClientConverters
 {
-    public class WBCategoryClientJSONConverter : JsonConverter<List<CategoryModel>>
+    public class WBCategoryToClientJSONConverter : JsonConverter<List<CategoryModel>>
     {
         public override List<CategoryModel>? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {

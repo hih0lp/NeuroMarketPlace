@@ -126,7 +126,7 @@
   
   
   .container2 {
-      visibility: hidden;
+      /*visibility: hidden;*/
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
@@ -135,6 +135,17 @@
       margin: 0 auto;
       padding: 20px;
   }
+
+.container3333 {
+    /*visibility: hidden;*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+}
   
   .item {
       box-sizing: border-box;

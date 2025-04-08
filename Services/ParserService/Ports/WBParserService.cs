@@ -14,7 +14,7 @@ namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
         public async void AddCategoryInDB(object state)
         {
             JsonSerializerOptions options = new JsonSerializerOptions();
-            options.Converters.Add(new WBCategoryDBJSONConverter());
+            options.Converters.Add(new WBCategoryToDBJSONConverter());
 
 
             HttpClient client = new HttpClient();
@@ -32,28 +32,23 @@ namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
                     {
                         using (var db = new DataBase())
                         {
-
                             var categoryList = db.CategoryModels.ToList();
-
-
-
                             var category = categoryList.FirstOrDefault(s => s.Name == categoryDTO.Name);
-
 
                             if (category == null)
                             { 
 
                                 //List<DataBaseProductModel> list = null!;
 
-                                DataBaseCategoryModel DBCategoryModel = new DataBaseCategoryModel(
+                                CategoryModel DBCategoryModel = new CategoryModel(
                                     categoryDTO.Id,
                                     categoryDTO.Name,
                                     categoryDTO.RelationRef,
-                                    categoryDTO.IsChildrenOnly);
+                                    categoryDTO.IsChildrenOnly,
+                                    null); //last param = "WB"
 
                                 db.CategoryModels.Add(DBCategoryModel);
                                 await db.SaveChangesAsync();
-
                             }
                         }
                     }
@@ -66,7 +61,7 @@ namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
         public async void AddProductsInDB(object state)
         {
             JsonSerializerOptions options = new JsonSerializerOptions();
-            options.Converters.Add(new WBProductsJSONConverter());
+            options.Converters.Add(new WBProductsToDBJSONConverter());
 
             HttpClient client = new HttpClient();
             client.Timeout = TimeSpan.FromDays(1);
@@ -89,7 +84,7 @@ namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
 
                         var product = productsList.FirstOrDefault(s => s.Name == productDTO.name);
 
-                        if (product == null && productDTO.url != null)
+                        if (product == null && productDTO.pictureUrl != null)
                         {
                             DataBaseProductModel DBProductModel = new DataBaseProductModel(
                                 productDTO.id,

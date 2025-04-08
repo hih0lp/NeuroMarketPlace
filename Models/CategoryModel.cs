@@ -5,44 +5,47 @@ using System.Text.Json;
 namespace NeuroWeb.Models
 {
 
-    public class DataBaseCategoryModel //класс для базы данных
-    {
-        public DataBaseCategoryModel()
-        {
+    //public class DataBaseCategoryModel //класс для базы данных
+    //{
+    //    public DataBaseCategoryModel()
+    //    {
 
-        }
+    //    }
 
-        public DataBaseCategoryModel(int id, string name, string relationRef, bool isChildrenOnly)
-        {
-            _id = id;
-            _name = name;
-            _relationRef = relationRef;
-            _isChildrenOnly = isChildrenOnly;
-        }
+    //    public DataBaseCategoryModel(int id, string name, string relationRef, bool isChildrenOnly)
+    //    {
+    //        _id = id;
+    //        _name = name;
+    //        _relationRef = relationRef;
+    //        _isChildrenOnly = isChildrenOnly;
+    //    }
 
-        private int _id;
-        private string _name;
-        private string _relationRef;
-        private bool _isChildrenOnly;
+    //    private int _id;
+    //    private string _name;
+    //    private string _relationRef;
+    //    private bool _isChildrenOnly;
+    //    //private string _marketPlace;
 
-        public int Id { get { return _id; } set { _id = value; } }
-        public string Name { get { return _name; } set { _name = value; } }
-        public string RelationRef { get { return _relationRef; } set { _relationRef = value; } }
-        public bool IsChildrenOnly { get { return _isChildrenOnly; } set { _isChildrenOnly = value; } }
+    //    public int Id { get { return _id; } set { _id = value; } }
+    //    public string Name { get { return _name; } set { _name = value; } }
+    //    public string RelationRef { get { return _relationRef; } set { _relationRef = value; } }
+    //    public bool IsChildrenOnly { get { return _isChildrenOnly; } set { _isChildrenOnly = value; } }
+    //    //public string MarketPlace { get => _marketPlace; set => _marketPlace = value; }
 
-    }
+    //}
 
 
     public class CategoryModel //класс для действий с категориями и взаимодействием с базой данных
     {
         public CategoryModel() { }
 
-        public CategoryModel(int id, string name, string relationRef, bool isChildrenOnly)
+        public CategoryModel(int id, string name, string relationRef, bool isChildrenOnly, string pictureUrl)
         {
             _id = id;
             _name = name;
             _relationRef = relationRef;
             _isChildrenOnly = isChildrenOnly;
+            _pictureUrl = pictureUrl;
         }
 
         private int _id;
@@ -60,7 +63,7 @@ namespace NeuroWeb.Models
 
 
 
-        public async Task<List<CategoryModel>> GetMainCategoriesAsync()
+        public async Task<List<CategoryModel>> GetCategoriesAsync()
         { 
             using (var db = new DataBase())
             {
@@ -68,22 +71,19 @@ namespace NeuroWeb.Models
                 var categories = db.CategoryModels.ToList();
                 List<CategoryModel> categoryDTOList = new List<CategoryModel>();
 
-
                 foreach (var category in categories)
                 {
                     CategoryModel categoryDTO = new CategoryModel();
-
+                    //categoryDTO.PictureUrl = products.Where(p => p.CategoryName == category.Name).FirstOrDefault().PictureUrl; //это верно
                     categoryDTO.Name = category.Name;
                     categoryDTO.PictureUrl = "https://basket-12.wbbasket.ru/vol1731/part173167/173167093/images/big/1.webp";
 
-                    //categoryDTO.pictureUrl = products.Where(p => p.CategoryName == category.Name).FirstOrDefault().PictureUrl; //это верно
-
-                    if (category.IsChildrenOnly)
+                    if (!categoryDTO.IsChildrenOnly) //все, кроме чилдрен онли, чтоб упростить поиск 
                     {
-                        categoryDTOList.Add(categoryDTO);
+                        categoryDTO.IsChildrenOnly = category.IsChildrenOnly;
                     }
+                    categoryDTOList.Add(categoryDTO);
                 }
-
                 return categoryDTOList;
             }
         }

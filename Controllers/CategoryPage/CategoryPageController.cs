@@ -19,13 +19,13 @@ namespace PetProjectC_NeuroWeb.Controllers.CategoryPage
 
 
         [HttpGet]
-        public async Task<JsonResult> GetCategories()
+        public async Task<JsonResult> GetCategories(string categoryName = "")
         {
             JsonSerializerOptions options = new JsonSerializerOptions();
             options.Converters.Add(new WBCategoryToClientJSONConverter());
             CategoryModel categoryModel = new CategoryModel();
 
-            var categoryList = await categoryModel.GetCategoriesAsync();
+            var categoryList = await categoryModel.GetCategoriesAsync(categoryName);
 
             //List<CategoryModel> categoryList = new List<CategoryModel>();
 

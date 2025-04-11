@@ -1,0 +1,127 @@
+:root {
+    --text-color: #333;
+    --primary-color: rgba(245, 102, 129, 1);
+    --primary-hover-color: rgb(231, 87, 114);
+    --border-radius: 5px;
+    --font-size-small: 1.8vh;
+    --font-size-medium: 2vh;
+    --header-padding: 1vh 2vw;
+    --link-gap: 2vw;
+    --shadow-color: rgba(0, 0, 0, 0.25);
+  }
+  
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: sans-serif;
+  }
+  
+  .header {
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--header-padding);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    box-sizing: border-box;
+    box-shadow: 0 0.2em 0.5em rgba(0, 0, 0, 0.1);
+    width: 100vw; 
+  }
+  
+  .logo {
+    max-width: 15vw;
+  }
+  
+  .logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  
+  .search-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin-left: 2vw;
+    margin-right: 2vw;
+  }
+  
+  .search-container {
+    display: flex;
+    align-items: center;
+    border: 0.1vh solid #ccc;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    width: 100%;
+    max-width: 40vw;
+  }
+  
+  .search-input {
+    flex: 1;
+    padding: 1vh 1.5vw;
+    border: none;
+    outline: none;
+    font-size: var(--font-size-small);
+  }
+  
+  .search-button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1vh 1.5vw;
+    border: none;
+    cursor: pointer;
+    font-size: var(--font-size-small);
+  }
+  
+  .search-button:hover {
+    background-color: var(--primary-hover-color);
+  }
+  
+  .links {
+    display: flex;
+    gap: var(--link-gap);
+  }
+  
+  .links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: var(--font-size-medium);
+  }
+  
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .logo {
+        max-width: 40vw;
+    }
+  
+    .search-wrapper {
+      width: 100%;
+      justify-content: center; 
+      margin-left: 0;
+      margin-right: 0;
+    }
+  
+    .search-container {
+      max-width: 80vw;
+    }
+  
+    .links {
+      flex-direction: row;
+      justify-content: center; 
+      gap: 5vw; 
+      width: 100%;
+    }
+  }

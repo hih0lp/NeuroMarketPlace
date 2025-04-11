@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0jljFTUV9RLe/roOMpZ+iy0t2QXwucNl7uPeO+B6vBg=",
+  "Hash": "9G/ZbGw3NXPA2PckDqnoFM9KEZbnTOisfgTs2kny4IA=",
   "Source": "PetProjectC#NeuroWeb",
   "BasePath": "_content/PetProjectC#NeuroWeb",
   "Mode": "Default",
@@ -110,6 +110,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\styles\\CategoryPageStyle.css"
+    },
+    {
+      "Identity": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\styles\\Subdirectory.css",
+      "SourceId": "PetProjectC#NeuroWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\",
+      "BasePath": "_content/PetProjectC#NeuroWeb",
+      "RelativePath": "styles/Subdirectory.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\styles\\Subdirectory.css"
     }
   ]
 }

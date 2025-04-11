@@ -5,14 +5,15 @@ using NeuroWeb.Models;
 using PetProjectC_NeuroWeb.JSONConverters.WildberriesJSONConverter.ClientConverters;
 using PetProjectC_NeuroWeb.JSONConverters.WildberriesJSONConverter.DataBaseConverters;
 using System.Text.Json;
-//using Microsoft
 using static System.Net.WebRequestMethods;
 
 namespace PetProjectC_NeuroWeb.Controllers.CategoryPage
 {
+
     public class CategoryPageController : Controller
     {
         
+        private static readonly JsonSerializerOptions _jsonOptions = new JsonSerializerOptions { Converters = { new WBCategoryToClientJSONConverter() } };
         public ActionResult CategoryPage()
         {
             return View();
@@ -20,17 +21,15 @@ namespace PetProjectC_NeuroWeb.Controllers.CategoryPage
 
 
         [HttpGet]
-        public async Task<JsonResult> GetCategories()
+        public async Task<JsonResult> GetCategories(string categoryName = "")
         {
-            JsonSerializerOptions options = new JsonSerializerOptions();
-            options.Converters.Add(new WBCategoryClientJSONConverter());
             CategoryModel categoryModel = new CategoryModel();
-            var categoryList = await categoryModel.GetMainCategoriesAsync();
 
+            var categoryList = await categoryModel.GetCategoriesAsync(categoryName);
 
-            //return await context.Response.WriteAsJsonAsync(categoryDTOList, options);
-            return Json(categoryList, options);
             
+
+            return Json(categoryList, _jsonOptions);
         }
     }
 }

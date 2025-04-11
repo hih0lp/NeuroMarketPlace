@@ -4,11 +4,11 @@ using NeuroWeb.Models;
 
 namespace PetProjectC_NeuroWeb.JSONConverters.WildberriesJSONConverter.DataBaseConverters
 {
-    public class WBProductsJSONConverter : JsonConverter<List<ProductDTOModel>>
+    public class WBProductsToDBJSONConverter : JsonConverter<List<ProductModel>>
     {
-        public override List<ProductDTOModel>? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+        public override List<ProductModel>? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {
-            List<ProductDTOModel> models = new List<ProductDTOModel>();
+            List<ProductModel> models = new List<ProductModel>();
 
             int id = 0;
             string name = "Undefined";
@@ -29,37 +29,37 @@ namespace PetProjectC_NeuroWeb.JSONConverters.WildberriesJSONConverter.DataBaseC
                     switch (propertyName)
                     {
                         case "id":
-                            models.Add(new ProductDTOModel());
+                            models.Add(new ProductModel());
                             id = reader.GetInt32();
-                            models.Last().id = id;
+                            models.Last().Id = id;
                             break;
                         case "name":
                             name = reader.GetString();
-                            models.Last().name = name;
+                            models.Last().Name = name;
                             break;
                         case "brand":
                             brand = reader.GetString();
-                            models.Last().brand = brand;
+                            models.Last().Brand = brand;
                             break;
                         case "reviewRating":
                             reviewRating = reader.GetDouble();
-                            models.Last().reviewRating = reviewRating;
+                            models.Last().ReviewRating = reviewRating;
                             break;
                         case "categoryName":
                             categoryName = reader.GetString();
-                            models.Last().categoryName = categoryName;
+                            models.Last().CategoryName = categoryName;
                             break;
                         case "url":
                             url = reader.GetString();
-                            models.Last().url = url;
+                            models.Last().Url = url;
                             break;
                         case "price":
                             price = reader.GetInt32();
-                            models.Last().price = price;
+                            models.Last().Price = price;
                             break;
                         case "picture":
                             pictureUrl = reader.GetString();
-                            models.Last().pictureUrl = pictureUrl;
+                            models.Last().PictureUrl = pictureUrl;
                             break;
                     }
                 }
@@ -68,7 +68,7 @@ namespace PetProjectC_NeuroWeb.JSONConverters.WildberriesJSONConverter.DataBaseC
         }
 
 
-        public override void Write(Utf8JsonWriter writer, List<ProductDTOModel> value, JsonSerializerOptions options)
+        public override void Write(Utf8JsonWriter writer, List<ProductModel> value, JsonSerializerOptions options)
         { }
     }
 }

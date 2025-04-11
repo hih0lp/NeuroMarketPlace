@@ -25,17 +25,19 @@ namespace PetProjectC_NeuroWeb.Controllers.CategoryPage
             options.Converters.Add(new WBCategoryToClientJSONConverter());
             CategoryModel categoryModel = new CategoryModel();
 
-            var allCategories = await categoryModel.GetCategoriesAsync();
-            List<CategoryModel> categoryList = new List<CategoryModel>();
+            var categoryList = await categoryModel.GetCategoriesAsync();
 
-            foreach (var category in allCategories)
-            {
-                if (!category.IsChildrenOnly)
-                {
-                    categoryList.Add(category);
-                }
-            }
+            //List<CategoryModel> categoryList = new List<CategoryModel>();
+
+            //foreach (var category in allCategories)
+            //{
+            //    if (!category.IsChildrenOnly)
+            //    {
+            //        categoryList.Add(category);
+            //    }
+            //}
             //return await context.Response.WriteAsJsonAsync(categoryDTOList, options);
+
             return Json(categoryList, options);
         }
     }

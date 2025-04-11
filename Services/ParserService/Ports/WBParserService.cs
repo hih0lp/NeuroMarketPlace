@@ -71,7 +71,7 @@ namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
 
             if (response.IsSuccessStatusCode)
             {
-                List<ProductDTOModel> productsDTOList = await response.Content.ReadFromJsonAsync<List<ProductDTOModel>>(options);
+                List<ProductModel> productsDTOList = await response.Content.ReadFromJsonAsync<List<ProductModel>>(options);
 
                 
                 foreach (var productDTO in productsDTOList)
@@ -82,19 +82,19 @@ namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
                     {
                         var productsList = db.ProductModels.ToList();
 
-                        var product = productsList.FirstOrDefault(s => s.Name == productDTO.name);
+                        var product = productsList.FirstOrDefault(s => s.Name == productDTO.Name);
 
-                        if (product == null && productDTO.pictureUrl != null)
+                        if (product == null && productDTO.PictureUrl != null)
                         {
-                            DataBaseProductModel DBProductModel = new DataBaseProductModel(
-                                productDTO.id,
-                                productDTO.name,
-                                productDTO.brand,
-                                productDTO.reviewRating,
-                                productDTO.categoryName,
-                                productDTO.url,
-                                productDTO.price,
-                                productDTO.pictureUrl);
+                            ProductModel DBProductModel = new ProductModel(
+                                productDTO.Id,
+                                productDTO.Name,
+                                productDTO.Brand,
+                                productDTO.ReviewRating,
+                                productDTO.CategoryName,
+                                productDTO.Url,
+                                productDTO.Price,
+                                productDTO.PictureUrl);
 
                             db.ProductModels.Add(DBProductModel);
                             await db.SaveChangesAsync();

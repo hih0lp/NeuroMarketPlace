@@ -12,7 +12,7 @@ namespace NeuroWeb
         }
 
         public DbSet<CategoryModel> CategoryModels { get; set; }
-        public DbSet<DataBaseProductModel> ProductModels { get; set; }
+        public DbSet<ProductModel> ProductModels { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

@@ -49,45 +49,62 @@ namespace NeuroWeb.Models
         }
 
         private int _id;
-        private string _name;
-        private string _relationRef;
+        private string _name = null!;
+        private string _relationRef = null!;
         private bool _isChildrenOnly;
-        private string _pictureUrl;
+        private string? _pictureUrl;
 
 
         public int Id { get { return _id; } set { _id = value; } }
         public string Name { get { return _name; } set { _name = value; } }
         public string RelationRef { get { return _relationRef; } set { _relationRef = value; } }
         public bool IsChildrenOnly { get { return _isChildrenOnly; } set { _isChildrenOnly = value; } }
-        public string PictureUrl { get { return _pictureUrl; } set { _pictureUrl = value; } }
+        public string? PictureUrl { get { return _pictureUrl; } set { _pictureUrl = value; } }
 
 
 
-        public async Task<List<CategoryModel>> GetCategoriesAsync()
+        public async Task<List<CategoryModel>> GetCategoriesAsync(string categoryName = "")
         { 
             using (var db = new DataBase())
             {
                 var products = db.ProductModels.ToList();
-                var categories = db.CategoryModels.ToList();
+                var categoryList = db.CategoryModels.ToList();
+                string categoryUrl;
                 List<CategoryModel> categoryDTOList = new List<CategoryModel>();
 
-                foreach (var category in categories)
-                {
-                    CategoryModel categoryDTO = new CategoryModel();
-                    //categoryDTO.PictureUrl = products.Where(p => p.CategoryName == category.Name).FirstOrDefault().PictureUrl; //это верно
-                    categoryDTO.Name = category.Name;
-                    categoryDTO.PictureUrl = "https://basket-12.wbbasket.ru/vol1731/part173167/173167093/images/big/1.webp";
 
-                    if (!categoryDTO.IsChildrenOnly) //все, кроме чилдрен онли, чтоб упростить поиск 
+
+                foreach (var category in categoryList)
+                {
+                    if (categoryName != string.Empty)
                     {
-                        categoryDTO.IsChildrenOnly = category.IsChildrenOnly;
+                        if (category.Name == categoryName)
+                        {
+                            categoryUrl = category.RelationRef;
+
+                            categoryDTOList = categoryList.Where(x => x.RelationRef.Split('/').Count() == categoryUrl.Split('/').Count()).ToList();
+
+                            return categoryDTOList;
+                        }
                     }
-                    categoryDTOList.Add(categoryDTO);
+                    else
+                    {
+                        CategoryModel categoryDTO = new CategoryModel();
+                        //categoryDTO.PictureUrl = products.Where(p => p.CategoryName == category.Name).FirstOrDefault().PictureUrl; //это верно
+                        categoryDTO.Name = category.Name;
+                        categoryDTO.PictureUrl = "https://basket-12.wbbasket.ru/vol1731/part173167/173167093/images/big/1.webp";
+                        categoryDTO.IsChildrenOnly = category.IsChildrenOnly;
+
+                        if (categoryDTO.IsChildrenOnly)  
+                        {
+                            categoryDTOList.Add(categoryDTO);
+                            Console.WriteLine(111111);
+                        }
+                    }
                 }
                 return categoryDTOList;
             }
         }
     }
 }
-
-//Сделать логику здесь и перенести ее из контроллера
+//Протестить парсер на данной модели, в случае неудачи, вероятно, в случае неудачи раскомментировать

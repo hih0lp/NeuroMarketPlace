@@ -82,7 +82,7 @@ namespace NeuroWeb.Models
                         {
                             categoryUrl = category.RelationRef;
 
-                            categoryDTOList = categoryList.Where(x => x.RelationRef.Split('/').Count() == categoryUrl.Split('/').Count()).ToList();
+                            categoryDTOList = categoryList.Where(x => x.RelationRef.Split('/').Count() == categoryUrl.Split('/').Count() + 1).ToList();
 
                             Console.WriteLine("huy pizda zalupa");
 

@@ -18,15 +18,13 @@ builder.Services.AddTransient<IParserService, WBParserService>();
 builder.Services.AddTransient<TimeService>();
 
 
-    
-
 
 var app = builder.Build();
 app.Services.GetService<TimeService>(); //парсер для категорий и продуктов
 
 
 app.MapControllerRoute(
-name: "default",
+    name: "default",
     pattern: "{controller=CategoryPage}/{action=CategoryPage}/{id?}");
 
 

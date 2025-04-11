@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>сколько пенсионеров умерает в России?</title>
+    <link rel="stylesheet" href="../styles/CategoryPageStyle.css">
+    <link rel="stylesheet" href="../styles/CategoryPageStyle.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Goldman:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      :root {
+        --text-color: #333;
+        --primary-color: rgba(245, 102, 129, 1);
+        --primary-hover-color: rgb(231, 87, 114);
+        --border-radius: 5px;
+        --font-size-small: 1.8vh;
+        --font-size-medium: 2vh;
+        --header-padding: 1vh 2vw;
+        --link-gap: 2vw;
+        --shadow-color: rgba(0, 0, 0, 0.25);
+      }
+
+      * {
+        overflow-x: hidden;
+      }
+
+      body {
+        margin: 0;
+        font-family: sans-serif;
+      }
+
+      .header {
+        background-color: rgba(255, 255, 255, 1);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: var(--header-padding);
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        box-sizing: border-box;
+        box-shadow: 0 0.2em 0.5em rgba(0, 0, 0, 0.1);
+        width: 100vw;
+      }
+
+      .logo {
+        max-width: 15vw;
+      }
+
+      .logo img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .search-wrapper {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        margin-left: 2vw;
+        margin-right: 2vw;
+      }
+
+      .search-container {
+        display: flex;
+        align-items: center;
+        border: 0.1vh solid #ccc;
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        width: 100%;
+        max-width: 40vw;
+      }
+
+      .search-input {
+        flex: 1;
+        padding: 1vh 1.5vw;
+        border: none;
+        outline: none;
+        font-size: var(--font-size-small);
+      }
+
+      .search-button {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 1vh 1.5vw;
+        border: none;
+        cursor: pointer;
+        font-size: var(--font-size-small);
+      }
+
+      .search-button:hover {
+        background-color: var(--primary-hover-color);
+      }
+
+      .links {
+        display: flex;
+        gap: var(--link-gap);
+      }
+
+      .links a {
+        text-decoration: none;
+        color: var(--text-color);
+        font-size: var(--font-size-medium);
+      }
+
+      @media (max-width: 768px) {
+        .header {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .logo {
+          max-width: 40vw;
+        }
+
+        .search-wrapper {
+          width: 100%;
+          justify-content: center;
+          margin-left: 0;
+          margin-right: 0;
+        }
+
+        .search-container {
+          max-width: 80vw;
+        }
+
+        .links {
+          flex-direction: row;
+          justify-content: center;
+          gap: 5vw;
+          width: 100%;
+        }
+      }
+
+      .container2 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        width: 90%;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .item {
+        box-sizing: border-box;
+        text-align: center;
+        margin: 10px;
+        box-shadow: 0 0.4em 1em var(--shadow-color);
+        border-radius: 0.8vw;
+      }
+
+      .item a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        color: black;
+      } 
+
+      .item img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        transform: scale(0.8);
+      }
+
+      @media (min-width: 992px) {
+        .item {
+          width: calc(25% - 20px);
+        }
+      }
+
+      @media (min-width: 768px) and (max-width: 991px) {
+        .item {
+          width: calc(33.33% - 20px);
+        }
+      }
+
+      @media (max-width: 767px) {
+        .item {
+          width: calc(50% - 20px);
+        }
+        .container2 {
+          padding: 10px;
+        }
+      }
+
+      :root {
+        --text-color: #333;
+        --font-size-medium: 2.5vh;
+        --logo-max-width: 50vw;
+      }
+
+      main {
+        padding: 2vh 0;
+      }
+
+      .content-wrapper2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .logo-container2 {
+        margin-bottom: 2vh;
+      }
+
+      .logo-container2 img {
+        max-width: var(--logo-max-width);
+        height: auto;
+        display: flex;
+      }
+
+      .catalog-text2 {
+        font-size: var(--font-size-medium);
+        color: var(--text-color);
+        margin-top: 2vw;
+        font-weight: 600;
+        letter-spacing: 0%;
+        font-size: 1.8vw;
+      }
+
+      @media (max-width: 768px) {
+        :root {
+          --logo-max-width: 80vw;
+          --font-size-medium: 3vh;
+        }
+      }
+
+      .ded {
+        font-weight: 600;
+        font-size: 1.8vw;
+        letter-spacing: 0%;
+        text-align: center;
+        padding: 0.9vw;
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      .page-container {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 60px; /* Увеличиваем отступы от краев страницы */
+        }
+
+        /* Заголовок */
+        h1 {
+            text-align: left;
+        }
+
+        /* Контейнер для карточек */
+        .products-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px; /* Увеличиваем расстояние между карточками */
+            margin-top: 20px;
+        }
+
+        /* Карточка товара (ссылка) */
+        .product-card {
+            display: flex;
+            flex-direction: column;
+            border-radius: 8px;
+            overflow: hidden;
+            text-decoration: none;
+            color: #333;
+            transition: transform 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Добавляем легкую тень вместо рамки */
+            background-color: #fff; /* Добавляем белый фон, чтобы тень была видна */
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Изображение товара */
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        /* Информация о товаре */
+        .product-info {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            flex: 1; /* Позволяет информации занимать все доступное пространство по высоте */
+        }
+
+        /* Цена товара */
+        .product-price {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+
+        /* Название товара */
+        .product-name {
+            font-size: 1em;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        /* Оценка товара */
+        .product-rating {
+            display: flex;
+            align-items: center;
+            text-align: left;
+        }
+
+        /* Звезды рейтинга */
+        .product-rating .stars {
+            color: gold;
+            font-size: 1.1em;
+        }
+
+        /* Текст "Читать отзывы" */
+        .product-rating .reviews {
+            margin-left: 5px;
+            color: rgba(0, 0, 0, 0.5);
+            font-size: 0.9em;
+        }
+
+        /* Кнопка "Подробнее" */
+        .product-button {
+            background-color: #ffc107;
+            color: #000;
+            padding: 10px 15px;
+            border-radius: 25px;
+            text-align: center;
+            text-decoration: none; /* Убираем подчеркивание, т.к. это не отдельная ссылка */
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+            width: 80%;
+            margin: 10px auto 15px; /* Центрируем кнопку */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-button:hover {
+            background-color: #ffda64;
+        }
+
+        .product-button img {
+            width: 20px;
+            height: 20px;
+            margin-left: 5px;
+            vertical-align: middle;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .products-container {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 20px; /* Уменьшаем расстояние между карточками на маленьких экранах */
+            }
+
+            .product-card img {
+                height: 150px;
+            }
+
+            .page-container {
+              padding: 20px; /* Уменьшаем отступ на маленьких экранах */
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /* Общие стили страницы */
+        .page-container {
+            font-family: sans-serif;
+            padding: 30px;
+            margin-top: 60px;
+        }
+
+        /* Контейнер для заголовка и кнопки */
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center; /* Выравниваем элементы по центру вертикально */
+            margin-bottom: 10px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Заголовок "Производители" */
+        .manufacturers-title {
+            font-weight: bold;
+            margin: 0;
+            position: relative; /*  Для позиционирования относительно самого себя */
+            top: -5px; /* Сдвигаем немного вверх */
+        }
+
+        /* Кнопка "Все производители" */
+        .all-manufacturers-button {
+            background-color: white;
+            color: black;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: auto;
+            text-align: center;
+            display: inline-block; /* Возвращаем inline-block */
+            text-decoration: none; /*  Возвращаем text-decoration */
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        .all-manufacturers-button:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* Контейнер для блоков с производителями */
+        .manufacturers-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /*  Увеличиваем minmax для 5 блоков в строке */
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Блок с производителем (ссылка) */
+        .manufacturer-block {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            text-decoration: none;
+            color: inherit;
+            overflow: hidden;
+            position: relative;
+            min-height: 120px;
+            transition: transform 0.3s ease;
+        }
+
+        .manufacturer-block:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Изображение производителя */
+        .manufacturer-image {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 8px;
+            display: block;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            object-fit: contain;
+            transform: scale(0.75);
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .manufacturers-container {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                gap: 10px;
+                padding: 10px;
+            }
+
+            .header-container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 0;
+            }
+
+            .manufacturers-title {
+                margin-bottom: 5px;
+                padding-left: 0;
+                top: 0; /*  Убираем сдвиг на маленьких экранах */
+            }
+
+            .all-manufacturers-button {
+                width: auto;
+                padding: 6px 12px;
+            }
+        }
+
+
+
+
+
+
+/*самый первый блок с гемором*/
+.container_3 {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 900px;
+            margin: 20px auto;
+            gap: 30px;
+        }
+
+        .block_3 {
+            width: 220px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+            background-color: white;
+            align-items: center;
+            text-align: center;
+            text-decoration: none; /*  Убираем подчеркивание у ссылок */
+            color: inherit; /*  Наследуем цвет от родителя (чтобы текст не был синим) */
+        }
+
+        .block_3:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .block-content_3 {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .block-text_3 {
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .block-image-container_3 {
+            margin-top: auto;
+            padding: 10px;
+        }
+
+        .block-image_3 {
+            width: 100%;
+            max-height: 150px;
+            object-fit: contain;
+            display: block;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 600px) {
+            .container_3 {
+                justify-content: center;
+            }
+            .block_3 {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .block-image_3 {
+                max-height: 100px;
+            }
+        }
+
+
+
+
+
+    </style>
+  </head>
+  <body>
+
+    
+<!--ушанка-->
+    <header class="header">
+      <a href="#" class="logo">
+        <img src="../images/Estate_House.svg" alt="Логотип" />
+      </a>
+
+      <div class="search-wrapper">
+        <div class="search-container">
+          <button class="search-button" aria-label="Поиск">
+            <i class="fas fa-search"></i>
+          </button>
+          <input type="text" class="search-input" placeholder="Поиск..." />
+        </div>
+      </div>
+
+      <nav class="links">
+        <a href="#">Сравнение</a>
+        <a href="#">Профиль</a>
+      </nav>
+    </header>
+
+
+
+
+<!--Занудное пояснение для долбаёбов и надпись "Каталог мебели"-->
+    <main>
+      <div class="content-wrapper2">
+        <div class="logo-container2">
+          <img src="../images/Frame 2.svg" alt="Логотип" />
+        </div>
+
+        <div class="wrapper_text_ebanij">
+          <div class="text-block_text_ebanij">
+            Estate House — это удобный сервис для тех, кто ищет идеальную мебель для своего дома. Наш каталог предлагает широкий выбор товаров от проверенных производителей и магазинов. Здесь вы можете приобрести как готовые решения, так и заказать индивидуальное изготовление шкафов, кроватей и другой мебели. В ассортименте представлены разнообразные стили: от уютного прованса до современного минимализма. С нами процесс покупки становится простым и приятным. Estate House — ваш надежный проводник в мире качественной мебели!
+          </div>
+        </div>
+
+        <p class="catalog-text2">Каталог мебели</p>
+      </div>
+    </main>
+
+
+
+
+<!--самая первая часть с блоками-->
+<div class="container_3">
+  <a href="#" class="block_3">
+      <div class="block-content_3">
+          <div class="block-text_3">Очень короткий текст</div>
+      </div>
+      <div class="block-image-container_3">
+          <img src="../images/детдом.svg" alt="Image 1" class="block-image_3">
+      </div>
+  </a>
+  <a href="#" class="block_3">
+      <div class="block-content_3">
+          <div class="block-text_3">Очень длинный строк</div>
+      </div>
+      <div class="block-image-container_3">
+          <img src="../images/детдом.svg" alt="Image 2" class="block-image_3">
+      </div>
+  </a>
+  <a href="#" class="block_3">
+      <div class="block-content_3">
+          <div class="block-text_3">Средней длины текст</div>
+      </div>
+       <div class="block-image-container_3">
+          <img src="../images/детдом.svg" alt="Image 3" class="block-image_3">
+      </div>
+  </a>
+  <a href="#" class="block_3">
+      <div class="block-content_3">
+          <div class="block-text_3">Короткий текст jhgfgfcxhg fxfgdzhrtsxkjtuy d f juy f o uygvlkihvghjvcgjkcghj khgcghcghcghgh</div>
+      </div>
+      <div class="block-image-container_3">
+          <img src="../images/детдом.svg" alt="Image 4" class="block-image_3">
+      </div>
+  </a>
+</div>
+
+
+
+
+<!--нижняя еболда которая выше псевдоподвала-->
+    <div class="page-container">
+
+      <h1>Наши товары</h1>
+
+      <div class="products-container">
+          <!-- Карточка товара 1 -->
+          <a href="#" class="product-card">
+              <img src="../images/детдом.svg" alt="Товар 1">
+              <div class="product-info">
+                  <div class="product-price">1999 ₽</div>
+                  <div class="product-name">Название товара 1</div>
+                  <div class="product-rating">
+                      <span class="stars">★★★★★</span>
+                      <span class="reviews">Читать отзывы</span>
+                  </div>
+              </div>
+              <div class="product-button">
+                  Подробнее
+                  <img src="../images/детдом.svg" alt="Иконка">
+              </div>
+          </a>
+           
+          <!-- Карточка товара 2 -->
+          <a href="#" class="product-card">
+              <img src="../images/детдом.svg" alt="Товар 2">
+              <div class="product-info">
+                  <div class="product-price">2499 ₽</div>
+                  <div class="product-name">Название товара 2</div>
+                  <div class="product-rating">
+                      <span class="stars">★★★★☆</span>
+                      <span class="reviews">Читать отзывы</span>
+                  </div>
+              </div>
+              <div class="product-button">
+                  Подробнее
+                  <img src="../images/детдом.svg" alt="Иконка">
+              </div>
+          </a>
+  
+          <!-- Карточка товара 3 -->
+          <a href="#" class="product-card">
+              <img src="../images/детдом.svg" alt="Товар 3">
+              <div class="product-info">
+                  <div class="product-price">999 ₽</div>
+                  <div class="product-name">Название товара 3</div>
+                  <div class="product-rating">
+                      <span class="stars">★★★☆☆</span>
+                      <span class="reviews">Читать отзывы</span>
+                  </div>
+              </div>
+               <div class="product-button">
+                  Подробнее
+                  <img src="../images/детдом.svg" alt="Иконка">
+              </div>
+          </a>
+  
+          <!-- Карточка товара 4 -->
+          <a href="#" class="product-card">
+              <img src="../images/детдом.svg" alt="Товар 4">
+              <div class="product-info">
+                  <div class="product-price">3499 ₽</div>
+                  <div class="product-name">Название товара 4</div>
+                  <div class="product-rating">
+                      <span class="stars">★★★★★</span>
+                      <span class="reviews">Читать отзывы</span>
+                  </div>
+              </div>
+              <div class="product-button">
+                  Подробнее
+                  <img src="../images/детдом.svg" alt="Иконка">
+              </div>
+          </a>
+  
+
+      </div>
+
+      
+    </div>
+
+
+
+
+
+
+<!--хуйня псевдоподвала-->
+<div class="page-container">
+
+  <div class="header-container">
+    <h2 class="manufacturers-title">Производители</h2>
+    <a href="#" class="all-manufacturers-button">Все производители</a>
+</div>
+
+<div class="manufacturers-container">
+    <a href="#" class="manufacturer-block">
+        <img src="" alt="Производитель 1" class="manufacturer-image">
+    </a>
+    <a href="#" class="manufacturer-block">
+        <img src="" alt="Производитель 2" class="manufacturer-image">
+    </a>
+    <a href="#" class="manufacturer-block">
+        <img src="" alt="Производитель 3" class="manufacturer-image">
+    </a>
+    <a href="#" class="manufacturer-block">
+        <img src="" alt="Производитель 4" class="manufacturer-image">
+    </a>
+    <a href="#" class="manufacturer-block">
+        <img src="" alt="Производитель 5" class="manufacturer-image">
+    </a>
+
+</div>
+
+
+</div>
+
+    
+
+  </body>
+</html>

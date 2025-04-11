@@ -1,10 +1,10 @@
-﻿using NeuroWeb.JSONConverters.DataBaseConverters;
+﻿using PetProjectC_NeuroWeb.JSONConverters.WildberriesJSONConverter.ClientConverters;
+using PetProjectC_NeuroWeb.JSONConverters.WildberriesJSONConverter.DataBaseConverters;
 using NeuroWeb.Models;
 using PetProjectC_NeuroWeb.Services.ParserService.Interface;
 using System.Text.Json;
 using PetProjectC_NeuroWeb;
 using NeuroWeb;
-using PetProjectC_NeuroWeb.JSONConverters.DataBaseConverters;
 using System.Net;
 
 namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
@@ -14,7 +14,7 @@ namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
         public async void AddCategoryInDB(object state)
         {
             JsonSerializerOptions options = new JsonSerializerOptions();
-            options.Converters.Add(new CategoryDBJSONConverter());
+            options.Converters.Add(new WBCategoryToDBJSONConverter());
 
 
             HttpClient client = new HttpClient();
@@ -24,7 +24,7 @@ namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
             if (response.IsSuccessStatusCode)
             {
 
-                List<CategoryParserDTOModel> categoryDTOList = await response.Content.ReadFromJsonAsync<List<CategoryParserDTOModel>>(options);
+                List<CategoryModel> categoryDTOList = await response.Content.ReadFromJsonAsync<List<CategoryModel>>(options); //DTO категорий (парсер)
 
                 foreach (var categoryDTO in categoryDTOList)
                 {
@@ -32,28 +32,23 @@ namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
                     {
                         using (var db = new DataBase())
                         {
-
                             var categoryList = db.CategoryModels.ToList();
-
-
-
-                            var category = categoryList.FirstOrDefault(s => s.Name == categoryDTO.name);
-
+                            var category = categoryList.FirstOrDefault(s => s.Name == categoryDTO.Name);
 
                             if (category == null)
                             { 
 
                                 //List<DataBaseProductModel> list = null!;
 
-                                DataBaseCategoryModel DBCategoryModel = new DataBaseCategoryModel(
-                                    categoryDTO.id,
-                                    categoryDTO.name,
-                                    categoryDTO.relationRef,
-                                    categoryDTO.isChildrenOnly);
+                                CategoryModel DBCategoryModel = new CategoryModel(
+                                    categoryDTO.Id,
+                                    categoryDTO.Name,
+                                    categoryDTO.RelationRef,
+                                    categoryDTO.IsChildrenOnly,
+                                    null); //last param = "WB"
 
                                 db.CategoryModels.Add(DBCategoryModel);
                                 await db.SaveChangesAsync();
-
                             }
                         }
                     }
@@ -66,7 +61,7 @@ namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
         public async void AddProductsInDB(object state)
         {
             JsonSerializerOptions options = new JsonSerializerOptions();
-            options.Converters.Add(new ProductsJSONConverter());
+            options.Converters.Add(new WBProductsToDBJSONConverter());
 
             HttpClient client = new HttpClient();
             client.Timeout = TimeSpan.FromDays(1);
@@ -76,7 +71,7 @@ namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
 
             if (response.IsSuccessStatusCode)
             {
-                List<ProductDTOModel> productsDTOList = await response.Content.ReadFromJsonAsync<List<ProductDTOModel>>(options);
+                List<ProductModel> productsDTOList = await response.Content.ReadFromJsonAsync<List<ProductModel>>(options);
 
                 
                 foreach (var productDTO in productsDTOList)
@@ -87,19 +82,19 @@ namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
                     {
                         var productsList = db.ProductModels.ToList();
 
-                        var product = productsList.FirstOrDefault(s => s.Name == productDTO.name);
+                        var product = productsList.FirstOrDefault(s => s.Name == productDTO.Name);
 
-                        if (product == null && productDTO.url != null)
+                        if (product == null && productDTO.PictureUrl != null)
                         {
-                            DataBaseProductModel DBProductModel = new DataBaseProductModel(
-                                productDTO.id,
-                                productDTO.name,
-                                productDTO.brand,
-                                productDTO.reviewRating,
-                                productDTO.categoryName,
-                                productDTO.url,
-                                productDTO.price,
-                                productDTO.pictureUrl);
+                            ProductModel DBProductModel = new ProductModel(
+                                productDTO.Id,
+                                productDTO.Name,
+                                productDTO.Brand,
+                                productDTO.ReviewRating,
+                                productDTO.CategoryName,
+                                productDTO.Url,
+                                productDTO.Price,
+                                productDTO.PictureUrl);
 
                             db.ProductModels.Add(DBProductModel);
                             await db.SaveChangesAsync();

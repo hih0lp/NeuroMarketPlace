@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NKQgrj89vIZQwHbczSI1themDlkzAbHpO8gkaETvbpU=",
+  "Hash": "9G/ZbGw3NXPA2PckDqnoFM9KEZbnTOisfgTs2kny4IA=",
   "Source": "PetProjectC#NeuroWeb",
   "BasePath": "_content/PetProjectC#NeuroWeb",
   "Mode": "Default",
@@ -10,36 +10,17 @@
     {
       "Name": "PetProjectC#NeuroWeb\\wwwroot",
       "Source": "PetProjectC#NeuroWeb",
-      "ContentRoot": "C:\\Users\\shaki\\NeuroMarketPlace\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\",
       "BasePath": "_content/PetProjectC#NeuroWeb",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\shaki\\NeuroMarketPlace\\wwwroot\\images\\детдом.svg",
+      "Identity": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\images\\Estate_House.svg",
       "SourceId": "PetProjectC#NeuroWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\shaki\\NeuroMarketPlace\\wwwroot\\",
-      "BasePath": "_content/PetProjectC#NeuroWeb",
-      "RelativePath": "images/детдом.svg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\детдом.svg"
-    },
-    {
-      "Identity": "C:\\Users\\shaki\\NeuroMarketPlace\\wwwroot\\images\\Estate_House.svg",
-      "SourceId": "PetProjectC#NeuroWeb",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\shaki\\NeuroMarketPlace\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\",
       "BasePath": "_content/PetProjectC#NeuroWeb",
       "RelativePath": "images/Estate_House.svg",
       "AssetKind": "All",
@@ -55,10 +36,10 @@
       "OriginalItemSpec": "wwwroot\\images\\Estate_House.svg"
     },
     {
-      "Identity": "C:\\Users\\shaki\\NeuroMarketPlace\\wwwroot\\images\\Frame 2.svg",
+      "Identity": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\images\\Frame 2.svg",
       "SourceId": "PetProjectC#NeuroWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\shaki\\NeuroMarketPlace\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\",
       "BasePath": "_content/PetProjectC#NeuroWeb",
       "RelativePath": "images/Frame 2.svg",
       "AssetKind": "All",
@@ -74,10 +55,29 @@
       "OriginalItemSpec": "wwwroot\\images\\Frame 2.svg"
     },
     {
-      "Identity": "C:\\Users\\shaki\\NeuroMarketPlace\\wwwroot\\js\\CategoryPageCatalog.js",
+      "Identity": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\images\\детдом.svg",
       "SourceId": "PetProjectC#NeuroWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\shaki\\NeuroMarketPlace\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\",
+      "BasePath": "_content/PetProjectC#NeuroWeb",
+      "RelativePath": "images/детдом.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\детдом.svg"
+    },
+    {
+      "Identity": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\js\\CategoryPageCatalog.js",
+      "SourceId": "PetProjectC#NeuroWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\",
       "BasePath": "_content/PetProjectC#NeuroWeb",
       "RelativePath": "js/CategoryPageCatalog.js",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\js\\CategoryPageCatalog.js"
     },
     {
-      "Identity": "C:\\Users\\shaki\\NeuroMarketPlace\\wwwroot\\styles\\CategoryPageStyle.css",
+      "Identity": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\styles\\CategoryPageStyle.css",
       "SourceId": "PetProjectC#NeuroWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\shaki\\NeuroMarketPlace\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\",
       "BasePath": "_content/PetProjectC#NeuroWeb",
       "RelativePath": "styles/CategoryPageStyle.css",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\styles\\CategoryPageStyle.css"
     },
     {
-      "Identity": "C:\\Users\\shaki\\NeuroMarketPlace\\wwwroot\\styles\\Subdirectory.css",
+      "Identity": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\styles\\Subdirectory.css",
       "SourceId": "PetProjectC#NeuroWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\shaki\\NeuroMarketPlace\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\",
       "BasePath": "_content/PetProjectC#NeuroWeb",
       "RelativePath": "styles/Subdirectory.css",
       "AssetKind": "All",

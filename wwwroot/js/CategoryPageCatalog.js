@@ -86,6 +86,7 @@ async function createHTMLcategory(object, fetchurl) {
 
 async function loadCategories(furl) {
     const categories = GetCategories(furl);
+    console.log(categoties)
     if (categories && Array.isArray(categories)) {
         for (const category of categories) {
             await createHTMLcategory(category,category.name);

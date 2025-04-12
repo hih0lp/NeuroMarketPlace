@@ -1,27 +1,27 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\images\\Estate_House.svg",
+      "Id": "C:\\Users\\User\\source\\repos\\NeuroMarketPlace\\wwwroot\\images\\Estate_House.svg",
       "PackagePath": "staticwebassets\\images\\Estate_House.svg"
     },
     {
-      "Id": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\images\\Frame 2.svg",
+      "Id": "C:\\Users\\User\\source\\repos\\NeuroMarketPlace\\wwwroot\\images\\Frame 2.svg",
       "PackagePath": "staticwebassets\\images\\Frame 2.svg"
     },
     {
-      "Id": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\images\\детдом.svg",
+      "Id": "C:\\Users\\User\\source\\repos\\NeuroMarketPlace\\wwwroot\\images\\детдом.svg",
       "PackagePath": "staticwebassets\\images\\детдом.svg"
     },
     {
-      "Id": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\js\\CategoryPageCatalog.js",
+      "Id": "C:\\Users\\User\\source\\repos\\NeuroMarketPlace\\wwwroot\\js\\CategoryPageCatalog.js",
       "PackagePath": "staticwebassets\\js\\CategoryPageCatalog.js"
     },
     {
-      "Id": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\styles\\CategoryPageStyle.css",
+      "Id": "C:\\Users\\User\\source\\repos\\NeuroMarketPlace\\wwwroot\\styles\\CategoryPageStyle.css",
       "PackagePath": "staticwebassets\\styles\\CategoryPageStyle.css"
     },
     {
-      "Id": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\styles\\Subdirectory.css",
+      "Id": "C:\\Users\\User\\source\\repos\\NeuroMarketPlace\\wwwroot\\styles\\Subdirectory.css",
       "PackagePath": "staticwebassets\\styles\\Subdirectory.css"
     },
     {

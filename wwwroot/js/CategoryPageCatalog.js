@@ -1,5 +1,5 @@
-async function GetCategories() {
-    const furl = "CategoryPage/GetCategories";
+const testArray = [{name:'huy',pictureUrl:'https://basket-06.wbbasket.ru/vol1607/part160724/160724319/images/c516x688/1.webp'}]
+async function GetCategories(furl) {//    const furl = "CategoryPage/GetCategories";
     try {
         const response = await fetch(furl);
         if (!response.ok) {
@@ -38,7 +38,7 @@ async function GetImg(furl) {
     }
 }
 
-async function createHTMLcategory(object) {
+async function createHTMLcategory(object, fetchurl) {
     if (!object || !object.name || !object.pictureUrl) {
         console.error("Err: Invalid category object");
         return;
@@ -75,6 +75,8 @@ async function createHTMLcategory(object) {
             };
         }
 
+        newCategory.setAttribute("onclick", `fun1('CategoryPage/GetCategories?${fetchurl}$)`);
+
         categoriesZone.appendChild(newCategory);
 
     } catch (error) {
@@ -82,13 +84,18 @@ async function createHTMLcategory(object) {
     }
 }
 
-async function loadCategories() {
-    const categories = await GetCategories();
+async function loadCategories(furl) {
+    const categories = GetCategories(furl);
     if (categories && Array.isArray(categories)) {
         for (const category of categories) {
-            await createHTMLcategory(category);
+            await createHTMLcategory(category,category.name);
         }
     }
 }
 
-document.addEventListener("DOMContentLoaded", loadCategories);
+async function fun1(furl) {
+    document.addEventListener("DOMContentLoaded", loadCategories(furl));
+}
+
+const furl = "CategoryPage/GetCategories";
+fun1(furl);

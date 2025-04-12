@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|solutionrelative:views\\categorypage\\categorypage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|c:\\users\\user\\source\\repos\\petprojectc#neuroweb\\wwwroot\\styles\\categorypagestyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|solutionrelative:wwwroot\\styles\\categorypagestyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|c:\\users\\user\\source\\repos\\petprojectc#neuroweb\\wwwroot\\js\\categorypagecatalog.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|solutionrelative:wwwroot\\js\\categorypagecatalog.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
@@ -41,8 +45,17 @@
           "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CategoryPageStyle.css",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\styles\\CategoryPageStyle.css",
+              "RelativeDocumentMoniker": "wwwroot\\styles\\CategoryPageStyle.css",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\styles\\CategoryPageStyle.css",
+              "RelativeToolTip": "wwwroot\\styles\\CategoryPageStyle.css",
+              "ViewState": "AQIAAKIAAAAAAAAAAAAAAKcAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-04-12T17:57:44.311Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -52,26 +65,31 @@
               "RelativeDocumentMoniker": "Views\\CategoryPage\\CategoryPage.cshtml",
               "ToolTip": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\Views\\CategoryPage\\CategoryPage.cshtml",
               "RelativeToolTip": "Views\\CategoryPage\\CategoryPage.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADsAAAAMAAAA",
+              "ViewState": "AQIAAOMAAAAAAAAAAAAAABUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-12T05:35:16.224Z",
+              "WhenOpened": "2025-04-12T17:47:20.656Z",
               "EditorCaption": ""
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "CategoryPageCatalog.js",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\js\\CategoryPageCatalog.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\CategoryPageCatalog.js",
               "ToolTip": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\js\\CategoryPageCatalog.js",
               "RelativeToolTip": "wwwroot\\js\\CategoryPageCatalog.js",
-              "ViewState": "AQIAAEEAAAAAAAAAAAAqwFgAAAAaAAAA",
+              "ViewState": "AQIAABwAAAAAAAAAAAAQwAIAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-04-11T15:30:36.325Z"
+              "WhenOpened": "2025-04-11T15:30:36.325Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -83,7 +101,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "WBParserService.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\Services\\ParserService\\Ports\\WBParserService.cs",
               "RelativeDocumentMoniker": "Services\\ParserService\\Ports\\WBParserService.cs",
@@ -95,7 +113,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "WBProductsToDBJSONConverter.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\JSONConverters\\WildberriesJSONConverter\\DataBaseConverters\\WBProductsToDBJSONConverter.cs",
               "RelativeDocumentMoniker": "JSONConverters\\WildberriesJSONConverter\\DataBaseConverters\\WBProductsToDBJSONConverter.cs",
@@ -107,7 +125,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "CategoryPageController.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\Controllers\\CategoryPage\\CategoryPageController.cs",
               "RelativeDocumentMoniker": "Controllers\\CategoryPage\\CategoryPageController.cs",
@@ -119,17 +137,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "CategoryModel.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\Models\\CategoryModel.cs",
               "RelativeDocumentMoniker": "Models\\CategoryModel.cs",
               "ToolTip": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\Models\\CategoryModel.cs",
               "RelativeToolTip": "Models\\CategoryModel.cs",
-<<<<<<< Updated upstream
               "ViewState": "AQIAACgAAAAAAAAAAADwvzcAAAAwAAAA",
-=======
-              "ViewState": "AQIAACsAAAAAAAAAAADwvyQAAAArAAAA",
->>>>>>> Stashed changes
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-16T14:16:16.649Z"
             }

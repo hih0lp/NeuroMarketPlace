@@ -1,6 +1,14 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\documents\\SecondPage.html",
+      "PackagePath": "staticwebassets\\documents\\SecondPage.html"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\documents\\Subdirectory.html",
+      "PackagePath": "staticwebassets\\documents\\Subdirectory.html"
+    },
+    {
       "Id": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\images\\Estate_House.svg",
       "PackagePath": "staticwebassets\\images\\Estate_House.svg"
     },

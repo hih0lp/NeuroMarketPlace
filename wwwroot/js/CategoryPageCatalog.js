@@ -1,5 +1,6 @@
 const testArray = [{name:'huy',pictureUrl:'https://basket-06.wbbasket.ru/vol1607/part160724/160724319/images/c516x688/1.webp'}]
-async function GetCategories(furl) {//    const furl = "CategoryPage/GetCategories";
+async function GetCategories(furl) {
+    const furl = "CategoryPage/GetCategories";
     try {
         const response = await fetch(furl);
         if (!response.ok) {

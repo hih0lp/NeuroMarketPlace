@@ -1,6 +1,8 @@
+
 //const testArray = [{name:'huy',pictureUrl:'https://basket-06.wbbasket.ru/vol1607/part160724/160724319/images/c516x688/1.webp'}]
 
 async function GetCategories(furl) {
+    const furl = "CategoryPage/GetCategories";
     try {
         const response = await fetch(furl);
         if (!response.ok) {
@@ -96,6 +98,7 @@ async function loadCategories(furl) {
         if (!categoriesZone) {
             console.error("Err: category-container not found");
             return;
+
         }
 
         // Удаляем только дочерние элементы, оставляя шаблон example

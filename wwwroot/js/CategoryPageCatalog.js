@@ -1,4 +1,6 @@
-const testArray = [{name:'huy',pictureUrl:'https://basket-06.wbbasket.ru/vol1607/part160724/160724319/images/c516x688/1.webp'}]
+
+//const testArray = [{name:'huy',pictureUrl:'https://basket-06.wbbasket.ru/vol1607/part160724/160724319/images/c516x688/1.webp'}]
+
 async function GetCategories(furl) {
     const furl = "CategoryPage/GetCategories";
     try {
@@ -39,7 +41,7 @@ async function GetImg(furl) {
     }
 }
 
-async function createHTMLcategory(object, fetchurl) {
+async function createHTMLcategory(object) {
     if (!object || !object.name || !object.pictureUrl) {
         console.error("Err: Invalid category object");
         return;
@@ -51,6 +53,7 @@ async function createHTMLcategory(object, fetchurl) {
             console.error("Err: category-container not found");
             return;
         }
+
         const origCategory = document.getElementById('example');
         if (!origCategory) {
             console.error("Err: example category not found");
@@ -62,6 +65,7 @@ async function createHTMLcategory(object, fetchurl) {
 
         const newCategory = origCategory.cloneNode(true);
         newCategory.id = `category-${CatName.toLowerCase().replace(/\s+/g, '-')}`;
+        newCategory.style.display = ""; // Делаем элемент видимым
 
         const catNameElement = newCategory.querySelector(".ded");
         if (catNameElement) {
@@ -76,7 +80,10 @@ async function createHTMLcategory(object, fetchurl) {
             };
         }
 
-        newCategory.setAttribute("onclick", `fun1('CategoryPage/GetCategories?${fetchurl}$)`);
+        newCategory.addEventListener("click", async (event) => {
+            event.preventDefault();
+            await loadCategories(`MainPage/GetCategories?${CatName}`);
+        });
 
         categoriesZone.appendChild(newCategory);
 
@@ -86,18 +93,37 @@ async function createHTMLcategory(object, fetchurl) {
 }
 
 async function loadCategories(furl) {
-    const categories = GetCategories(furl);
-    console.log(categoties)
-    if (categories && Array.isArray(categories)) {
-        for (const category of categories) {
-            await createHTMLcategory(category,category.name);
+    try {
+        const categoriesZone = document.getElementById('category-container');
+        if (!categoriesZone) {
+            console.error("Err: category-container not found");
+            return;
+
         }
+
+        // Удаляем только дочерние элементы, оставляя шаблон example
+        while (categoriesZone.firstChild) {
+            if (categoriesZone.firstChild.id !== 'example') {
+                categoriesZone.removeChild(categoriesZone.firstChild);
+            } else {
+                break; // Прекращаем удаление, когда доходим до шаблона
+            }
+        }
+
+        const categories = await GetCategories(furl);
+        console.log(categories);
+
+        if (categories && Array.isArray(categories)) {
+            for (const category of categories) {
+                await createHTMLcategory(category);
+            }
+        }
+    } catch (error) {
+        console.error("Error loading categories:", error);
     }
 }
 
-async function fun1(furl) {
-    document.addEventListener("DOMContentLoaded", loadCategories(furl));
-}
-
-const furl = "CategoryPage/GetCategories";
-fun1(furl);
+document.addEventListener("DOMContentLoaded", function() {
+  const furl = "CategoryPage/GetCategories";
+  loadCategories(furl);
+});

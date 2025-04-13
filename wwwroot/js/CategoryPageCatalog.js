@@ -1,9 +1,8 @@
-
 //const testArray = [{name:'huy',pictureUrl:'https://basket-06.wbbasket.ru/vol1607/part160724/160724319/images/c516x688/1.webp'}]
 
 async function GetCategories(furl) {
-    const furl = "CategoryPage/GetCategories";
     try {
+        console.log("pizda")
         const response = await fetch(furl);
         if (!response.ok) {
             throw new Error(`Fetch Categories Err: ${response.status}`);
@@ -98,7 +97,6 @@ async function loadCategories(furl) {
         if (!categoriesZone) {
             console.error("Err: category-container not found");
             return;
-
         }
 
         // Удаляем только дочерние элементы, оставляя шаблон example
@@ -123,7 +121,8 @@ async function loadCategories(furl) {
     }
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-  const furl = "CategoryPage/GetCategories";
-  loadCategories(furl);
+document.addEventListener("DOMContentLoaded", function () {
+    const furl = "CategoryPage/GetCategories";
+    console.log(1234567890);
+    loadCategories(furl);
 });

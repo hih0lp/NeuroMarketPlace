@@ -15,18 +15,16 @@ using System.Text;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddTransient<IParserService, WBParserService>();
-builder.Services.AddTransient<TimeService>();
+//builder.Services.AddTransient<TimeService>();
 
-
-    
 
 
 var app = builder.Build();
-app.Services.GetService<TimeService>();
+//app.Services.GetService<TimeService>(); //парсер для категорий и продуктов
 
 
 app.MapControllerRoute(
-name: "default",
+    name: "default",
     pattern: "{controller=CategoryPage}/{action=CategoryPage}/{id?}");
 
 

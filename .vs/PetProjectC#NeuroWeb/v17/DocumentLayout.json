@@ -7,24 +7,24 @@
       "RelativeMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|solutionrelative:controllers\\categorypage\\categorypagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|c:\\users\\user\\source\\repos\\neuromarketplace\\jsonconverters\\databaseconverters\\productsjsonconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|solutionrelative:jsonconverters\\databaseconverters\\productsjsonconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|c:\\users\\user\\source\\repos\\neuromarketplace\\jsonconverters\\clientconverters\\categoryclientjsonconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|solutionrelative:jsonconverters\\clientconverters\\categoryclientjsonconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|c:\\users\\user\\source\\repos\\neuromarketplace\\wwwroot\\js\\categorypagecatalog.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|solutionrelative:wwwroot\\js\\categorypagecatalog.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|c:\\users\\user\\source\\repos\\neuromarketplace\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|c:\\users\\user\\source\\repos\\neuromarketplace\\services\\parserservice\\ports\\wbparserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|solutionrelative:services\\parserservice\\ports\\wbparserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|c:\\users\\user\\source\\repos\\neuromarketplace\\views\\categorypage\\categorypage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|solutionrelative:views\\categorypage\\categorypage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|c:\\users\\user\\source\\repos\\neuromarketplace\\jsonconverters\\databaseconverters\\categorydbjsonconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|solutionrelative:jsonconverters\\databaseconverters\\categorydbjsonconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|c:\\users\\user\\source\\repos\\neuromarketplace\\wwwroot\\styles\\categorypage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|solutionrelative:wwwroot\\styles\\categorypage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|c:\\users\\user\\source\\repos\\neuromarketplace\\services\\parserservice\\ports\\wbparserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|solutionrelative:services\\parserservice\\ports\\wbparserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|c:\\users\\user\\source\\repos\\neuromarketplace\\models\\productmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -39,10 +39,6 @@
       "RelativeMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|solutionrelative:services\\timeservice\\ports\\timeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|c:\\users\\user\\source\\repos\\neuromarketplace\\views\\categorypage\\categorypage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|solutionrelative:views\\categorypage\\categorypage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|c:\\users\\user\\source\\repos\\neuromarketplace\\services\\parserservice\\interface\\iparserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|solutionrelative:services\\parserservice\\interface\\iparserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -54,51 +50,41 @@
       "DocumentGroups": [
         {
           "DockedWidth": 224,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CategoryPageCatalog.js",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\NeuroMarketPlace\\wwwroot\\js\\CategoryPageCatalog.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\CategoryPageCatalog.js",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\NeuroMarketPlace\\wwwroot\\js\\CategoryPageCatalog.js",
+              "RelativeToolTip": "wwwroot\\js\\CategoryPageCatalog.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-04-13T13:24:26.484Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CategoryClientJSONConverter.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\NeuroMarketPlace\\JSONConverters\\ClientConverters\\CategoryClientJSONConverter.cs",
-              "RelativeDocumentMoniker": "JSONConverters\\ClientConverters\\CategoryClientJSONConverter.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\NeuroMarketPlace\\JSONConverters\\ClientConverters\\CategoryClientJSONConverter.cs",
-              "RelativeToolTip": "JSONConverters\\ClientConverters\\CategoryClientJSONConverter.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAABEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-16T15:34:31.525Z"
+              "DocumentIndex": 3,
+              "Title": "CategoryPage.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\NeuroMarketPlace\\Views\\CategoryPage\\CategoryPage.cshtml",
+              "RelativeDocumentMoniker": "Views\\CategoryPage\\CategoryPage.cshtml",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\NeuroMarketPlace\\Views\\CategoryPage\\CategoryPage.cshtml",
+              "RelativeToolTip": "Views\\CategoryPage\\CategoryPage.cshtml",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAAABUAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-13T13:22:48.779Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "CategoryDBJSONConverter.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\NeuroMarketPlace\\JSONConverters\\DataBaseConverters\\CategoryDBJSONConverter.cs",
-              "RelativeDocumentMoniker": "JSONConverters\\DataBaseConverters\\CategoryDBJSONConverter.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\NeuroMarketPlace\\JSONConverters\\DataBaseConverters\\CategoryDBJSONConverter.cs",
-              "RelativeToolTip": "JSONConverters\\DataBaseConverters\\CategoryDBJSONConverter.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABUAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-16T14:06:26.101Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProductsJSONConverter.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\NeuroMarketPlace\\JSONConverters\\DataBaseConverters\\ProductsJSONConverter.cs",
-              "RelativeDocumentMoniker": "JSONConverters\\DataBaseConverters\\ProductsJSONConverter.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\NeuroMarketPlace\\JSONConverters\\DataBaseConverters\\ProductsJSONConverter.cs",
-              "RelativeToolTip": "JSONConverters\\DataBaseConverters\\ProductsJSONConverter.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-16T12:21:08.57Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "WBParserService.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\NeuroMarketPlace\\Services\\ParserService\\Ports\\WBParserService.cs",
               "RelativeDocumentMoniker": "Services\\ParserService\\Ports\\WBParserService.cs",
@@ -116,22 +102,23 @@
               "RelativeDocumentMoniker": "Controllers\\CategoryPage\\CategoryPageController.cs",
               "ToolTip": "C:\\Users\\User\\source\\repos\\NeuroMarketPlace\\Controllers\\CategoryPage\\CategoryPageController.cs",
               "RelativeToolTip": "Controllers\\CategoryPage\\CategoryPageController.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAA1wBUAAAA1AAAA",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAAAB0AAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-16T13:44:08.243Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\NeuroMarketPlace\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\User\\source\\repos\\NeuroMarketPlace\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAACcAAAAoAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T14:14:14.965Z"
+              "WhenOpened": "2025-03-15T14:14:14.965Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -171,19 +158,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 4,
               "Title": "CategoryPage.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\NeuroMarketPlace\\Views\\CategoryPage\\CategoryPage.cshtml",
-              "RelativeDocumentMoniker": "Views\\CategoryPage\\CategoryPage.cshtml",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\NeuroMarketPlace\\Views\\CategoryPage\\CategoryPage.cshtml",
-              "RelativeToolTip": "Views\\CategoryPage\\CategoryPage.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAGAAAA",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\NeuroMarketPlace\\wwwroot\\styles\\CategoryPage.cshtml",
+              "RelativeDocumentMoniker": "wwwroot\\styles\\CategoryPage.cshtml",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\NeuroMarketPlace\\wwwroot\\styles\\CategoryPage.cshtml",
+              "RelativeToolTip": "wwwroot\\styles\\CategoryPage.cshtml",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAABMAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-16T13:45:06.018Z"
+              "WhenOpened": "2025-03-16T13:45:06.018Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "IParserService.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\NeuroMarketPlace\\Services\\ParserService\\Interface\\IParserService.cs",
               "RelativeDocumentMoniker": "Services\\ParserService\\Interface\\IParserService.cs",

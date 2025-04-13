@@ -1,0 +1,53 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\NeuroMarketPlace\\wwwroot\\documents\\SecondPage.html",
+      "PackagePath": "staticwebassets\\documents\\SecondPage.html"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\NeuroMarketPlace\\wwwroot\\documents\\Subdirectory.html",
+      "PackagePath": "staticwebassets\\documents\\Subdirectory.html"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\NeuroMarketPlace\\wwwroot\\images\\Estate_House.svg",
+      "PackagePath": "staticwebassets\\images\\Estate_House.svg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\NeuroMarketPlace\\wwwroot\\images\\Frame 2.svg",
+      "PackagePath": "staticwebassets\\images\\Frame 2.svg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\NeuroMarketPlace\\wwwroot\\images\\детдом.svg",
+      "PackagePath": "staticwebassets\\images\\детдом.svg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\NeuroMarketPlace\\wwwroot\\js\\CategoryPageCatalog.js",
+      "PackagePath": "staticwebassets\\js\\CategoryPageCatalog.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\NeuroMarketPlace\\wwwroot\\styles\\CategoryPageStyle.css",
+      "PackagePath": "staticwebassets\\styles\\CategoryPageStyle.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\NeuroMarketPlace\\wwwroot\\styles\\Subdirectory.css",
+      "PackagePath": "staticwebassets\\styles\\Subdirectory.css"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.PetProjectC#NeuroWeb.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.PetProjectC#NeuroWeb.props",
+      "PackagePath": "build\\PetProjectC#NeuroWeb.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.PetProjectC#NeuroWeb.props",
+      "PackagePath": "buildMultiTargeting\\PetProjectC#NeuroWeb.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.PetProjectC#NeuroWeb.props",
+      "PackagePath": "buildTransitive\\PetProjectC#NeuroWeb.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

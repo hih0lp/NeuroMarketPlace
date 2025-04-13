@@ -1,8 +1,4 @@
-
-//const testArray = [{name:'huy',pictureUrl:'https://basket-06.wbbasket.ru/vol1607/part160724/160724319/images/c516x688/1.webp'}]
-
 async function GetCategories(furl) {
-    const furl = "CategoryPage/GetCategories";
     try {
         const response = await fetch(furl);
         if (!response.ok) {
@@ -82,7 +78,7 @@ async function createHTMLcategory(object) {
 
         newCategory.addEventListener("click", async (event) => {
             event.preventDefault();
-            await loadCategories(`MainPage/GetCategories?${CatName}`);
+            await loadCategories(`CategoryPage/GetCategories?${CatName}`);
         });
 
         categoriesZone.appendChild(newCategory);
@@ -123,7 +119,8 @@ async function loadCategories(furl) {
     }
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-  const furl = "CategoryPage/GetCategories";
-  loadCategories(furl);
+document.addEventListener("DOMContentLoaded", function () {
+    const furl = "/CategoryPage/GetCategories";
+    console.log(123)
+    loadCategories(furl);
 });

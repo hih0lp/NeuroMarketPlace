@@ -22,6 +22,7 @@
 
   <ItemGroup>
     <None Include="Views\CategoryPage\CategoryPage.cshtml" />
+    <None Include="wwwroot\styles\CategoryPage.cshtml" />
   </ItemGroup>
 
 </Project>

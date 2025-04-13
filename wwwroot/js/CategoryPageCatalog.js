@@ -1,8 +1,5 @@
-//const testArray = [{name:'huy',pictureUrl:'https://basket-06.wbbasket.ru/vol1607/part160724/160724319/images/c516x688/1.webp'}]
-
 async function GetCategories(furl) {
     try {
-        console.log("pizda")
         const response = await fetch(furl);
         if (!response.ok) {
             throw new Error(`Fetch Categories Err: ${response.status}`);
@@ -81,7 +78,7 @@ async function createHTMLcategory(object) {
 
         newCategory.addEventListener("click", async (event) => {
             event.preventDefault();
-            await loadCategories(`MainPage/GetCategories?${CatName}`);
+            await loadCategories(`CategoryPage/GetCategories?${CatName}`);
         });
 
         categoriesZone.appendChild(newCategory);
@@ -97,6 +94,7 @@ async function loadCategories(furl) {
         if (!categoriesZone) {
             console.error("Err: category-container not found");
             return;
+
         }
 
         // Удаляем только дочерние элементы, оставляя шаблон example
@@ -122,7 +120,7 @@ async function loadCategories(furl) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    const furl = "CategoryPage/GetCategories";
-    console.log(1234567890);
+    const furl = "/CategoryPage/GetCategories";
+    console.log(123)
     loadCategories(furl);
 });

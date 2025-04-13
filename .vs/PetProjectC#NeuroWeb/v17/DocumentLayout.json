@@ -5,6 +5,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|c:\\users\\user\\source\\repos\\petprojectc#neuroweb\\wwwroot\\js\\categorypagecatalog.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|solutionrelative:wwwroot\\js\\categorypagecatalog.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|c:\\users\\user\\source\\repos\\petprojectc#neuroweb\\views\\categorypage\\categorypage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|solutionrelative:views\\categorypage\\categorypage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +18,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CategoryPage.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\Views\\CategoryPage\\CategoryPage.cshtml",
+              "RelativeDocumentMoniker": "Views\\CategoryPage\\CategoryPage.cshtml",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\Views\\CategoryPage\\CategoryPage.cshtml",
+              "RelativeToolTip": "Views\\CategoryPage\\CategoryPage.cshtml",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAAAEcAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-13T15:53:17.28Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -28,7 +45,7 @@
               "RelativeDocumentMoniker": "wwwroot\\js\\CategoryPageCatalog.js",
               "ToolTip": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\js\\CategoryPageCatalog.js",
               "RelativeToolTip": "wwwroot\\js\\CategoryPageCatalog.js",
-              "ViewState": "AQIAAGcAAAAAAAAAAAAAAH0AAAAcAAAA",
+              "ViewState": "AQIAAFcAAAAAAAAAAAAAAGYAAABGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-04-13T13:38:46.896Z",
               "EditorCaption": ""

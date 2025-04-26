@@ -24,7 +24,7 @@ namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
             if (response.IsSuccessStatusCode)
             {
 
-                List<CategoryModel> categoryDTOList = await response.Content.ReadFromJsonAsync<List<CategoryModel>>(options); //DTO категорий (парсер)
+                List<WildberriesCategoryModel> categoryDTOList = await response.Content.ReadFromJsonAsync<List<WildberriesCategoryModel>>(options); //DTO категорий (парсер)
 
                 foreach (var categoryDTO in categoryDTOList)
                 {
@@ -40,7 +40,7 @@ namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
 
                                 //List<DataBaseProductModel> list = null!;
 
-                                CategoryModel DBCategoryModel = new CategoryModel(
+                                WildberriesCategoryModel DBCategoryModel = new WildberriesCategoryModel(
                                     categoryDTO.Id,
                                     categoryDTO.Name,
                                     categoryDTO.RelationRef,

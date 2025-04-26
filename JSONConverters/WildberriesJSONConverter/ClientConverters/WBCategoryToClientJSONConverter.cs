@@ -4,16 +4,16 @@ using System.Text.Json;
 
 namespace PetProjectC_NeuroWeb.JSONConverters.WildberriesJSONConverter.ClientConverters
 {
-    public class WBCategoryToClientJSONConverter : JsonConverter<List<CategoryModel>>
+    public class WBCategoryToClientJSONConverter : JsonConverter<List<WildberriesCategoryModel>>
     {
-        public override List<CategoryModel>? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+        public override List<WildberriesCategoryModel>? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {
             return null;
         }
 
 
 
-        public override void Write(Utf8JsonWriter writer, List<CategoryModel> value, JsonSerializerOptions options)
+        public override void Write(Utf8JsonWriter writer, List<WildberriesCategoryModel> value, JsonSerializerOptions options)
         {
             writer.WriteStartObject();
 

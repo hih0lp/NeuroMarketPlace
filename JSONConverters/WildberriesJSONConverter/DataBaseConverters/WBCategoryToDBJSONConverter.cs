@@ -4,11 +4,11 @@ using NeuroWeb.Models;
 
 namespace PetProjectC_NeuroWeb.JSONConverters.WildberriesJSONConverter.DataBaseConverters
 {
-    public class WBCategoryToDBJSONConverter : JsonConverter<List<CategoryModel>>
+    public class WBCategoryToDBJSONConverter : JsonConverter<List<WildberriesCategoryModel>>
     {
-        public override List<CategoryModel>? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+        public override List<WildberriesCategoryModel>? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {
-            List<CategoryModel> models = new List<CategoryModel>();
+            List<WildberriesCategoryModel> models = new List<WildberriesCategoryModel>();
             var id = 0;
             var name = "Undefined";
             var relationRef = "Undefined";
@@ -25,7 +25,7 @@ namespace PetProjectC_NeuroWeb.JSONConverters.WildberriesJSONConverter.DataBaseC
                     switch (propertyName)
                     {
                         case "id":
-                            models.Add(new CategoryModel());
+                            models.Add(new WildberriesCategoryModel());
                             id = reader.GetInt32();
                             models.Last().Id = id;
                             break;
@@ -52,7 +52,7 @@ namespace PetProjectC_NeuroWeb.JSONConverters.WildberriesJSONConverter.DataBaseC
             return models;
         }
 
-        public override void Write(Utf8JsonWriter writer, List<CategoryModel> value, JsonSerializerOptions options)
+        public override void Write(Utf8JsonWriter writer, List<WildberriesCategoryModel> value, JsonSerializerOptions options)
         { }
 
 

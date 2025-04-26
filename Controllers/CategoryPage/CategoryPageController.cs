@@ -23,9 +23,9 @@ namespace PetProjectC_NeuroWeb.Controllers.CategoryPage
         [HttpGet]
         public async Task<JsonResult> GetCategories(string categoryName = "")
         {
-            CategoryModel categoryModel = new CategoryModel();
+            WildberriesDataActionModel categoryActionModel = new WildberriesDataActionModel();
 
-            var categoryList = await categoryModel.GetCategoriesAsync(categoryName);
+            var categoryList = await categoryActionModel.GetCategoriesAsync(categoryName);
 
             
 

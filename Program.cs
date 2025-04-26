@@ -14,7 +14,7 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
-builder.Services.AddTransient<IParserService, WBParserService>();
+builder.Services.AddTransient<IParserService, WBParserService>(); //почитать про фоновые процессы 
 //builder.Services.AddTransient<TimeService>();
 
 

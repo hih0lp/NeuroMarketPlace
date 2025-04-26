@@ -1,14 +1,15 @@
 ﻿using PetProjectC_NeuroWeb.JSONConverters.WildberriesJSONConverter.ClientConverters;
 using PetProjectC_NeuroWeb.JSONConverters.WildberriesJSONConverter.DataBaseConverters;
+using PetProjectC_NeuroWeb.Models;
 using System.Text.Json;
 
 namespace NeuroWeb.Models
 {
-    public class CategoryModel //класс для действий с категориями и взаимодействием с базой данных
+    public class WildberriesCategoryModel
     {
-        public CategoryModel() { }
+        public WildberriesCategoryModel() { }
 
-        public CategoryModel(int id, string name, string relationRef, bool isChildrenOnly, string pictureUrl, string marketPlace)
+        public WildberriesCategoryModel(int id, string name, string relationRef, bool isChildrenOnly, string pictureUrl, string marketPlace)
         {
             _id = id;
             _name = name;
@@ -33,17 +34,18 @@ namespace NeuroWeb.Models
         public bool IsChildrenOnly { get { return _isChildrenOnly; } set { _isChildrenOnly = value; } }
         public string? PictureUrl { get { return _pictureUrl; } set { _pictureUrl = value; } }
         public string MarketPlace { get { return _marketPlace; } set { _marketPlace = value; } }
+    }
 
-
-
-        public async Task<List<CategoryModel>> GetCategoriesAsync(string categoryName = "")
+    public class WildberriesDataActionModel : CategoryDataActionModel<WildberriesCategoryModel>  //класс для действий с категориями и взаимодействием с базой данных
+    { 
+        public override async Task<List<WildberriesCategoryModel>> GetCategoriesAsync(string categoryName = "")
         { 
             using (var db = new DataBase())
             {
                 var products = db.ProductModels.ToList();
                 var categoryList = db.CategoryModels.ToList();
                 string categoryUrl;
-                List<CategoryModel> categoryDTOList = new List<CategoryModel>();
+                List<WildberriesCategoryModel> categoryDTOList = new List<WildberriesCategoryModel>();
 
 
 
@@ -64,7 +66,7 @@ namespace NeuroWeb.Models
                     }
                     else
                     {
-                        CategoryModel categoryDTO = new CategoryModel();
+                        WildberriesCategoryModel categoryDTO = new WildberriesCategoryModel();
                         //categoryDTO.PictureUrl = products.Where(p => p.CategoryName == category.Name).FirstOrDefault().PictureUrl; //это верно
                         categoryDTO.Name = category.Name;
                         categoryDTO.PictureUrl = "https://basket-12.wbbasket.ru/vol1731/part173167/173167093/images/big/1.webp";

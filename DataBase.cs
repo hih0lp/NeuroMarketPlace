@@ -11,7 +11,7 @@ namespace NeuroWeb
             Database.EnsureCreated();
         }
 
-        public DbSet<CategoryModel> CategoryModels { get; set; }
+        public DbSet<WildberriesCategoryModel> CategoryModels { get; set; }
         public DbSet<ProductModel> ProductModels { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

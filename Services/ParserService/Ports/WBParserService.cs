@@ -45,7 +45,8 @@ namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
                                     categoryDTO.Name,
                                     categoryDTO.RelationRef,
                                     categoryDTO.IsChildrenOnly,
-                                    null); //last param = "WB"
+                                    null,
+                                    "WB"); //last param = "WB"
 
                                 db.CategoryModels.Add(DBCategoryModel);
                                 await db.SaveChangesAsync();
@@ -94,7 +95,8 @@ namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
                                 productDTO.CategoryName,
                                 productDTO.Url,
                                 productDTO.Price,
-                                productDTO.PictureUrl);
+                                productDTO.PictureUrl,
+                                "WB");
 
                             db.ProductModels.Add(DBProductModel);
                             await db.SaveChangesAsync();

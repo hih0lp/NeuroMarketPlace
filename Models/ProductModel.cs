@@ -42,7 +42,7 @@ namespace NeuroWeb.Models
     {
         public ProductModel() { }
 
-        public ProductModel(int id, string name, string brand, double reviewRating, string categoryName, string url, int price, string pictureUrl, string marketPlace)
+        public ProductModel(int id, string name, string brand, double reviewRating, string categoryName, string url, int price, string pictureUrl)//, string marketPlace
         {
             _id = id;
             _name = name;
@@ -52,7 +52,7 @@ namespace NeuroWeb.Models
             _url = url;
             _price = price;
             _pictureUrl = pictureUrl;
-            _marketPlace = marketPlace;
+            //_marketPlace = marketPlace;
         }
 
         private int _id;
@@ -63,7 +63,7 @@ namespace NeuroWeb.Models
         private string _url;
         private int _price;
         private string _pictureUrl;
-        private string _marketPlace;
+        //private string _marketPlace;
 
 
         public int Id { get => _id; set => _id = value; }
@@ -74,7 +74,7 @@ namespace NeuroWeb.Models
         public string Url { get => _url; set => _url = value; }
         public int Price { get => _price; set => _price = value; }
         public string PictureUrl { get => _pictureUrl; set => _pictureUrl = value; }
-        public string MarketPlace { get => _marketPlace; set => _marketPlace = value; }
+        //public string MarketPlace { get => _marketPlace; set => _marketPlace = value; }
 
 
     }

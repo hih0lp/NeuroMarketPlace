@@ -11,7 +11,7 @@ namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
 {
     public class WBParserService : IParserService
     {
-        public async void AddCategoryInDB(object state)
+        public async Task AddCategoryInDB()//param = object state
         {
             JsonSerializerOptions options = new JsonSerializerOptions();
             options.Converters.Add(new WBCategoryToDBJSONConverter());
@@ -45,8 +45,7 @@ namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
                                     categoryDTO.Name,
                                     categoryDTO.RelationRef,
                                     categoryDTO.IsChildrenOnly,
-                                    null,
-                                    "WB"); //last param = "WB"
+                                    null); //last param = "WB"
 
                                 db.CategoryModels.Add(DBCategoryModel);
                                 await db.SaveChangesAsync();
@@ -59,7 +58,7 @@ namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
 
 
 
-        public async void AddProductsInDB(object state)
+        public async Task AddProductsInDB()//param = object state
         {
             JsonSerializerOptions options = new JsonSerializerOptions();
             options.Converters.Add(new WBProductsToDBJSONConverter());
@@ -95,8 +94,7 @@ namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
                                 productDTO.CategoryName,
                                 productDTO.Url,
                                 productDTO.Price,
-                                productDTO.PictureUrl,
-                                "WB");
+                                productDTO.PictureUrl); //last param = wb
 
                             db.ProductModels.Add(DBProductModel);
                             await db.SaveChangesAsync();

@@ -9,14 +9,14 @@ namespace NeuroWeb.Models
     {
         public WildberriesCategoryModel() { }
 
-        public WildberriesCategoryModel(int id, string name, string relationRef, bool isChildrenOnly, string pictureUrl, string marketPlace)
+        public WildberriesCategoryModel(int id, string name, string relationRef, bool isChildrenOnly, string pictureUrl)// string marketPlace
         {
             _id = id;
             _name = name;
             _relationRef = relationRef;
             _isChildrenOnly = isChildrenOnly;
             _pictureUrl = pictureUrl;
-            _marketPlace = marketPlace;
+            //_marketPlace = marketPlace;
         }
 
 
@@ -25,7 +25,7 @@ namespace NeuroWeb.Models
         private string _relationRef = null!;
         private bool _isChildrenOnly;
         private string? _pictureUrl;
-        private string _marketPlace;
+        //private string _marketPlace;
 
 
         public int Id { get { return _id; } set { _id = value; } }
@@ -33,7 +33,7 @@ namespace NeuroWeb.Models
         public string RelationRef { get { return _relationRef; } set { _relationRef = value; } }
         public bool IsChildrenOnly { get { return _isChildrenOnly; } set { _isChildrenOnly = value; } }
         public string? PictureUrl { get { return _pictureUrl; } set { _pictureUrl = value; } }
-        public string MarketPlace { get { return _marketPlace; } set { _marketPlace = value; } }
+        //public string MarketPlace { get { return _marketPlace; } set { _marketPlace = value; } }
     }
 
     public class WildberriesDataActionModel : CategoryDataActionModel<WildberriesCategoryModel>  //класс для действий с категориями и взаимодействием с базой данных

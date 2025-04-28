@@ -23,7 +23,6 @@ namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
 
             if (response.IsSuccessStatusCode)
             {
-
                 List<WildberriesCategoryModel> categoryDTOList = await response.Content.ReadFromJsonAsync<List<WildberriesCategoryModel>>(options); //DTO категорий (парсер)
 
                 foreach (var categoryDTO in categoryDTOList)

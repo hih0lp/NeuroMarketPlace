@@ -26,21 +26,21 @@ namespace PetProjectC_NeuroWeb.Services.TimeService.Ports
             {
                 if (_parserServices.Any() != true)
                 {
-                    _logger.LogWarning("No one parser services was found");
+                    _logger.LogInformation("No one parser services was found");
                     return;
                 }
 
                 foreach (var parser in _parserServices)
                 {
-                    _logger.LogDebug("Парсер работает");
+                    _logger.LogInformation("Парсер работает");
                     await parser.AddCategoryInDB();
                     await parser.AddCategoryInDB();
-                    _logger.LogDebug("Парсер закончил свою работу");
+                    _logger.LogInformation("Парсер закончил свою работу");
 
                     await Task.Delay(TimeSpan.FromDays(7));
                 }
             }
-            _logger.LogDebug("Финиш");
+            _logger.LogInformation("Финиш");
         }
     }
 }

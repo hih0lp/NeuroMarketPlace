@@ -30,6 +30,8 @@ builder.Services.AddHostedService<BackgroundTimeService>();
 
 
 var app = builder.Build();
+//ILoggerFactory factory = LoggerFactory.Create(builder => builder.AddConsole());
+
 //app.Services.GetService<TimeService>(); //парсер для категорий и продуктов
 
 

@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Data.Common;
-using NeuroWeb.Models;
+using PetProjectC_NeuroWeb.Models.CategoryModels;
+using PetProjectC_NeuroWeb.Models.Products;
 
 namespace NeuroWeb
 {

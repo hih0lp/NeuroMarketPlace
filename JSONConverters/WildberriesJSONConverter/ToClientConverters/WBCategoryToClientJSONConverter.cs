@@ -1,6 +1,6 @@
-﻿using NeuroWeb.Models;
-using System.Text.Json.Serialization;
+﻿using System.Text.Json.Serialization;
 using System.Text.Json;
+using PetProjectC_NeuroWeb.Models.CategoryModels;
 
 namespace PetProjectC_NeuroWeb.JSONConverters.WildberriesJSONConverter.ClientConverters
 {

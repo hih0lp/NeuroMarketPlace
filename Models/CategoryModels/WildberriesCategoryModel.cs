@@ -1,9 +1,10 @@
-﻿using PetProjectC_NeuroWeb.JSONConverters.WildberriesJSONConverter.ClientConverters;
+﻿using NeuroWeb;
+using PetProjectC_NeuroWeb.JSONConverters.WildberriesJSONConverter.ClientConverters;
 using PetProjectC_NeuroWeb.JSONConverters.WildberriesJSONConverter.DataBaseConverters;
 using PetProjectC_NeuroWeb.Models;
 using System.Text.Json;
 
-namespace NeuroWeb.Models
+namespace PetProjectC_NeuroWeb.Models.CategoryModels
 {
     public class WildberriesCategoryModel
     {
@@ -37,9 +38,9 @@ namespace NeuroWeb.Models
     }
 
     public class WildberriesDataActionModel : CategoryDataActionModel<WildberriesCategoryModel>  //класс для действий с категориями и взаимодействием с базой данных
-    { 
+    {
         public override async Task<List<WildberriesCategoryModel>> GetCategoriesAsync(string categoryName = "")
-        { 
+        {
             using (var db = new DataBase())
             {
                 var products = db.ProductModels.ToList();
@@ -72,7 +73,7 @@ namespace NeuroWeb.Models
                         categoryDTO.PictureUrl = "https://basket-12.wbbasket.ru/vol1731/part173167/173167093/images/big/1.webp";
                         categoryDTO.IsChildrenOnly = category.IsChildrenOnly;
 
-                        if (categoryDTO.IsChildrenOnly)  
+                        if (categoryDTO.IsChildrenOnly)
                         {
                             categoryDTOList.Add(categoryDTO);
                             Console.WriteLine(111111);

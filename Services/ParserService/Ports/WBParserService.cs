@@ -1,11 +1,12 @@
 ﻿using PetProjectC_NeuroWeb.JSONConverters.WildberriesJSONConverter.ClientConverters;
 using PetProjectC_NeuroWeb.JSONConverters.WildberriesJSONConverter.DataBaseConverters;
-using NeuroWeb.Models;
 using PetProjectC_NeuroWeb.Services.ParserService.Interface;
 using System.Text.Json;
 using PetProjectC_NeuroWeb;
 using NeuroWeb;
 using System.Net;
+using PetProjectC_NeuroWeb.Models.CategoryModels;
+using PetProjectC_NeuroWeb.Models.Products;
 
 namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
 {

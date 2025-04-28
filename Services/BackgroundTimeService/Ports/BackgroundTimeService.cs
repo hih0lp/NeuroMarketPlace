@@ -9,8 +9,8 @@ namespace PetProjectC_NeuroWeb.Services.TimeService.Ports
     public class BackgroundTimeService : BackgroundService
     {
         private readonly ILogger<BackgroundTimeService> _logger;
-        readonly List<Timer> _timers = new List<Timer>();
-        readonly IEnumerable<IParserService> _parserServices;
+        private readonly List<Timer> _timers = new List<Timer>();
+        private readonly IEnumerable<IParserService> _parserServices;
         public BackgroundTimeService(ILogger<BackgroundTimeService> logger, IEnumerable<IParserService> parserServices)
         {
             _logger = logger;
@@ -26,21 +26,23 @@ namespace PetProjectC_NeuroWeb.Services.TimeService.Ports
             {
                 if (_parserServices.Any() != true)
                 {
-                    _logger.LogInformation("No one parser services was found");
+                    _logger.LogInformation("Парсеры не найдены. Ошибка");
                     return;
                 }
 
                 foreach (var parser in _parserServices)
                 {
-                    _logger.LogInformation("Парсер работает");
+                    _logger.LogInformation("Парсер начал работать");
+
                     await parser.AddCategoryInDB();
                     await parser.AddCategoryInDB();
+
                     _logger.LogInformation("Парсер закончил свою работу");
 
                     await Task.Delay(TimeSpan.FromDays(7));
                 }
             }
-            _logger.LogInformation("Финиш");
+            _logger.LogInformation("Сервис закончил работу");
         }
     }
 }

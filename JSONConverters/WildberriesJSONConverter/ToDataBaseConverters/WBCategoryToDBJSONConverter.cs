@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 using System.Text.Json;
-using NeuroWeb.Models;
+using PetProjectC_NeuroWeb.Models.CategoryModels;
 
 namespace PetProjectC_NeuroWeb.JSONConverters.WildberriesJSONConverter.DataBaseConverters
 {
@@ -48,13 +48,10 @@ namespace PetProjectC_NeuroWeb.JSONConverters.WildberriesJSONConverter.DataBaseC
                     }
                 }
             }
-
             return models;
         }
 
         public override void Write(Utf8JsonWriter writer, List<WildberriesCategoryModel> value, JsonSerializerOptions options)
         { }
-
-
     }
 }

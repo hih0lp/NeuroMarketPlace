@@ -1,6 +1,4 @@
-﻿using NeuroWeb.Models;
-
-namespace NeuroWeb.Models
+﻿namespace PetProjectC_NeuroWeb.Models.Products
 {
     //public class DataBaseProductModel
     //{

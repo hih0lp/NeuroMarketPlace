@@ -1,30 +1,30 @@
-﻿using NeuroWeb.JSONConverters.DataBaseConverters;
-using NeuroWeb.Models;
+﻿using PetProjectC_NeuroWeb.JSONConverters.WildberriesJSONConverter.ClientConverters;
+using PetProjectC_NeuroWeb.JSONConverters.WildberriesJSONConverter.DataBaseConverters;
 using PetProjectC_NeuroWeb.Services.ParserService.Interface;
 using System.Text.Json;
 using PetProjectC_NeuroWeb;
 using NeuroWeb;
-using PetProjectC_NeuroWeb.JSONConverters.DataBaseConverters;
 using System.Net;
+using PetProjectC_NeuroWeb.Models.CategoryModels;
+using PetProjectC_NeuroWeb.Models.Products;
 
 namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
 {
     public class WBParserService : IParserService
     {
-        public async void AddCategoryInDB(object state)
+        public async Task AddCategoryInDB()//param = object state
         {
             JsonSerializerOptions options = new JsonSerializerOptions();
-            options.Converters.Add(new CategoryDBJSONConverter());
+            options.Converters.Add(new WBCategoryToDBJSONConverter());
 
 
             HttpClient client = new HttpClient();
             HttpResponseMessage response = await client.GetAsync("https://localhost:7259/wildberries/categories");
-
+                
 
             if (response.IsSuccessStatusCode)
             {
-
-                List<CategoryParserDTOModel> categoryDTOList = await response.Content.ReadFromJsonAsync<List<CategoryParserDTOModel>>(options);
+                List<WildberriesCategoryModel> categoryDTOList = await response.Content.ReadFromJsonAsync<List<WildberriesCategoryModel>>(options); //DTO категорий (парсер)
 
                 foreach (var categoryDTO in categoryDTOList)
                 {
@@ -32,28 +32,23 @@ namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
                     {
                         using (var db = new DataBase())
                         {
-
                             var categoryList = db.CategoryModels.ToList();
-
-
-
-                            var category = categoryList.FirstOrDefault(s => s.Name == categoryDTO.name);
-
+                            var category = categoryList.FirstOrDefault(s => s.Name == categoryDTO.Name);
 
                             if (category == null)
                             { 
 
                                 //List<DataBaseProductModel> list = null!;
 
-                                DataBaseCategoryModel DBCategoryModel = new DataBaseCategoryModel(
-                                    categoryDTO.id,
-                                    categoryDTO.name,
-                                    categoryDTO.relationRef,
-                                    categoryDTO.isChildrenOnly);
+                                WildberriesCategoryModel DBCategoryModel = new WildberriesCategoryModel(
+                                    categoryDTO.Id,
+                                    categoryDTO.Name,
+                                    categoryDTO.RelationRef,
+                                    categoryDTO.IsChildrenOnly,
+                                    null); //last param = "WB"
 
                                 db.CategoryModels.Add(DBCategoryModel);
                                 await db.SaveChangesAsync();
-
                             }
                         }
                     }
@@ -63,48 +58,43 @@ namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
 
 
 
-        public async void AddProductsInDB(object state)
+        public async Task AddProductsInDB()//param = object state
         {
             JsonSerializerOptions options = new JsonSerializerOptions();
-            options.Converters.Add(new ProductsJSONConverter());
-
-            //HttpClientHandler handler = new HttpClientHandler()
-            //{
-            //    AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate
-            //};
+            options.Converters.Add(new WBProductsToDBJSONConverter());
 
             HttpClient client = new HttpClient();
-            client.Timeout = TimeSpan.FromMinutes(35);
+            client.Timeout = TimeSpan.FromDays(1);
 
-            //HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Connect, "https://localhost:7259/wildberries/products");
             HttpResponseMessage response = await client.GetAsync("https://localhost:7259/wildberries/products");
 
 
             if (response.IsSuccessStatusCode)
             {
-                List<ProductDTOModel> productsDTOList = await response.Content.ReadFromJsonAsync<List<ProductDTOModel>>(options);
+                List<ProductModel> productsDTOList = await response.Content.ReadFromJsonAsync<List<ProductModel>>(options);
 
                 
                 foreach (var productDTO in productsDTOList)
                 {
+                    
+
                     using (var db = new DataBase())
                     {
                         var productsList = db.ProductModels.ToList();
 
-                        var product = productsList.FirstOrDefault(s => s.Name == productDTO.name);
+                        var product = productsList.FirstOrDefault(s => s.Name == productDTO.Name);
 
-                        if (product == null)
+                        if (product == null && productDTO.PictureUrl != null)
                         {
-                            Console.WriteLine(111111);
-                            DataBaseProductModel DBProductModel = new DataBaseProductModel(
-                                productDTO.id,
-                                productDTO.name,
-                                productDTO.brand,
-                                productDTO.reviewRating,
-                                productDTO.categoryName,
-                                productDTO.url,
-                                productDTO.price,
-                                productDTO.pictureUrl);
+                            ProductModel DBProductModel = new ProductModel(
+                                productDTO.Id,
+                                productDTO.Name,
+                                productDTO.Brand,
+                                productDTO.ReviewRating,
+                                productDTO.CategoryName,
+                                productDTO.Url,
+                                productDTO.Price,
+                                productDTO.PictureUrl); //last param = wb
 
                             db.ProductModels.Add(DBProductModel);
                             await db.SaveChangesAsync();

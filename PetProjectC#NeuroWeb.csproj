@@ -17,12 +17,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\" />
-    <Folder Include="wwwroot\documents\" />
+    <Folder Include="ConfigureFiles\" />
   </ItemGroup>
 
   <ItemGroup>
     <None Include="Views\CategoryPage\CategoryPage.cshtml" />
+    <None Include="wwwroot\js\CategoryPageCatalog.js" />
+    <None Include="wwwroot\styles\CategoryPage.cshtml" />
   </ItemGroup>
 
 </Project>

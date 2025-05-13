@@ -1,17 +1,19 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NeuroWeb;
-using NeuroWeb.JSONConverters.DataBaseConverters;
-using NeuroWeb.Models;
-using PetProjectC_NeuroWeb.JSONConverters.ClientConverters;
-using PetProjectC_NeuroWeb.JSONConverters.ClientConverters;
+using PetProjectC_NeuroWeb.JSONConverters.WildberriesJSONConverter.ClientConverters;
+using PetProjectC_NeuroWeb.JSONConverters.WildberriesJSONConverter.DataBaseConverters;
+using PetProjectC_NeuroWeb.Models.CategoryModels;
 using System.Text.Json;
+using static System.Net.WebRequestMethods;
 
 namespace PetProjectC_NeuroWeb.Controllers.CategoryPage
 {
     public class CategoryPageController : Controller
     {
-        
+        private ILogger<CategoryPageController> _logger;
+        private static readonly JsonSerializerOptions _jsonOptions = new JsonSerializerOptions { Converters = { new WBCategoryToClientJSONConverter() } };
+
         public ActionResult CategoryPage()
         {
             return View();
@@ -19,38 +21,17 @@ namespace PetProjectC_NeuroWeb.Controllers.CategoryPage
 
 
         [HttpGet]
-        public async Task<JsonResult> GetCategories()
+        public async Task<JsonResult> GetCategories(string categoryName = "")
         {
+            WildberriesDataActionModel categoryActionModel = new WildberriesDataActionModel();
+            _logger.LogInformation("Запрос на получение категорий отправлен"); //закомментить, если не нужна отладка
+            
 
-            JsonSerializerOptions options = new JsonSerializerOptions();
-            options.Converters.Add(new CategoryClientJSONConverter());
-
-            using (var db = new DataBase())
-            {
-                var products = db.ProductModels.ToList();
-                var categories = db.CategoryModels.ToList();
-
-                List<CategoryClientDTOModel> categoryDTOList = new List<CategoryClientDTOModel>();
-                CategoryClientDTOModel categoryDTO = new CategoryClientDTOModel();
-
-                foreach (var category in categories)
-                {
-                    var pictureUrl = products.FirstOrDefault(s => s.CategoryName == category.Name)!.PictureUrl;
-                    categoryDTO.name = category.Name;
-                    categoryDTO.pictureUrl = pictureUrl;
-
-                    categoryDTOList.Add(categoryDTO);
-                }
-
-                //return await context.Response.WriteAsJsonAsync(categoryDTOList, options);
-                return Json(categoryDTOList, options);
-            }
-
-
-
+            var categoryList = await categoryActionModel.GetCategoriesAsync(categoryName);
 
             
-        }
 
+            return Json(categoryList, _jsonOptions);
+        }
     }
 }

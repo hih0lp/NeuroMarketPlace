@@ -60,7 +60,7 @@ namespace PetProjectC_NeuroWeb.Models.CategoryModels
 
                             categoryDTOList = categoryList.Where(x => x.RelationRef.Split('/').Count() == categoryUrl.Split('/').Count() + 1).Where(x => x.RelationRef.Contains(categoryUrl)).ToList();
 
-                            Console.WriteLine("huy pizda zalupa");
+                            Console.WriteLine("подкатегории is getting");
 
                             return categoryDTOList;
                         }

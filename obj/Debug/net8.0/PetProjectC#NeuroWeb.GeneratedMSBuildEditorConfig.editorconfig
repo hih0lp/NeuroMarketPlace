@@ -17,6 +17,8 @@ build_property.SupportLocalizedComponentNames =
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = C:\Users\User\source\repos\PetProjectC#NeuroWeb
 build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
 
 [C:/Users/User/source/repos/PetProjectC\#NeuroWeb/wwwroot/images/CategoryPage(useless).cshtml]
 build_metadata.AdditionalFiles.TargetPath = d3d3cm9vdFxpbWFnZXNcQ2F0ZWdvcnlQYWdlKHVzZWxlc3MpLmNzaHRtbA==

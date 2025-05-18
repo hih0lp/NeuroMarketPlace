@@ -19,9 +19,6 @@ namespace PetProjectC_NeuroWeb.Services.TimeService.Ports
 
         protected override async Task ExecuteAsync(CancellationToken cancellationToken)
         {
-            
-
-
             while (!cancellationToken.IsCancellationRequested)
             {
                 if (_parserServices.Any() != true)
@@ -42,6 +39,7 @@ namespace PetProjectC_NeuroWeb.Services.TimeService.Ports
                     await Task.Delay(TimeSpan.FromDays(7));
                 }
             }
+
             _logger.LogInformation("Сервис закончил работу");
         }
     }

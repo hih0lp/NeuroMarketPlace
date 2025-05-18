@@ -1,17 +1,18 @@
 ﻿using PetProjectC_NeuroWeb.JSONConverters.WildberriesJSONConverter.ClientConverters;
 using PetProjectC_NeuroWeb.JSONConverters.WildberriesJSONConverter.DataBaseConverters;
-using NeuroWeb.Models;
 using PetProjectC_NeuroWeb.Services.ParserService.Interface;
 using System.Text.Json;
 using PetProjectC_NeuroWeb;
 using NeuroWeb;
 using System.Net;
+using PetProjectC_NeuroWeb.Models.CategoryModels;
+using PetProjectC_NeuroWeb.Models.Products;
 
 namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
 {
     public class WBParserService : IParserService
     {
-        public async void AddCategoryInDB(object state)
+        public async Task AddCategoryInDB()//param = object state
         {
             JsonSerializerOptions options = new JsonSerializerOptions();
             options.Converters.Add(new WBCategoryToDBJSONConverter());
@@ -23,8 +24,7 @@ namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
 
             if (response.IsSuccessStatusCode)
             {
-
-                List<CategoryModel> categoryDTOList = await response.Content.ReadFromJsonAsync<List<CategoryModel>>(options); //DTO категорий (парсер)
+                List<WildberriesCategoryModel> categoryDTOList = await response.Content.ReadFromJsonAsync<List<WildberriesCategoryModel>>(options); //DTO категорий (парсер)
 
                 foreach (var categoryDTO in categoryDTOList)
                 {
@@ -40,7 +40,7 @@ namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
 
                                 //List<DataBaseProductModel> list = null!;
 
-                                CategoryModel DBCategoryModel = new CategoryModel(
+                                WildberriesCategoryModel DBCategoryModel = new WildberriesCategoryModel(
                                     categoryDTO.Id,
                                     categoryDTO.Name,
                                     categoryDTO.RelationRef,
@@ -58,7 +58,7 @@ namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
 
 
 
-        public async void AddProductsInDB(object state)
+        public async Task AddProductsInDB()//param = object state
         {
             JsonSerializerOptions options = new JsonSerializerOptions();
             options.Converters.Add(new WBProductsToDBJSONConverter());
@@ -94,7 +94,7 @@ namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
                                 productDTO.CategoryName,
                                 productDTO.Url,
                                 productDTO.Price,
-                                productDTO.PictureUrl);
+                                productDTO.PictureUrl); //last param = wb
 
                             db.ProductModels.Add(DBProductModel);
                             await db.SaveChangesAsync();

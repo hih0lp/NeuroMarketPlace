@@ -2,7 +2,7 @@
 {
     public interface IParserService
     {
-        public void AddCategoryInDB(object state);
-        public void AddProductsInDB(object state);
+        public Task AddCategoryInDB();//param = object state
+        public Task AddProductsInDB();//param = object state
     }
 }

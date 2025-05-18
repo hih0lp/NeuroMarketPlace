@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог мебели</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Шапка (из вашего JSON) */
+        body { 
+            margin: 0;
+            font-family: Arial, sans-serif;
+            padding-top: 70px;
+            background-color: #f5f5f5;
+        }
+ 
+        header {
+            background-color: #fff;
+            height: 70px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+ 
+        .logo {
+            width: 150px;
+            min-width: 150px;
+        }
+ 
+        .logo img {
+            height: 40px;
+            width: auto;
+            display: block;
+        }
+ 
+        .search-container {
+            display: flex;
+            align-items: center;
+            border: 1px solid #e0e0e0;
+            border-radius: 25px;
+            background-color: #fff;
+            overflow: hidden;
+            height: 40px;
+            margin: 0 auto;
+            max-width: 500px;
+            width: 100%;
+            transition: all 0.3s ease;
+            flex-shrink: 1;
+        }
+ 
+        .search-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 100%;
+            background-color: #8b0000;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            padding: 0;
+            flex-shrink: 0;
+        }
+ 
+        .search-button:hover {
+            background-color: #8b4500;
+        }
+ 
+        .search-input {
+            border: none;
+            padding: 0 15px;
+            font-size: 16px;
+            color: #333;
+            width: 100%;
+            outline: none;
+            background: transparent;
+        }
+ 
+        .links {
+            display: flex;
+            margin-left: 20px;
+            gap: 20px;
+            flex-shrink: 0;
+        }
+ 
+        .links a {
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+            white-space: nowrap;
+        }
+ 
+        /* Новый блок 1 - растянутая картинка */
+        .banner-block_N23 {
+            width: 72%;
+            margin: auto;
+            padding: 40px;
+        }
+ 
+        .banner-image_N23 {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+ 
+        /* Новый блок 2 - текст */
+        .text-block_N23 {
+            max-width: calc(100% - 400px);
+            margin: 0 auto 40px;
+            padding: 0 200px;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+            text-align: left;
+        }
+ 
+        /* Блок категорий (new_block_3) */
+        .categories-container_N23 {
+            max-width: calc(100% - 400px);
+            margin: 50px auto;
+            padding: 0 200px;
+        }
+ 
+        .categories-title_N23 {
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #333;
+        }
+ 
+        .categories-grid_N23 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 50px 102px;
+        }
+ 
+        .category-card_N23 {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            min-width: 180px;
+            min-height: 270px;
+            text-decoration: none;
+            color: inherit;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+ 
+        .category-card_N23:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+ 
+        .category-name_N23 {
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            padding: 15px 10px;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+ 
+        .category-image-container_N23 {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            padding: 12px;
+            min-height: 120px;
+        }
+ 
+        .categories-container_N23 img {
+            transform: scale(1.1)
+        }
+ 
+        .category-image_N23 {
+            max-width: 75%;
+            max-height: 100px;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+ 
+        /* Блок товаров (из вашего JSON) */
+        .products-section_N23 {
+            max-width: calc(100% - 400px);
+            margin: 80px auto;
+            padding: 0 200px;
+        }
+ 
+        .products-title_N23 {
+            font-size: 40px;
+            font-weight: bold;
+            text-align: left;
+            margin-bottom: 29px;
+            color: #333;
+        }
+ 
+        .products-grid_N23 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 54px 193px;
+        }
+ 
+        .product-card_N23 {
+            border: 1px solid #eee;
+            border-radius: 10px;
+            padding: 15px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+        }
+ 
+        .product-card_N23:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+ 
+        .product-image_N23 {
+            width: 100%;
+            height: 180px;
+            object-fit: contain;
+            border-radius: 8px;
+            margin-bottom: 12px;
+        }
+ 
+        .product-price_N23 {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+ 
+        .product-title_N23 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #333;
+            line-height: 1.4;
+        }
+ 
+        .product-rating_N23 {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            color: #f39c12;
+            font-size: 13px;
+        }
+ 
+        .product-actions_N23 {
+            display: flex;
+            justify-content: space-between;
+            margin-top: auto;
+        }
+ 
+        .add-to-cart_N23 {
+            margin: auto;
+            background-color: rgb(231, 255, 93);
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 14px;
+        }
+ 
+        .add-to-cart_N23:hover {
+            background-color: rgb(255, 231, 93);
+        }
+ 
+        .favorite-btn_N23 {
+            background: none;
+            border: none;
+            font-size: 20px;
+            color: #ccc;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+ 
+        .filter-photo-card_N23 {
+            width: 20px;
+            height: 20px;
+            margin-left: 5px;
+            vertical-align: middle;
+        }
+ 
+        /* Стили для второго блока карточек */
+        .products-container_cards_3 {
+            max-width: calc(100% - 400px);
+            margin: 80px auto;
+            padding: 0 200px;
+        }
+ 
+        .products-grid_cards_3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 54px 193px;
+        }
+ 
+        .products-grid_cards_3 a {
+            text-decoration: none;
+        }
+ 
+        .product-card_cards_3 {
+            border: 1px solid #eee;
+            border-radius: 10px;
+            padding: 15px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+        }
+        .product-card_cards_3 a {
+            text-decoration: none;
+        }
+ 
+        .product-card_cards_3:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+ 
+        .product-image_cards_3 {
+            width: 100%;
+            height: 180px;
+            object-fit: contain;
+            border-radius: 8px;
+            margin-bottom: 12px;
+        }
+ 
+        .product-price_cards_3 {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+ 
+        .product-title_cards_3 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #333;
+            line-height: 1.4;
+        }
+ 
+        .product-rating_cards_3 {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            color: #f39c12;
+            font-size: 13px;
+        }
+ 
+        .product-actions_cards_3 {
+            display: flex;
+            justify-content: space-between;
+            margin-top: auto;
+        }
+ 
+        .add-to-cart_cards_3 {
+            margin: auto;
+            background-color: rgb(231, 255, 93);
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: button;
+            transition: background-color 0.3s;
+            font-size: 14px;
+        }
+ 
+        .add-to-cart_cards_3:hover {
+            background-color: rgb(255, 231, 93);
+        }
+ 
+        .favorite-btn_cards_3 {
+            background: none;
+            border: none;
+            font-size: 20px;
+            color: #ccc;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+ 
+        .filter-photo-card_cards_3 {
+            width: 20px;
+            height: 20px;
+            margin-left: 5px;
+            vertical-align: middle;
+        }
+ 
+        .favorite-btn_cards_3.active {
+            color: #e74c3c;
+        }
+ 
+        .section-title_cards_3 {
+            font-size: 30px;
+            font-weight: bold;
+            text-align: left;
+            margin-bottom: 29px;
+            color: #333;
+        }
+ 
+        /* Блок производителей */
+        .manufacturers-container {
+            max-width: calc(100% - 400px);
+            margin: 80px auto;
+            padding: 0 200px;
+            position: relative;
+        }
+ 
+        .manufacturers-title {
+            font-size: 30px;
+            font-weight: bold;
+            text-align: left;
+            margin-bottom: 60px;
+            color: #333;
+        }
+ 
+        .manufacturers-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+        }
+ 
+        .manufacturer-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 120px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+ 
+        .manufacturer-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+ 
+        .manufacturer-image {
+            max-width: 80%;
+            max-height: 80px;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+ 
+        .all-manufacturers-btn {
+            position: absolute;
+            top: 0px;
+            right: 200px;
+            background: white;
+            border-radius: 5px;
+            padding: 15px 25px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            width: 238px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+ 
+        .all-manufacturers-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+            background-color: #f8f8f8;
+        }
+ 
+        /* Адаптивность */
+        @media (max-width: 1400px) {
+            .categories-grid_N23, 
+            .products-grid_N23,
+            .products-grid_cards_3,
+            .manufacturers-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+ 
+            .text-block_N23,
+            .categories-container_N23,
+            .products-section_N23,
+            .products-container_cards_3,
+            .manufacturers-container {
+                padding: 0 100px;
+                max-width: calc(100% - 200px);
+            }
+ 
+            .all-manufacturers-btn {
+                right: 100px;
+            }
+        }
+ 
+        @media (max-width: 1000px) {
+            .categories-grid_N23,
+            .products-grid_N23,
+            .products-grid_cards_3,
+            .manufacturers-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+ 
+            .text-block_N23,
+            .categories-container_N23,
+            .products-section_N23,
+            .products-container_cards_3,
+            .manufacturers-container {
+                padding: 0 50px;
+                max-width: calc(100% - 100px);
+            }
+ 
+            .all-manufacturers-btn {
+                right: 50px;
+            }
+        }
+ 
+        @media (max-width: 600px) {
+            .categories-grid_N23,
+            .products-grid_N23,
+            .products-grid_cards_3,
+            .manufacturers-grid {
+                grid-template-columns: 1fr;
+            }
+ 
+            .text-block_N23,
+            .categories-container_N23,
+            .products-section_N23,
+            .products-container_cards_3,
+            .manufacturers-container {
+                padding: 0 20px;
+                max-width: calc(100% - 40px);
+            }
+ 
+            .all-manufacturers-btn {
+                position: static;
+                margin: 20px auto;
+                width: 100%;
+                max-width: 238px;
+            }
+ 
+            .manufacturers-title {
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Шапка -->
+    <header id="site-header">
+        <div class="logo">
+            <a href="#">
+                <img src="../img/Estate_House.svg" alt="Логотип">
+            </a>
+        </div>
+ 
+        <form class="search-container" id="search-form">
+            <button class="search-button" type="submit">
+                <i class="fas fa-search"></i>
+            </button>
+            <input type="text" class="search-input" id="search-input" placeholder="Поиск...">
+        </form>
+ 
+        <div class="links">
+            <a href="#">Сравнение</a>
+            <a href="#">Профиль</a>
+        </div>
+    </header>
+ 
+    <!-- Новый блок 1 - растянутая картинка -->
+    <div class="banner-block_N23">
+        <img src="../img/Frame 2.svg" alt="Рекламный баннер" class="banner-image_N23">
+    </div>
+ 
+    <!-- Новый блок 2 - текст -->
+    <div class="text-block_N23">
+        <p>Estate House — это удобный сервис для тех, кто ищет идеальную мебель для своего дома. Наш каталог предлагает широкий выбор товаров от проверенных производителей и магазинов. Здесь вы можете приобрести как готовые решения, так и заказать индивидуальное изготовление шкафов, кроватей и другой мебели. В ассортименте представлены разнообразные стили: от уютного прованса до современного минимализма. С нами процесс покупки становится простым и приятным. Estate House — ваш надежный проводник в мире качественной мебели!</p>
+    </div>
+ 
+    <!-- Блок категорий (new_block_3) -->
+    <div class="categories-container_N23">
+        <h2 class="categories-title_N23">Каталог мебели</h2>
+ 
+        <div class="categories-grid_N23">
+            <a href="#" class="category-card_N23">
+                <div class="category-name_N23">Каливан кляйн sdfgviuysdfg iusdfgku iyshfdk gusdfku gsdfiuygoisu dfgiudiku yf fwerjkfghkdjlh  dfhgkdhs dfhgjk dfgh h h h h h h </div>
+                <div class="category-image-container_N23">
+                    <img  src="../img/детдом.svg" alt="Каливан кляйн" class="category-image_N23">
+                </div>
+            </a>
+ 
+            <a href="#" class="category-card_N23">
+                <div class="category-name_N23">Кресла</div>
+                <div class="category-image-container_N23">
+                    <img src="../img/детдом.svg" alt="Кресла" class="category-image_N23">
+                </div>
+            </a>
+ 
+            <a href="#" class="category-card_N23">
+                <div class="category-name_N23">Столы</div>
+                <div class="category-image-container_N23">
+                    <img src="../img/детдом.svg" alt="Столы" class="category-image_N23">
+                </div>
+            </a>
+ 
+            <a href="#" class="category-card_N23">
+                <div class="category-name_N23">Стулья</div>
+                <div class="category-image-container_N23">
+                    <img src="https://via.placeholder.com/200x150?text=Стулья" alt="Стулья" class="category-image_N23">
+                </div>
+            </a>
+ 
+            <a href="#" class="category-card_N23">
+                <div class="category-name_N23">Шкафы</div>
+                <div class="category-image-container_N23">
+                    <img src="https://via.placeholder.com/200x150?text=Шкафы" alt="Шкафы" class="category-image_N23">
+                </div>
+            </a>
+ 
+            <a href="#" class="category-card_N23">
+                <div class="category-name_N23">Кровати</div>
+                <div class="category-image-container_N23">
+                    <img src="https://via.placeholder.com/200x150?text=Кровати" alt="Кровати" class="category-image_N23">
+                </div>
+            </a>
+ 
+            <a href="#" class="category-card_N23">
+                <div class="category-name_N23">Комоды</div>
+                <div class="category-image-container_N23">
+                    <img src="https://via.placeholder.com/200x150?text=Комоды" alt="Комоды" class="category-image_N23">
+                </div>
+            </a>
+ 
+            <a href="#" class="category-card_N23">
+                <div class="category-name_N23">Тумбы</div>
+                <div class="category-image-container_N23">
+                    <img src="https://via.placeholder.com/200x150?text=Тумбы" alt="Тумбы" class="category-image_N23">
+                </div>
+            </a>
+        </div>
+    </div>
+ 
+    <!-- Второй блок карточек товаров -->
+    <div class="products-container_cards_3">
+        <h2 class="section-title_cards_3">Популярные товары</h2>
+        <div class="products-grid_cards_3">
+            <!-- Карточка товара 1 -->
+            <a href="#" class="product-card_cards_3">
+                <img src="../img/детдом.svg" alt="Товар 1" class="product-image_cards_3">
+                <div class="product-price_cards_3">89 990 ₽</div>
+                <h3 class="product-title_cards_3">Ноутбук игровой ASUS ROG Strix G15 (16 ГБ RAM, 1 ТБ SSD)</h3>
+                <div class="product-rating_cards_3">★★★★☆ (124 отзыва)</div>
+                <div class="product-actions_cards_3">
+                    <button class="add-to-cart_cards_3"><strong> Подробнее</strong><img class="filter-photo-card_cards_3" src="../img/Estate_House.svg" alt=""></button>
+                    <button class="favorite-btn_cards_3">♥</button>
+                </div>
+            </a>
+ 
+            <!-- Карточка товара 2 -->
+            <a href="#" class="product-card_cards_3">
+                <img src="../img/детдом.svg" alt="Товар 1" class="product-image_cards_3">
+                <div class="product-price_cards_3">89 990 ₽</div>
+                <h3 class="product-title_cards_3">Ноутбук игровой ASUS ROG Strix G15 (16 ГБ RAM, 1 ТБ SSD)</h3>
+                <div class="product-rating_cards_3">★★★★☆ (124 отзыва)</div>
+                <div class="product-actions_cards_3">
+                    <button class="add-to-cart_cards_3"><strong> Подробнее</strong><img class="filter-photo-card_cards_3" src="../img/Estate_House.svg" alt=""></button>
+                    <button class="favorite-btn_cards_3">♥</button>
+                </div>
+            </a>
+ 
+            <!-- Карточка товара 3 -->
+            <a href="#" class="product-card_cards_3">
+                <img src="../img/детдом.svg" alt="Товар 1" class="product-image_cards_3">
+                <div class="product-price_cards_3">89 990 ₽</div>
+                <h3 class="product-title_cards_3">Ноутбук игровой ASUS ROG Strix G15 (16 ГБ RAM, 1 ТБ SSD)</h3>
+                <div class="product-rating_cards_3">★★★★☆ (124 отзыва)</div>
+                <div class="product-actions_cards_3">
+                    <button class="add-to-cart_cards_3"><strong> Подробнее</strong><img class="filter-photo-card_cards_3" src="../img/Estate_House.svg" alt=""></button>
+                    <button class="favorite-btn_cards_3">♥</button>
+                </div>
+            </a>
+ 
+            <!-- Карточка товара 4 -->
+            <a href="#" class="product-card_cards_3">
+                <img src="../img/детдом.svg" alt="Товар 1" class="product-image_cards_3">
+                <div class="product-price_cards_3">89 990 ₽</div>
+                <h3 class="product-title_cards_3">Ноутбук игровой ASUS ROG Strix G15 (16 ГБ RAM, 1 ТБ SSD)</h3>
+                <div class="product-rating_cards_3">★★★★☆ (124 отзыва)</div>
+                <div class="product-actions_cards_3">
+                    <button class="add-to-cart_cards_3"><strong> Подробнее</strong><img class="filter-photo-card_cards_3" src="../img/Estate_House.svg" alt=""></button>
+                    <button class="favorite-btn_cards_3">♥</button>
+                </div>
+            </a>
+ 
+            <!-- Карточка товара 5 -->
+            <a href="#" class="product-card_cards_3">
+                <img src="../img/детдом.svg" alt="Товар 1" class="product-image_cards_3">
+                <div class="product-price_cards_3">89 990 ₽</div>
+                <h3 class="product-title_cards_3">Ноутбук игровой ASUS ROG Strix G15 (16 ГБ RAM, 1 ТБ SSD)</h3>
+                <div class="product-rating_cards_3">★★★★☆ (124 отзыва)</div>
+                <div class="product-actions_cards_3">
+                    <button class="add-to-cart_cards_3"><strong> Подробнее</strong><img class="filter-photo-card_cards_3" src="../img/Estate_House.svg" alt=""></button>
+                    <button class="favorite-btn_cards_3">♥</button>
+                </div>
+            </a>
+ 
+            <!-- Карточка товара 6 -->
+            <a href="#" class="product-card_cards_3">
+                <img src="../img/детдом.svg" alt="Товар 1" class="product-image_cards_3">
+                <div class="product-price_cards_3">89 990 ₽</div>
+                <h3 class="product-title_cards_3">Ноутбук игровой ASUS ROG Strix G15 (16 ГБ RAM, 1 ТБ SSD)</h3>
+                <div class="product-rating_cards_3">★★★★☆ (124 отзыва)</div>
+                <div class="product-actions_cards_3">
+                    <button class="add-to-cart_cards_3"><strong> Подробнее</strong><img class="filter-photo-card_cards_3" src="../img/Estate_House.svg" alt=""></button>
+                    <button class="favorite-btn_cards_3">♥</button>
+                </div>
+            </a>
+        </div>
+    </div>
+ 
+    <!-- Блок производителей -->
+    <div class="manufacturers-container">
+        <h2 class="manufacturers-title">Производители</h2>
+        <a href="#" class="all-manufacturers-btn">Все производители</a>
+ 
+        <div class="manufacturers-grid">
+            <!-- Производитель 1 -->
+            <a href="#" class="manufacturer-card">
+                <img src="../img/детдом.svg" alt="Производитель 1" class="manufacturer-image">
+            </a>
+ 
+            <!-- Производитель 2 -->
+            <div class="manufacturer-card">
+                <img src="../img/детдом.svg" alt="Производитель 2" class="manufacturer-image">
+            </div>
+ 
+            <!-- Производитель 3 -->
+            <div class="manufacturer-card">
+                <img src="../img/детдом.svg" alt="Производитель 3" class="manufacturer-image">
+            </div>
+ 
+            <!-- Производитель 4 -->
+            <div class="manufacturer-card">
+                <img src="../img/детдом.svg" alt="Производитель 4" class="manufacturer-image">
+            </div>
+ 
+            <!-- Производитель 5 -->
+            <div class="manufacturer-card">
+                <img src="../img/детдом.svg" alt="Производитель 5" class="manufacturer-image">
+            </div>
+ 
+            <!-- Производитель 6 -->
+            <div class="manufacturer-card">
+                <img src="../img/детдом.svg" alt="Производитель 6" class="manufacturer-image">
+            </div>
+ 
+            <!-- Производитель 7 -->
+            <div class="manufacturer-card">
+                <img src="../img/детдом.svg" alt="Производитель 7" class="manufacturer-image">
+            </div>
+ 
+            <!-- Производитель 8 -->
+            <div class="manufacturer-card">
+                <img src="../img/детдом.svg" alt="Производитель 8" class="manufacturer-image">
+            </div>
+ 
+            <!-- Производитель 9 -->
+            <div class="manufacturer-card">
+                <img src="../img/детдом.svg" alt="Производитель 9" class="manufacturer-image">
+            </div>
+ 
+            <!-- Производитель 10 -->
+            <div class="manufacturer-card">
+                <img src="../img/детдом.svg" alt="Производитель 10" class="manufacturer-image">
+            </div>
+        </div>
+    </div>
+ 
+    <script>
+        // Избранное для первого блока
+        const favoriteBtns1 = document.querySelectorAll('.favorite-btn_N23');
+        favoriteBtns1.forEach(btn => {
+            btn.addEventListener('click', () => {
+                btn.classList.toggle('active');
+            });
+        });
+ 
+        // Корзина для первого блока
+        const addToCartBtns1 = document.querySelectorAll('.add-to-cart_N23');
+        addToCartBtns1.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const originalText = btn.innerHTML;
+                btn.innerHTML = '<strong>Добавлено!</strong>';
+                btn.style.backgroundColor = '#2ecc71';
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.style.backgroundColor = 'rgb(231, 255, 93)';
+                }, 2000);
+            });
+        });
+ 
+        // Избранное для второго блока
+        const favoriteBtns2 = document.querySelectorAll('.favorite-btn_cards_3');
+        favoriteBtns2.forEach(btn => {
+            btn.addEventListener('click', () => {
+                btn.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

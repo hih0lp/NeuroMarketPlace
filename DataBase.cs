@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Data.Common;
-using NeuroWeb.Models;
+using PetProjectC_NeuroWeb.Models.CategoryModels;
+using PetProjectC_NeuroWeb.Models.Products;
 
 namespace NeuroWeb
 {
@@ -11,7 +12,7 @@ namespace NeuroWeb
             Database.EnsureCreated();
         }
 
-        public DbSet<CategoryModel> CategoryModels { get; set; }
+        public DbSet<WildberriesCategoryModel> CategoryModels { get; set; }
         public DbSet<ProductModel> ProductModels { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

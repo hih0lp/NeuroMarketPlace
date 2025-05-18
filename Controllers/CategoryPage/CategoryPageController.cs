@@ -1,19 +1,19 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NeuroWeb;
-using NeuroWeb.Models;
 using PetProjectC_NeuroWeb.JSONConverters.WildberriesJSONConverter.ClientConverters;
 using PetProjectC_NeuroWeb.JSONConverters.WildberriesJSONConverter.DataBaseConverters;
+using PetProjectC_NeuroWeb.Models.CategoryModels;
 using System.Text.Json;
 using static System.Net.WebRequestMethods;
 
 namespace PetProjectC_NeuroWeb.Controllers.CategoryPage
 {
-
     public class CategoryPageController : Controller
     {
-        
+        private ILogger<CategoryPageController> _logger;
         private static readonly JsonSerializerOptions _jsonOptions = new JsonSerializerOptions { Converters = { new WBCategoryToClientJSONConverter() } };
+
         public ActionResult CategoryPage()
         {
             return View();
@@ -23,9 +23,11 @@ namespace PetProjectC_NeuroWeb.Controllers.CategoryPage
         [HttpGet]
         public async Task<JsonResult> GetCategories(string categoryName = "")
         {
-            CategoryModel categoryModel = new CategoryModel();
+            WildberriesDataActionModel categoryActionModel = new WildberriesDataActionModel();
+            _logger.LogInformation("Запрос на получение категорий отправлен"); //закомментить, если не нужна отладка
+            
 
-            var categoryList = await categoryModel.GetCategoriesAsync(categoryName);
+            var categoryList = await categoryActionModel.GetCategoriesAsync(categoryName);
 
             
 

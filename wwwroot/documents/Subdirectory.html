@@ -3,68 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="../styles/Subdirectory.css">
-    <link rel="stylesheet" href="../styles/CategoryPageStyle.css">
-    <link rel="stylesheet" href="../styles/CategoryPageStyle.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Goldman:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-
-
-
-
-    <style>
-
-
-        
-
-
-    </style>
-
-
+    <title>Интернет-магазин</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-
-
-
-
-
-
-
-    <header class="header">
-        <a href="#" class="logo">
-          <img src="../images/Estate_House.svg" alt="Логотип" />
-        </a>
-  
-        <div class="search-wrapper">
-          <div class="search-container">
-            <button class="search-button" aria-label="Поиск">
-              <i class="fas fa-search"></i>
-            </button>
-            <input type="text" class="search-input" placeholder="Поиск..." />
-          </div>
+    <!-- Шапка сайта -->
+    <header id="site-header">
+        <div class="logo">
+            <a href="#">
+                <img src="../images/Estate_House.svg" alt="Логотип">
+            </a>
         </div>
-  
-        <nav class="links">
-          <a href="#">Сравнение</a>
-          <a href="#">Профиль</a>
-        </nav>
-      </header>
-
-
-
-
-
+ 
+        <form class="search-container" id="search-form">
+            <button class="search-button" type="submit">
+                <i class="fas fa-search"></i>
+            </button>
+            <input type="text" class="search-input" id="search-input" placeholder="Поиск...">
+        </form>
+ 
+        <div class="links">
+            <a href="#">Сравнение</a>
+            <a href="#">Профиль</a>
+        </div>
+    </header>
+ 
+    <!-- Основной контент -->
+    <div class="main-container">
+        <!-- Блок фильтров -->
+        <aside class="filter-block">
+            <h2>Фильтр</h2>
+            <div class="filter-category">
+                <h3>Отсортировать по:</h3>
+                <div class="filter-option">
+                    <div class="filter-checkbox" data-filter="popular" title="Выбрать"></div>
+                    Сначала популярные
+                </div>
+                <div class="filter-option">
+                    <div class="filter-checkbox" data-filter="cheap" title="Выбрать"></div>
+                    Сначала недорогие
+                </div>
+                <div class="filter-option">
+                    <div class="filter-checkbox" data-filter="expensive" title="Выбрать"></div>
+                    Сначала дорогие
+                </div>
+                <div class="filter-option">
+                    <div class="filter-checkbox" data-filter="reviews" title="Выбрать"></div>
+                    По количеству отзывов
+                </div>
+            </div>
+            <div class="separator"></div>
+            <div class="filter-category">
+                <h3>Цена:</h3>
+                <div class="price-range">
+                    <input type="text" class="price-input" placeholder="от 9870" id="price-min">
+                    <input type="text" class="price-input" placeholder="до 119990" id="price-max">
+                </div>
+            </div>
+            <div class="separator"></div>
+            <div class="filter-category">
+                <h3>Продавец:</h3>
+                <input type="text" class="search-input-filter" placeholder="Поиск продавца" id="seller-search">
+                <div class="seller-list">
+                    <div class="seller-item">
+                        <div class="filter-checkbox" data-seller="seller1" title="Выбрать"></div>
+                        <img class="filter-photo" src="../images/детдом.svg" alt="Продавец 1">
+                    </div>
+                    <div class="seller-item">
+                        <div class="filter-checkbox" data-seller="seller2" title="Выбрать"></div>
+                        <img class="filter-photo" src="../images/детдом.svg" alt="Продавец 2">
+                    </div>
+                    <div class="seller-item">
+                        <div class="filter-checkbox" data-seller="seller3" title="Выбрать"></div>
+                        <img class="filter-photo" src="../images/детдом.svg" alt="Продавец 3">
+                    </div>
+                </div>
+                <a href="#" class="show-all">Показать все <span aria-hidden="true">▼</span></a>
+            </div>
+            <div class="separator"></div>
+            <div class="filter-category">
+                <h3>Размеры:</h3>
+                <div class="slider-container">
+                    <span class="slider-label">Ширина</span>
+                    <div class="slider">
+                        <div class="slider-thumb" style="left: 0%" data-value="50см" data-size="50"></div>
+                        <div class="slider-thumb" style="left: 100%" data-value="300см" data-size="300"></div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+ 
+        <!-- Блок товаров -->
+        <main class="product-block">
+            <h2>Товары</h2>
+            <div class="products-grid">
+                <!-- Карточка товара 1 -->
+                <a href="#" class="product-card">
+                    <img src="../images/детдом.svg" alt="Ноутбук" class="product-image">
+                    <div class="product-price">89 990 ₽</div>
+                    <h3 class="product-title">Ноутбук игровой ASUS ROG Strix G15 (16 ГБ RAM, 1 ТБ SSD)</h3>
+                    <div class="product-rating">★★★★☆ (124 отзыва)</div>
+                    <div class="product-actions">
+                        <button class="add-to-cart"><strong> Подробнее</strong><img class="filter-photo-card" src="../images/детдом.svg" alt=""></button>
+                        <button class="favorite-btn">♥</button>
+                    </div>
+                </a>
+ 
+ 
+ 
+            </div>
+        </main>
+    </div>
+<!--скрипт контрл с контрл в в основной-->
+    <script>
+        // Поиск
+        document.getElementById('search-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const query = document.getElementById('search-input').value.trim();
+            if (query) {
+                alert('Вы ищете: ' + query);
+                // Реальная логика поиска:
+                // window.location.href = '/search?q=' + encodeURIComponent(query);
+            }
+        });
+ 
+        // Фильтры
+        const filterCheckboxes = document.querySelectorAll('.filter-checkbox');
+        filterCheckboxes.forEach(checkbox => {
+            checkbox.addEventListener('click', () => {
+                checkbox.classList.toggle('checked');
+                // Здесь можно добавить логику фильтрации
+            });
+        });
+ 
+        // Слайдер
+        const sliderThumbs = document.querySelectorAll('.slider-thumb');
+        const slider = document.querySelector('.slider');
+        sliderThumbs.forEach(thumb => {
+            thumb.addEventListener('mousedown', (e) => {
+                e.preventDefault();
+                let shiftX = e.clientX - thumb.getBoundingClientRect().left;
+                document.addEventListener('mousemove', onMouseMove);
+                document.addEventListener('mouseup', onMouseUp);
+ 
+                function onMouseMove(e) {
+                    let newLeft = e.clientX - shiftX - slider.getBoundingClientRect().left;
+                    if (newLeft < 0) newLeft = 0;
+                    let rightEdge = slider.offsetWidth - thumb.offsetWidth;
+                    if (newLeft > rightEdge) newLeft = rightEdge;
+                    thumb.style.left = newLeft + 'px';
+                    thumb.dataset.value = Math.round((newLeft / rightEdge) * 250 + 50) + 'см';
+                    thumb.dataset.size = Math.round((newLeft / rightEdge) * 250 + 50);
+                }
+ 
+                function onMouseUp() {
+                    document.removeEventListener('mousemove', onMouseMove);
+                    document.removeEventListener('mouseup', onMouseUp);
+                }
+            });
+        });
+ 
+        // Избранное
+        const favoriteBtns = document.querySelectorAll('.favorite-btn');
+        favoriteBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                btn.classList.toggle('active');
+            });
+        });
+ 
+        // Корзина
+       // const addToCartBtns = document.querySelectorAll('.add-to-cart');
+       // addToCartBtns.forEach(btn => {
+        //    btn.addEventListener('click', () => {
+         //       btn.textContent = 'Добавлено!';
+         //       btn.style.backgroundColor = '#27ae60';
+           //     setTimeout(() => {
+            //        btn.textContent = 'В корзину';
+            //        btn.style.backgroundColor = '#3498db';
+             //   }, 2000);
+           // });
+       // });
+    </script>
 </body>
 </html>

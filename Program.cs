@@ -46,7 +46,7 @@ app.UseStaticFiles();
 
 //var staticFilesOptions = new FileServerOptions();
 //staticFilesOptions.DefaultFilesOptions.DefaultFileNames.Clear();
-//staticFilesOptions.DefaultFilesOptions.DefaultFileNames.Add("/documents/CategoryPage.cshtml");
+//staticFilesOptions.DefaultFilesOptions.DefaultFileNames.Add("/Views/CategoryPage/CategoryPage.cshtml");
 //app.UseFileServer(staticFilesOptions);
 
 

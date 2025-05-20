@@ -1,0 +1,7 @@
+wwwroot\images\Estate_House.svg
+wwwroot\images\Frame 2.svg
+wwwroot\images\детдом.svg
+wwwroot\js\CategoryPageCatalog.js
+wwwroot\documents\SecondPage.html
+wwwroot\css\CategoryPageStyle.css
+wwwroot\css\Subdirectory.css

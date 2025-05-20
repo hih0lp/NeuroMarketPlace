@@ -21,9 +21,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="Views\CategoryPage\CategoryPage.cshtml" />
+    <None Include="Views\CategoryPage\Subdirectory.cshtml" />
     <None Include="wwwroot\js\CategoryPageCatalog.js" />
-    <None Include="wwwroot\styles\CategoryPage.cshtml" />
+    <None Include="wwwroot\css\CategoryPageStyle.css" />
   </ItemGroup>
 
 </Project>

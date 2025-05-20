@@ -26,9 +26,7 @@ namespace PetProjectC_NeuroWeb.Controllers.CategoryPage
             WildberriesDataActionModel categoryActionModel = new WildberriesDataActionModel();
             _logger.LogInformation("Запрос на получение категорий отправлен"); //закомментить, если не нужна отладка
             
-
             var categoryList = await categoryActionModel.GetCategoriesAsync(categoryName);
-
             
 
             return Json(categoryList, _jsonOptions);

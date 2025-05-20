@@ -43,11 +43,6 @@ C:\Users\User\source\repos\PetProjectC#NeuroWeb\obj\Debug\net8.0\PetProjectC#Neu
 C:\Users\User\source\repos\PetProjectC#NeuroWeb\obj\Debug\net8.0\PetProjectC#NeuroWeb.sourcelink.json
 C:\Users\User\source\repos\PetProjectC#NeuroWeb\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\User\source\repos\PetProjectC#NeuroWeb\obj\Debug\net8.0\staticwebassets.development.json
-C:\Users\User\source\repos\PetProjectC#NeuroWeb\obj\Debug\net8.0\staticwebassets\msbuild.PetProjectC#NeuroWeb.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\User\source\repos\PetProjectC#NeuroWeb\obj\Debug\net8.0\staticwebassets\msbuild.build.PetProjectC#NeuroWeb.props
-C:\Users\User\source\repos\PetProjectC#NeuroWeb\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.PetProjectC#NeuroWeb.props
-C:\Users\User\source\repos\PetProjectC#NeuroWeb\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.PetProjectC#NeuroWeb.props
-C:\Users\User\source\repos\PetProjectC#NeuroWeb\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Users\User\source\repos\PetProjectC#NeuroWeb\obj\Debug\net8.0\scopedcss\bundle\PetProjectC#NeuroWeb.styles.css
 C:\Users\User\source\repos\PetProjectC#NeuroWeb\obj\Debug\net8.0\PetProje.14403545.Up2Date
 C:\Users\User\source\repos\PetProjectC#NeuroWeb\obj\Debug\net8.0\PetProjectC#NeuroWeb.dll
@@ -55,3 +50,7 @@ C:\Users\User\source\repos\PetProjectC#NeuroWeb\obj\Debug\net8.0\refint\PetProje
 C:\Users\User\source\repos\PetProjectC#NeuroWeb\obj\Debug\net8.0\PetProjectC#NeuroWeb.pdb
 C:\Users\User\source\repos\PetProjectC#NeuroWeb\obj\Debug\net8.0\PetProjectC#NeuroWeb.genruntimeconfig.cache
 C:\Users\User\source\repos\PetProjectC#NeuroWeb\obj\Debug\net8.0\ref\PetProjectC#NeuroWeb.dll
+C:\Users\User\source\repos\PetProjectC#NeuroWeb\bin\Debug\net8.0\PetProjectC#NeuroWeb.staticwebassets.endpoints.json
+C:\Users\User\source\repos\PetProjectC#NeuroWeb\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\User\source\repos\PetProjectC#NeuroWeb\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\User\source\repos\PetProjectC#NeuroWeb\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

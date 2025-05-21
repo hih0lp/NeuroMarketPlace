@@ -1,3 +1,4 @@
+testArray = [{name:"huy", pictureUrl:"https://basket-12.wbbasket.ru/vol1731/part173167/173167093/images/big/1.webp"},{name:"huy", pictureUrl:"https://basket-12.wbbasket.ru/vol1731/part173167/173167093/images/big/1.webp"},{name:"huy", pictureUrl:"https://basket-12.wbbasket.ru/vol1731/part173167/173167093/images/big/1.webp"},{name:"huy", pictureUrl:"https://basket-12.wbbasket.ru/vol1731/part173167/173167093/images/big/1.webp"},{name:"huy", pictureUrl:"https://basket-12.wbbasket.ru/vol1731/part173167/173167093/images/big/1.webp"},{name:"huy", pictureUrl:"https://basket-12.wbbasket.ru/vol1731/part173167/173167093/images/big/1.webp"},{name:"huy", pictureUrl:"https://basket-12.wbbasket.ru/vol1731/part173167/173167093/images/big/1.webp"},{name:"huy", pictureUrl:"https://basket-12.wbbasket.ru/vol1731/part173167/173167093/images/big/1.webp"},{name:"huy", pictureUrl:"https://basket-12.wbbasket.ru/vol1731/part173167/173167093/images/big/1.webp"},{name:"huy", pictureUrl:"https://basket-12.wbbasket.ru/vol1731/part173167/173167093/images/big/1.webp"},{name:"huy", pictureUrl:"https://basket-12.wbbasket.ru/vol1731/part173167/173167093/images/big/1.webp"},{name:"huy", pictureUrl:"https://basket-12.wbbasket.ru/vol1731/part173167/173167093/images/big/1.webp"}]
 async function GetCategories(furl) {
     try {
         const response = await fetch(furl);
@@ -39,8 +40,7 @@ async function GetImg(furl) {
 
 async function createHTMLcategory(object) {
     if (!object || !object.name || !object.pictureUrl) {
-        console.error("Err: Invalid category object");
-        return;
+        throw new Error("Err: object doesn't have name or pictureUrl");
     }
 
     try {
@@ -50,77 +50,70 @@ async function createHTMLcategory(object) {
             return;
         }
 
-        const origCategory = document.getElementById('example');
-        if (!origCategory) {
-            console.error("Err: example category not found");
-            return;
-        }
+        const category = document.createElement('a');
+        category.classList.add('category-card_N23');
+        category.href = '#';
 
-        const CatName = object.name;
+        const categoryName = document.createElement('div');
+        categoryName.textContent = object.name;
+        categoryName.classList.add('category-name_N23');
+        category.appendChild(categoryName);
+
+        const categoryImageContainer = document.createElement('div');
+        categoryImageContainer.classList.add('category-image-container_N23');
+
+        const categoryImage = document.createElement('img');
+        categoryImage.classList.add('category-image_N23');
         const CatImg = await GetImg(object.pictureUrl);
+        categoryImage.src = CatImg;
+        categoryImage.alt = object.name;
 
-        const newCategory = origCategory.cloneNode(true);
-        newCategory.id = `category-${CatName.toLowerCase().replace(/\s+/g, '-')}`;
-        newCategory.style.display = ""; // Делаем элемент видимым
+        categoryImageContainer.appendChild(categoryImage);
+        category.appendChild(categoryImageContainer);
+        categoriesZone.appendChild(category);
 
-        const catNameElement = newCategory.querySelector(".ded");
-        if (catNameElement) {
-            catNameElement.innerHTML = CatName.replace(/\s+/g, "<br />");
-        }
-
-        const catImageElement = newCategory.querySelector("img");
-        if (catImageElement && CatImg) {
-            catImageElement.src = CatImg;
-            catImageElement.onload = () => {
-                URL.revokeObjectURL(CatImg);
-            };
-        }
-
-        newCategory.addEventListener("click", async (event) => {
+        category.addEventListener("click", async (event) => {
             event.preventDefault();
-            await loadCategories(`CategoryPage/GetCategories?${CatName}`);
+            const categoryName = object.name;
+            const newFurl = `CategoryPage/GetCategories?categoryName=${categoryName}`; // Формируем URL
+            await loadCategories(newFurl);
         });
 
-        categoriesZone.appendChild(newCategory);
-
     } catch (error) {
-        console.error("Error creating category HTML:", error);
+        console.error("Err: create category error", error);
     }
 }
 
 async function loadCategories(furl) {
     try {
-        const categoriesZone = document.getElementById('category-container');
+        if (!furl) {
+            throw new Error('Err loadCategories: not found a furl');
+        }
+        const categories = await GetCategories(furl);
+        const categoriesZone = document.getElementById('category-container'); 
         if (!categoriesZone) {
             console.error("Err: category-container not found");
             return;
-
         }
 
-        // Удаляем только дочерние элементы, оставляя шаблон example
         while (categoriesZone.firstChild) {
-            if (categoriesZone.firstChild.id !== 'example') {
-                categoriesZone.removeChild(categoriesZone.firstChild);
-            } else {
-                break; // Прекращаем удаление, когда доходим до шаблона
-            }
+            categoriesZone.removeChild(categoriesZone.firstChild);
         }
 
-        const categories = await GetCategories(furl);
-        console.log(categories);
 
-        if (categories && Array.isArray(categories)) {
-            for (const category of categories) {
-                await createHTMLcategory(category);
-            }
+        for (const category of categories) {
+            await createHTMLcategory(category);
         }
-    } catch (error) {
-        console.error("Error loading categories:", error);
+    }
+    catch (error) {
+        console.error("Err loadCategories", error);
     }
 }
 
 document.addEventListener("DOMContentLoaded", function () {
     const furl = "/CategoryPage/GetCategories";
-    console.log(123)
-    loadCategories(furl);
+    console.log(123);
+    (async () => {
+        await loadCategories(furl);
+    })();
 });

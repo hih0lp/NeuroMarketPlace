@@ -40,9 +40,13 @@ async function GetImg(furl) {
 
 async function createHTMLcategory(object) {
     if (!object || !object.name || !object.pictureUrl) {
-        throw new Error("Err: object doesn't have name or pictureUrl");
+        if (!object.name) {
+            throw new Error("Err: object doesn't have name");
+        }
+        if (!object.pictureUrl) {
+            throw new Error("Err: object doesn't have pictureUrl");
+        }
     }
-
     try {
         const categoriesZone = document.getElementById('category-container');
         if (!categoriesZone) {
@@ -75,7 +79,8 @@ async function createHTMLcategory(object) {
         category.addEventListener("click", async (event) => {
             event.preventDefault();
             const categoryName = object.name;
-            const newFurl = `CategoryPage/GetCategories?categoryName=${categoryName}`; // Формируем URL
+            const newFurl = `CategoryPage/GetCategories?categoryName=${object.name}`; // Формируем URL
+            console.log(await GetCategories(newFurl))
             await loadCategories(newFurl);
         });
 
@@ -97,9 +102,8 @@ async function loadCategories(furl) {
         }
 
         while (categoriesZone.firstChild) {
-            categoriesZone.removeChild(categoriesZone.firstChild);
+             categoriesZone.removeChild(categoriesZone.firstChild);
         }
-
 
         for (const category of categories) {
             await createHTMLcategory(category);

@@ -63,16 +63,21 @@ namespace PetProjectC_NeuroWeb.Models.CategoryModels
 
                             categoryDTOList = categoryList.Where(x => x.RelationRef.Split('/').Count() == categoryUrl.Split('/').Count() + 1).Where(x => x.RelationRef.Contains(categoryUrl)).ToList();
 
-                            foreach (var _category in categoryDTOList)
-                            {
-                                Console.WriteLine(_category.RelationRef);
-                            }
+                            //foreach (var _category in categoryDTOList)
+                            //{
+                            //    Console.WriteLine(_category.RelationRef);
+                            //}
 
-                            Console.WriteLine("подкатегории is getting");
+                            //Console.WriteLine("подкатегории is getting");
 
-                            foreach (var item in categoryDTOList)
+                            //foreach (var item in categoryDTOList)
+                            //{
+                            //    Console.WriteLine(item.Name);
+                            //}
+
+                            foreach (var categoryDTO in categoryDTOList)
                             {
-                                Console.WriteLine(item.Name);
+                                categoryDTO.PictureUrl = "https://basket-12.wbbasket.ru/vol1731/part173167/173167093/images/big/1.webp";
                             }
 
                             return categoryDTOList;

@@ -18,26 +18,23 @@ namespace PetProjectC_NeuroWeb.Controllers.CategoryPage
             _logger = logger;
         }
 
-
         public ActionResult CategoryPage()
         {
             return View();
         }
 
-
         [HttpGet]
         public async Task<JsonResult> GetCategories(string categoryName = "")
         {
-            WildberriesDataActionModel categoryActionModel = new WildberriesDataActionModel();
+            WildberriesDataActionModel wildberriesCategoryActionModel = new WildberriesDataActionModel();
             _logger.LogInformation("Запрос на получение категорий получен"); //закомментить, если не нужна отладка
 
-            var categoryList = await categoryActionModel.GetCategoriesAsync(categoryName);
+            var categoryList = await wildberriesCategoryActionModel.GetCategoriesAsync(categoryName);
 
             foreach (var category in categoryList)
             {
                 Console.WriteLine(category.Name);   
             }
-            
 
             return Json(categoryList, _jsonOptions);
         }

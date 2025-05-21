@@ -104,10 +104,10 @@ C:\Users\User\source\repos\PetProjectC#NeuroWeb\obj\Debug\net8.0\staticwebassets
 C:\Users\User\source\repos\PetProjectC#NeuroWeb\obj\Debug\net8.0\staticwebassets.build.json.cache
 C:\Users\User\source\repos\PetProjectC#NeuroWeb\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\User\source\repos\PetProjectC#NeuroWeb\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\User\source\repos\PetProjectC#NeuroWeb\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\User\source\repos\PetProjectC#NeuroWeb\obj\Debug\net8.0\PetProje.14403545.Up2Date
 C:\Users\User\source\repos\PetProjectC#NeuroWeb\obj\Debug\net8.0\PetProjectC#NeuroWeb.dll
 C:\Users\User\source\repos\PetProjectC#NeuroWeb\obj\Debug\net8.0\refint\PetProjectC#NeuroWeb.dll
 C:\Users\User\source\repos\PetProjectC#NeuroWeb\obj\Debug\net8.0\PetProjectC#NeuroWeb.pdb
 C:\Users\User\source\repos\PetProjectC#NeuroWeb\obj\Debug\net8.0\PetProjectC#NeuroWeb.genruntimeconfig.cache
 C:\Users\User\source\repos\PetProjectC#NeuroWeb\obj\Debug\net8.0\ref\PetProjectC#NeuroWeb.dll
+C:\Users\User\source\repos\PetProjectC#NeuroWeb\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

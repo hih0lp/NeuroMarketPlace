@@ -5,3 +5,4 @@ wwwroot\images\Estate_House.svg
 wwwroot\images\Frame 2.svg
 wwwroot\images\детдом.svg
 wwwroot\js\CategoryPageCatalog.js
+wwwroot\js\CategoryPageCatalog2.js

@@ -79,7 +79,7 @@ async function createHTMLcategory(object) {
         category.addEventListener("click", async (event) => {
             event.preventDefault();
             const categoryName = object.name;
-            const newFurl = `CategoryPage/GetCategories?categoryName=${object.name}`; // Формируем URL
+            const newFurl = `CategoryPage/GetCategories?categoryName=${categoryName}`; // Формируем URL
             console.log(await GetCategories(newFurl))
             await loadCategories(newFurl);
         });

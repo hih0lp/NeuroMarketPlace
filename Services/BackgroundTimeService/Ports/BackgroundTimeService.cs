@@ -9,7 +9,7 @@ namespace PetProjectC_NeuroWeb.Services.TimeService.Ports
     public class BackgroundTimeService : BackgroundService
     {
         private readonly ILogger<BackgroundTimeService> _logger;
-        private readonly List<Timer> _timers = new List<Timer>();
+        //private readonly List<Timer> _timers = new List<Timer>();
         private readonly IEnumerable<IParserService> _parserServices;
         public BackgroundTimeService(ILogger<BackgroundTimeService> logger, IEnumerable<IParserService> parserServices)
         {

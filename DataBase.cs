@@ -29,5 +29,10 @@ namespace NeuroWeb
         //        .HasForeignKey(e => e.CategoryName)
         //        .HasPrincipalKey(r => r.Name); 
         //}
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<WildberriesCategoryModel>()
+                ;
+        }
     }
 }

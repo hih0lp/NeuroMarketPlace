@@ -13,6 +13,11 @@ namespace PetProjectC_NeuroWeb.Controllers.CategoryPage
     {
         private ILogger<CategoryPageController> _logger;
         private static readonly JsonSerializerOptions _jsonOptions = new JsonSerializerOptions { Converters = { new WBCategoryToClientJSONConverter() } };
+        public CategoryPageController(ILogger<CategoryPageController> logger)
+        {
+            _logger = logger;
+        }
+
 
         public ActionResult CategoryPage()
         {
@@ -24,9 +29,14 @@ namespace PetProjectC_NeuroWeb.Controllers.CategoryPage
         public async Task<JsonResult> GetCategories(string categoryName = "")
         {
             WildberriesDataActionModel categoryActionModel = new WildberriesDataActionModel();
-            _logger.LogInformation("Запрос на получение категорий отправлен"); //закомментить, если не нужна отладка
-            
+            _logger.LogInformation("Запрос на получение категорий получен"); //закомментить, если не нужна отладка
+
             var categoryList = await categoryActionModel.GetCategoriesAsync(categoryName);
+
+            foreach (var category in categoryList)
+            {
+                Console.WriteLine(category.Name);   
+            }
             
 
             return Json(categoryList, _jsonOptions);

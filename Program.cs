@@ -15,18 +15,11 @@ using System.Text;
 var builder = WebApplication.CreateBuilder(args);
 //var services = builder.Services;
 builder.Services.AddControllersWithViews();
-builder.Services.AddTransient<IParserService, WBParserService>(); 
+builder.Services.AddTransient<IParserService, WBParserService>();
 builder.Services.AddHostedService<BackgroundTimeService>();
 //builder.Services.AddTransient<TimeService>();
 //builder.Services.AddHostedService<BackgroundService>();
-//IHost host = Host.CreateDefaultBuilder(args)
-//    .ConfigureServices(services =>
-//    {
-//        services.AddHostedService<BackgroundTimeService>();
-//    })
-//    .Build();
 
-//host.Run();
 
 
 var app = builder.Build();

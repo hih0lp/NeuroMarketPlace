@@ -1,4 +1,6 @@
-﻿namespace PetProjectC_NeuroWeb.Models.Products
+﻿using PetProjectC_NeuroWeb.Models.CategoryModels;
+
+namespace PetProjectC_NeuroWeb.Models.Products
 {
     //public class DataBaseProductModel
     //{
@@ -61,6 +63,7 @@
         private string _url;
         private int _price;
         private string _pictureUrl;
+        private WildberriesCategoryModel _categoryWBModel;
         //private string _marketPlace;
 
 
@@ -72,6 +75,7 @@
         public string Url { get => _url; set => _url = value; }
         public int Price { get => _price; set => _price = value; }
         public string PictureUrl { get => _pictureUrl; set => _pictureUrl = value; }
+        public WildberriesCategoryModel CategoryModel { get => _categoryWBModel; set => _categoryWBModel = value; }
         //public string MarketPlace { get => _marketPlace; set => _marketPlace = value; }
 
 

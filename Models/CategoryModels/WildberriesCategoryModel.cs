@@ -2,6 +2,7 @@
 using PetProjectC_NeuroWeb.JSONConverters.WildberriesJSONConverter.ClientConverters;
 using PetProjectC_NeuroWeb.JSONConverters.WildberriesJSONConverter.DataBaseConverters;
 using PetProjectC_NeuroWeb.Models;
+using PetProjectC_NeuroWeb.Models.Products;
 using System.Text.Json;
 
 namespace PetProjectC_NeuroWeb.Models.CategoryModels
@@ -26,6 +27,7 @@ namespace PetProjectC_NeuroWeb.Models.CategoryModels
         private string _relationRef = null!;
         private bool _isChildrenOnly;
         private string? _pictureUrl;
+        private List<ProductModel>? _productModel;
         //private string _marketPlace;
 
 
@@ -34,6 +36,7 @@ namespace PetProjectC_NeuroWeb.Models.CategoryModels
         public string RelationRef { get { return _relationRef; } set { _relationRef = value; } }
         public bool IsChildrenOnly { get { return _isChildrenOnly; } set { _isChildrenOnly = value; } }
         public string? PictureUrl { get { return _pictureUrl; } set { _pictureUrl = value; } }
+        public List<ProductModel>? ProductModel { get => _productModel; set => _productModel = value; }
         //public string MarketPlace { get { return _marketPlace; } set { _marketPlace = value; } }
     }
 

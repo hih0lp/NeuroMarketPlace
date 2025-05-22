@@ -9,7 +9,6 @@ namespace PetProjectC_NeuroWeb.Services.TimeService.Ports
     public class BackgroundTimeService : BackgroundService
     {
         private readonly ILogger<BackgroundTimeService> _logger;
-        //private readonly List<Timer> _timers = new List<Timer>();
         private readonly IEnumerable<IParserService> _parserServices;
         public BackgroundTimeService(ILogger<BackgroundTimeService> logger, IEnumerable<IParserService> parserServices)
         {
@@ -32,7 +31,7 @@ namespace PetProjectC_NeuroWeb.Services.TimeService.Ports
                     _logger.LogInformation("Парсер начал работать");
 
                     await parser.AddCategoryInDB();
-                    await parser.AddCategoryInDB();
+                    await parser.AddProductsInDB();
 
                     _logger.LogInformation("Парсер закончил свою работу");
 

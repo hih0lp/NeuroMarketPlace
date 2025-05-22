@@ -27,7 +27,7 @@ namespace PetProjectC_NeuroWeb.Models.CategoryModels
         private string _relationRef = null!;
         private bool _isChildrenOnly;
         private string? _pictureUrl;
-        private List<ProductModel>? _productModel;
+        //private List<ProductModel>? _products;
         //private string _marketPlace;
 
 
@@ -36,7 +36,7 @@ namespace PetProjectC_NeuroWeb.Models.CategoryModels
         public string RelationRef { get { return _relationRef; } set { _relationRef = value; } }
         public bool IsChildrenOnly { get { return _isChildrenOnly; } set { _isChildrenOnly = value; } }
         public string? PictureUrl { get { return _pictureUrl; } set { _pictureUrl = value; } }
-        public List<ProductModel>? ProductModel { get => _productModel; set => _productModel = value; }
+        //public List<ProductModel>? Products { get => _products; set => _products = value; }
         //public string MarketPlace { get { return _marketPlace; } set { _marketPlace = value; } }
     }
 

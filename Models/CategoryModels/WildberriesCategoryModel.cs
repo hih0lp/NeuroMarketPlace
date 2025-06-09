@@ -20,7 +20,7 @@ namespace PetProjectC_NeuroWeb.Models.CategoryModels
         //public string MarketPlace { get { return _marketPlace; } set { _marketPlace = value; } }
     }
 
-    public class WildberriesDataActionModel : CategoryDataActionModel<WildberriesCategoryModel>  //класс для действий с категориями и взаимодействием с базой данных
+    public class WildberriesCategoryActionModel : CategoryDataActionModel<WildberriesCategoryModel>  //класс для действий с категориями и взаимодействием с базой данных
     {
         public override async Task<List<WildberriesCategoryModel>> GetCategoriesAsync(string categoryName = "")
         {
@@ -58,12 +58,20 @@ namespace PetProjectC_NeuroWeb.Models.CategoryModels
                     else
                     {
                         WildberriesCategoryModel categoryDTO = new WildberriesCategoryModel();
-                        //categoryDTO.PictureUrl = products.Where(p => p.CategoryName == category.Name).FirstOrDefault().PictureUrl; //это верно
-                        categoryDTO.Name = category.Name;
-                        categoryDTO.PictureUrl = "https://basket-12.wbbasket.ru/vol1731/part173167/173167093/images/big/1.webp";
-                        categoryDTO.IsChildrenOnly = category.IsChildrenOnly;
 
-                        if (categoryDTO.IsChildrenOnly)
+                        Console.WriteLine(12345678);
+
+                        categoryDTO.Name = category.Name;
+                        categoryDTO.IsChildrenOnly = category.IsChildrenOnly;
+                        categoryDTO.PictureUrl = "https://basket-12.wbbasket.ru/vol1731/part173167/173167093/images/big/1.webp";
+                        if (category.RelationRef.Split('/').Count() == 4)
+                        {
+                            Console.WriteLine(category.Name);
+                        }
+
+
+
+                        if (categoryDTO.IsChildrenOnly || category.RelationRef.Split('/').Count() == 4)
                         {
                             gettingCategoryList.Add(categoryDTO);
                             //Console.WriteLine(111111);

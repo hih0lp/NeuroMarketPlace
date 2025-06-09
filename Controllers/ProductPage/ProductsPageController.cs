@@ -19,5 +19,15 @@ namespace PetProjectC_NeuroWeb.Controllers.ProductPage
         {
             return View();
         }
+
+        public async Task<ActionResult> GetProducts(string categoryName)
+        {
+            WildberriesProductsActionModel actionModel = new WildberriesProductsActionModel();
+            var products = await actionModel.GetProductsAsync(categoryName);
+
+
+
+            return Json(products, _jsonOptions);
+        }
     }
 }

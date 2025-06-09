@@ -26,8 +26,8 @@ namespace NeuroWeb
             modelbuilder.Entity<ProductModel>()
                 .HasOne(p => p.Category)
                 .WithMany(s => s.Products)
-                .HasForeignKey(e => e.CategoryName);
-                //.HasPrincipalKey(r => r.Name);
+                .HasForeignKey(e => e.CategoryName)
+                .HasPrincipalKey(r => r.Name);
         }
     }
 }

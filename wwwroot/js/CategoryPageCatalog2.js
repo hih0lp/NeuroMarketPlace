@@ -108,19 +108,30 @@ async function loadCategories(furl) {
             throw new Error('Err loadCategories: not found a furl');
         }
         const categories = await GetCategories(furl);
-        const categoriesZone = document.getElementById('category-container');
-        if (!categoriesZone) {
-            console.error("Err: category-container not found");
-            return;
-        }
 
-        while (categoriesZone.firstChild) {
-            categoriesZone.removeChild(categoriesZone.firstChild);
+        if (categories.products) {
+            try {
+                window.location.href = "Views/ProductsPage/ProductsPage.cshtml";
+            }
+            catch {
+                throw new Error('Porducts page connect err')
+            }
         }
+        else if (categories.categories) {
+            const categoriesZone = document.getElementById('category-container');
+            if (!categoriesZone) {
+                console.error("Err: category-container not found");
+                return;
+            }
 
-        for (const category of categories) {
-            await createHTMLcategory(category);
-        }
+            while (categoriesZone.firstChild) {
+                categoriesZone.removeChild(categoriesZone.firstChild);
+            }
+
+            for (const category of categories) {
+                await createHTMLcategory(category);
+            }
+        } 
     } catch (error) {
         console.error("Err loadCategories", error);
     }

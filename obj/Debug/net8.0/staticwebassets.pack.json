@@ -5,8 +5,8 @@
       "PackagePath": "staticwebassets\\css\\CategoryPageStyle.css"
     },
     {
-      "Id": "D:\\projects\\NeuroMarketPlace\\wwwroot\\css\\Subdirectory.css",
-      "PackagePath": "staticwebassets\\css\\Subdirectory.css"
+      "Id": "D:\\projects\\NeuroMarketPlace\\wwwroot\\css\\ProductsPageStyle.css",
+      "PackagePath": "staticwebassets\\css\\ProductsPageStyle.css"
     },
     {
       "Id": "D:\\projects\\NeuroMarketPlace\\wwwroot\\documents\\SecondPage.html",
@@ -29,8 +29,8 @@
       "PackagePath": "staticwebassets\\js\\CategoryPageCatalog.js"
     },
     {
-      "Id": "D:\\projects\\NeuroMarketPlace\\wwwroot\\js\\test.js",
-      "PackagePath": "staticwebassets\\js\\test.js"
+      "Id": "D:\\projects\\NeuroMarketPlace\\wwwroot\\js\\CategoryPageCatalog2.js",
+      "PackagePath": "staticwebassets\\js\\CategoryPageCatalog2.js"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.PetProjectC#NeuroWeb.Microsoft.AspNetCore.StaticWebAssets.props",

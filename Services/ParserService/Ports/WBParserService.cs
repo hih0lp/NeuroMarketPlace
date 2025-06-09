@@ -24,9 +24,9 @@ namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
 
             if (response.IsSuccessStatusCode)
             {
-                List<WildberriesCategoryModel> categoryDTOList = await response.Content.ReadFromJsonAsync<List<WildberriesCategoryModel>>(options); //DTO категорий (парсер)
+                List<WildberriesCategoryModel> gettingCategoryList = await response.Content.ReadFromJsonAsync<List<WildberriesCategoryModel>>(options); //DTO категорий (парсер)
 
-                foreach (var categoryDTO in categoryDTOList)
+                foreach (var categoryDTO in gettingCategoryList)
                 {
                     if (categoryDTO != null)
                     {
@@ -36,16 +36,19 @@ namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
                             var category = categoryList.FirstOrDefault(s => s.Name == categoryDTO.Name);
 
                             if (category == null)
-                            { 
+                            {
 
                                 //List<DataBaseProductModel> list = null!;
 
-                                WildberriesCategoryModel DBCategoryModel = new WildberriesCategoryModel(
-                                    categoryDTO.Id,
-                                    categoryDTO.Name,
-                                    categoryDTO.RelationRef,
-                                    categoryDTO.IsChildrenOnly,
-                                    null); //last param = "WB"
+                                WildberriesCategoryModel DBCategoryModel = new WildberriesCategoryModel()
+                                {
+                                    Id = categoryDTO.Id,
+                                    Name = categoryDTO.Name,
+                                    PictureUrl = categoryDTO.PictureUrl,
+                                    Products = categoryDTO.Products,
+                                    RelationRef = categoryDTO.RelationRef,
+                                    IsChildrenOnly = categoryDTO.IsChildrenOnly,
+                                };
 
                                 db.CategoryModels.Add(DBCategoryModel);
                                 await db.SaveChangesAsync();
@@ -68,42 +71,50 @@ namespace PetProjectC_NeuroWeb.Services.ParserService.Ports
 
             HttpResponseMessage response = await client.GetAsync("https://localhost:7259/wildberries/products");
 
-
+            //Возможно, даже не возможно, а скорее всего, придется накатывать кэш для решения проблем с запросами в бд и обновлением ее во время парсинга
             if (response.IsSuccessStatusCode)
             {
-                List<ProductModel> productsDTOList = await response.Content.ReadFromJsonAsync<List<ProductModel>>(options);
+                List<ProductModel> gettingProductsList = await response.Content.ReadFromJsonAsync<List<ProductModel>>(options);
 
                 
-                foreach (var productDTO in productsDTOList)
+                foreach (var productDTO in gettingProductsList)
                 {
-                    
-
                     using (var db = new DataBase())
                     {
-                        var productsList = db.ProductModels.ToList();
-
-                        var product = productsList.FirstOrDefault(s => s.Name == productDTO.Name);
-
-                        if (product == null && productDTO.PictureUrl != null)
+                        if (productDTO.PictureUrl != null)
                         {
-                            ProductModel DBProductModel = new ProductModel(
-                                productDTO.Id,
-                                productDTO.Name,
-                                productDTO.Brand,
-                                productDTO.ReviewRating,
-                                productDTO.CategoryName,
-                                productDTO.Url,
-                                productDTO.Price,
-                                productDTO.PictureUrl); //last param = wb
+                            var productsList = db.ProductModels.ToList();
+                            var product = productsList.FirstOrDefault(s => s.Name == productDTO.Name);
 
-                            db.ProductModels.Add(DBProductModel);
-                            await db.SaveChangesAsync();
+                            if (product == null)
+                            {
+                                ProductModel DBProductModel = new ProductModel()
+                                {
+                                    Id = productDTO.Id,
+                                    Name = productDTO.Name,
+                                    Brand = productDTO.Brand,
+                                    ReviewRating = productDTO.ReviewRating,
+                                    CategoryName = productDTO.CategoryName,
+                                    Url = productDTO.Url,
+                                    Price = productDTO.Price,
+                                    PictureUrl = productDTO.PictureUrl,
+                                    Category = productDTO.Category,
+                                };
+
+                                db.ProductModels.Add(DBProductModel);
+                                await db.SaveChangesAsync();
+                            }
+                            else if (product != null)
+                            {
+                                product = productDTO;
+                                db.Update(product);
+
+                                db.SaveChanges();
+                            }
                         }
                     }
                 }
-                
             }
         }
-
     }
 }

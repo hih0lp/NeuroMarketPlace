@@ -1,5 +1,5 @@
 wwwroot\css\CategoryPageStyle.css
-wwwroot\css\Subdirectory.css
+wwwroot\css\ProductsPageStyle.css
 wwwroot\documents\SecondPage.html
 wwwroot\images\Estate_House.svg
 wwwroot\images\Frame 2.svg

@@ -22,11 +22,8 @@ builder.Services.AddHostedService<BackgroundTimeService>();
 
 
 
+
 var app = builder.Build();
-//ILoggerFactory factory = LoggerFactory.Create(builder => builder.AddConsole());
-
-//app.Services.GetService<TimeService>(); //парсер для категорий и продуктов
-
 
 app.MapControllerRoute(
     name: "default",
@@ -36,11 +33,6 @@ app.MapControllerRoute(
 
 app.UseStaticFiles();
 
-
-//var staticFilesOptions = new FileServerOptions();
-//staticFilesOptions.DefaultFilesOptions.DefaultFileNames.Clear();
-//staticFilesOptions.DefaultFilesOptions.DefaultFileNames.Add("/Views/CategoryPage/CategoryPage.cshtml");
-//app.UseFileServer(staticFilesOptions);
 
 
 app.Run();

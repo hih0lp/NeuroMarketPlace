@@ -11,32 +11,32 @@ namespace PetProjectC_NeuroWeb.Models.CategoryModels
     {
         public WildberriesCategoryModel() { }
 
-        public WildberriesCategoryModel(int id, string name, string relationRef, bool isChildrenOnly, string pictureUrl)// string marketPlace
-        {
-            _id = id;
-            _name = name;
-            _relationRef = relationRef;
-            _isChildrenOnly = isChildrenOnly;
-            _pictureUrl = pictureUrl;
-            //_marketPlace = marketPlace;
-        }
+        //public WildberriesCategoryModel(int id, string name, string relationRef, bool isChildrenOnly, string pictureUrl)// string marketPlace
+        //{
+        //    _id = id;
+        //    _name = name;
+        //    _relationRef = relationRef;
+        //    _isChildrenOnly = isChildrenOnly;
+        //    _pictureUrl = pictureUrl;
+        //    //_marketPlace = marketPlace;
+        //}
 
 
-        private int _id;
-        private string _name = null!;
-        private string _relationRef = null!;
-        private bool _isChildrenOnly;
-        private string? _pictureUrl;
+        //private int _id;
+        //private string _name = null!;
+        //private string _relationRef = null!;
+        //private bool _isChildrenOnly;
+        //private string? _pictureUrl;
         //private List<ProductModel>? _products;
         //private string _marketPlace;
 
 
-        public int Id { get { return _id; } set { _id = value; } }
-        public string Name { get { return _name; } set { _name = value; } }
-        public string RelationRef { get { return _relationRef; } set { _relationRef = value; } }
-        public bool IsChildrenOnly { get { return _isChildrenOnly; } set { _isChildrenOnly = value; } }
-        public string? PictureUrl { get { return _pictureUrl; } set { _pictureUrl = value; } }
-        //public List<ProductModel>? Products { get => _products; set => _products = value; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string RelationRef { get; set; }
+        public bool IsChildrenOnly { get; set; } 
+        public string? PictureUrl { get; set; }
+        public List<ProductModel>? Products { get; set; }
         //public string MarketPlace { get { return _marketPlace; } set { _marketPlace = value; } }
     }
 

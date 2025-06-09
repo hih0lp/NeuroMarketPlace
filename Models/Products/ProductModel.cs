@@ -42,40 +42,40 @@ namespace PetProjectC_NeuroWeb.Models.Products
     {
         public ProductModel() { }
 
-        public ProductModel(int id, string name, string brand, double reviewRating, string categoryName, string url, int price, string pictureUrl)//, string marketPlace
-        {
-            _id = id;
-            _name = name;
-            _brand = brand;
-            _reviewRating = reviewRating;
-            _categoryName = categoryName;
-            _url = url;
-            _price = price;
-            _pictureUrl = pictureUrl;
-            //_marketPlace = marketPlace;
-        }
+        //public ProductModel(int id, string name, string brand, double reviewRating, string categoryName, string url, int price, string pictureUrl)//, string marketPlace
+        //{
+        //    _id = id;
+        //    _name = name;
+        //    _brand = brand;
+        //    _reviewRating = reviewRating;
+        //    _categoryName = categoryName;
+        //    _url = url;
+        //    _price = price;
+        //    _pictureUrl = pictureUrl;
+        //    //_marketPlace = marketPlace;
+        //}
 
-        private int _id;
-        private string _name;
-        private string _brand;
-        private double _reviewRating;
-        private string _categoryName;
-        private string _url;
-        private int _price;
-        private string _pictureUrl;
+        //private int _id;
+        //private string _name;
+        //private string _brand;
+        //private double _reviewRating;
+        //private string _categoryName;
+        //private string _url;
+        //private int _price;
+        //private string _pictureUrl;
         //private WildberriesCategoryModel _category;
         //private string _marketPlace;
 
 
-        public int Id { get => _id; set => _id = value; }
-        public string Name { get => _name; set => _name = value; }
-        public string Brand { get => _brand; set => _brand = value; }
-        public double ReviewRating { get => _reviewRating; set => _reviewRating = value; }
-        public string CategoryName { get => _categoryName; set => _categoryName = value; }
-        public string Url { get => _url; set => _url = value; }
-        public int Price { get => _price; set => _price = value; }
-        public string PictureUrl { get => _pictureUrl; set => _pictureUrl = value; }
-        //public WildberriesCategoryModel Category { get => _category; set => _category = value; }
+        public int Id { get;  set; }
+        public string Name { get; set; }
+        public string Brand { get; set; }
+        public double ReviewRating { get; set; }
+        public string CategoryName { get; set; }
+        public string Url { get; set; }
+        public int Price { get; set; }
+        public string PictureUrl { get; set; }
+        public WildberriesCategoryModel Category { get; set; }
         //public string MarketPlace { get => _marketPlace; set => _marketPlace = value; }
 
 

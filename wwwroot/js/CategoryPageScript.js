@@ -109,7 +109,7 @@ async function loadCategories(furl) {
             }
         }
         else if (categoriesJSON && categoriesJSON.products) {
-            // Redirect to the products page WITHOUT fetching
+            sessionStorage.setItem('productsData', JSON.stringify(categoriesJSON))
             window.location.href = "ProductsPage/ProductsPage";
         }
         else {

@@ -3,8 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|c:\\users\\user\\source\\repos\\petprojectc#neuroweb\\wwwroot\\js\\filename.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|solutionrelative:wwwroot\\js\\filename.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|c:\\users\\user\\source\\repos\\petprojectc#neuroweb\\views\\productspage\\productspage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|solutionrelative:views\\productspage\\productspage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|c:\\users\\user\\source\\repos\\petprojectc#neuroweb\\views\\categorypage\\categorypage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|solutionrelative:views\\categorypage\\categorypage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|c:\\users\\user\\source\\repos\\petprojectc#neuroweb\\wwwroot\\js\\productspage.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|solutionrelative:wwwroot\\js\\productspage.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|c:\\users\\user\\source\\repos\\petprojectc#neuroweb\\wwwroot\\js\\categorypagescript.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|solutionrelative:wwwroot\\js\\categorypagescript.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|c:\\users\\user\\source\\repos\\petprojectc#neuroweb\\jsonconverters\\wildberriesjsonconverter\\toclientconverters\\wbproductstoclientjsonconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|solutionrelative:jsonconverters\\wildberriesjsonconverter\\toclientconverters\\wbproductstoclientjsonconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\js\\aaa.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
@@ -13,10 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|c:\\users\\user\\source\\repos\\petprojectc#neuroweb\\controllers\\productpage\\productspagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|solutionrelative:controllers\\productpage\\productspagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|c:\\users\\user\\source\\repos\\petprojectc#neuroweb\\views\\categorypage\\categorypage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|solutionrelative:views\\categorypage\\categorypage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|c:\\users\\user\\source\\repos\\petprojectc#neuroweb\\wwwroot\\js\\ttt.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
@@ -31,28 +43,12 @@
       "RelativeMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|solutionrelative:models\\categorymodels\\wildberriescategorymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|c:\\users\\user\\source\\repos\\petprojectc#neuroweb\\wwwroot\\js\\categorypagecatalog.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|solutionrelative:wwwroot\\js\\categorypagecatalog.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|c:\\users\\user\\source\\repos\\petprojectc#neuroweb\\views\\productspage\\productspage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|solutionrelative:views\\productspage\\productspage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|c:\\users\\user\\source\\repos\\petprojectc#neuroweb\\wwwroot\\js\\aboba.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|solutionrelative:wwwroot\\js\\aboba.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|c:\\users\\user\\source\\repos\\petprojectc#neuroweb\\models\\products\\productmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|solutionrelative:models\\products\\productmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|c:\\users\\user\\source\\repos\\petprojectc#neuroweb\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|solutionrelative:database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|c:\\users\\user\\source\\repos\\petprojectc#neuroweb\\jsonconverters\\wildberriesjsonconverter\\toclientconverters\\wbproductstoclientjsonconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{085C9EC6-3318-456F-8035-0EBF390B8164}|PetProjectC#NeuroWeb.csproj|solutionrelative:jsonconverters\\wildberriesjsonconverter\\toclientconverters\\wbproductstoclientjsonconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -74,43 +70,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "aaa.js",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\js\\aaa.js",
-              "RelativeDocumentMoniker": "wwwroot\\js\\aaa.js",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\js\\aaa.js",
-              "RelativeToolTip": "wwwroot\\js\\aaa.js",
+              "DocumentIndex": 2,
+              "Title": "ProductsPage.js",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\js\\ProductsPage.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\ProductsPage.js",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\js\\ProductsPage.js",
+              "RelativeToolTip": "wwwroot\\js\\ProductsPage.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-06-09T23:44:25.326Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FileName.js",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\js\\FileName.js",
-              "RelativeDocumentMoniker": "wwwroot\\js\\FileName.js",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\js\\FileName.js",
-              "RelativeToolTip": "wwwroot\\js\\FileName.js",
-              "ViewState": "AgIAAIcAAAAAAAAAAAAAAJQAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-06-09T23:42:46.963Z",
+              "WhenOpened": "2025-06-10T00:11:11.115Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ttt.js",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\js\\ttt.js",
-              "RelativeDocumentMoniker": "wwwroot\\js\\ttt.js",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\js\\ttt.js",
-              "RelativeToolTip": "wwwroot\\js\\ttt.js",
-              "ViewState": "AgIAAIAAAAAAAAAAAAAAAKYAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "CategoryPageScript.js",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\js\\CategoryPageScript.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\CategoryPageScript.js",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\js\\CategoryPageScript.js",
+              "RelativeToolTip": "wwwroot\\js\\CategoryPageScript.js",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAAAG8AAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-06-09T23:06:10.972Z"
+              "WhenOpened": "2025-06-10T00:09:43.758Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "ProductsPageController.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\Controllers\\ProductPage\\ProductsPageController.cs",
               "RelativeDocumentMoniker": "Controllers\\ProductPage\\ProductsPageController.cs",
@@ -122,19 +108,58 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CategoryPageController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\Controllers\\CategoryPage\\CategoryPageController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CategoryPage\\CategoryPageController.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\Controllers\\CategoryPage\\CategoryPageController.cs",
-              "RelativeToolTip": "Controllers\\CategoryPage\\CategoryPageController.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAwDMAAABQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T20:25:46.443Z"
+              "DocumentIndex": 7,
+              "Title": "ttt.js",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\js\\ttt.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\ttt.js",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\js\\ttt.js",
+              "RelativeToolTip": "wwwroot\\js\\ttt.js",
+              "ViewState": "AgIAAIAAAAAAAAAAAAAAAKYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-09T23:06:10.972Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
+              "Title": "ProductsPage.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\Views\\ProductsPage\\ProductsPage.cshtml",
+              "RelativeDocumentMoniker": "Views\\ProductsPage\\ProductsPage.cshtml",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\Views\\ProductsPage\\ProductsPage.cshtml",
+              "RelativeToolTip": "Views\\ProductsPage\\ProductsPage.cshtml",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAG4AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-09T20:24:21.512Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CategoryPage.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\Views\\CategoryPage\\CategoryPage.cshtml",
+              "RelativeDocumentMoniker": "Views\\CategoryPage\\CategoryPage.cshtml",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\Views\\CategoryPage\\CategoryPage.cshtml",
+              "RelativeToolTip": "Views\\CategoryPage\\CategoryPage.cshtml",
+              "ViewState": "AgIAANoAAAAAAAAAAAAAAOsAAABqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-09T20:19:53.42Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "WBProductsToClientJSONConverter.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\JSONConverters\\WildberriesJSONConverter\\ToClientConverters\\WBProductsToClientJSONConverter.cs",
+              "RelativeDocumentMoniker": "JSONConverters\\WildberriesJSONConverter\\ToClientConverters\\WBProductsToClientJSONConverter.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\JSONConverters\\WildberriesJSONConverter\\ToClientConverters\\WBProductsToClientJSONConverter.cs",
+              "RelativeToolTip": "JSONConverters\\WildberriesJSONConverter\\ToClientConverters\\WBProductsToClientJSONConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T20:49:29.768Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "WildberriesCategoryModel.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\Models\\CategoryModels\\WildberriesCategoryModel.cs",
               "RelativeDocumentMoniker": "Models\\CategoryModels\\WildberriesCategoryModel.cs",
@@ -146,51 +171,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CategoryPage.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\Views\\CategoryPage\\CategoryPage.cshtml",
-              "RelativeDocumentMoniker": "Views\\CategoryPage\\CategoryPage.cshtml",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\Views\\CategoryPage\\CategoryPage.cshtml",
-              "RelativeToolTip": "Views\\CategoryPage\\CategoryPage.cshtml",
-              "ViewState": "AgIAANYAAAAAAAAAAAAAABUBAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-09T20:19:53.42Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "CategoryPageCatalog.js",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\js\\CategoryPageCatalog.js",
-              "RelativeDocumentMoniker": "wwwroot\\js\\CategoryPageCatalog.js",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\js\\CategoryPageCatalog.js",
-              "RelativeToolTip": "wwwroot\\js\\CategoryPageCatalog.js",
-              "ViewState": "AgIAAFgAAAAAAAAAAAAQwGYAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-06-09T21:19:57.071Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "ProductsPage.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\Views\\ProductsPage\\ProductsPage.cshtml",
-              "RelativeDocumentMoniker": "Views\\ProductsPage\\ProductsPage.cshtml",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\Views\\ProductsPage\\ProductsPage.cshtml",
-              "RelativeToolTip": "Views\\ProductsPage\\ProductsPage.cshtml",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAAALoAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-09T20:24:21.512Z"
+              "Title": "CategoryPageController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\Controllers\\CategoryPage\\CategoryPageController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CategoryPage\\CategoryPageController.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\Controllers\\CategoryPage\\CategoryPageController.cs",
+              "RelativeToolTip": "Controllers\\CategoryPage\\CategoryPageController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAwDMAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T20:25:46.443Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Aboba.js",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\js\\Aboba.js",
-              "RelativeDocumentMoniker": "wwwroot\\js\\Aboba.js",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\js\\Aboba.js",
-              "RelativeToolTip": "wwwroot\\js\\Aboba.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "aaa.js",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\js\\aaa.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\aaa.js",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\wwwroot\\js\\aaa.js",
+              "RelativeToolTip": "wwwroot\\js\\aaa.js",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-06-09T22:34:50.992Z"
+              "WhenOpened": "2025-06-09T23:44:25.326Z"
             },
             {
               "$type": "Document",
@@ -215,18 +215,6 @@
               "ViewState": "AgIAACkAAAAAAAAAAAA2wDwAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-09T20:59:52.966Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "WBProductsToClientJSONConverter.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\JSONConverters\\WildberriesJSONConverter\\ToClientConverters\\WBProductsToClientJSONConverter.cs",
-              "RelativeDocumentMoniker": "JSONConverters\\WildberriesJSONConverter\\ToClientConverters\\WBProductsToClientJSONConverter.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\PetProjectC#NeuroWeb\\JSONConverters\\WildberriesJSONConverter\\ToClientConverters\\WBProductsToClientJSONConverter.cs",
-              "RelativeToolTip": "JSONConverters\\WildberriesJSONConverter\\ToClientConverters\\WBProductsToClientJSONConverter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T20:49:29.768Z"
             }
           ]
         }

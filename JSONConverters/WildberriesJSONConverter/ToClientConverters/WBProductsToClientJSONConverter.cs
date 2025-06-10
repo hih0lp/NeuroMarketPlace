@@ -26,6 +26,7 @@ namespace PetProjectC_NeuroWeb.JSONConverters.WildberriesJSONConverter.ToClientC
                 writer.WriteString("pictureurl", product.PictureUrl);
                 writer.WriteString("url", product.Url);
                 writer.WriteNumber("reviewrating", product.ReviewRating);
+                writer.WriteNumber("price", product.Price);
                 writer.WriteEndObject();
             }
 

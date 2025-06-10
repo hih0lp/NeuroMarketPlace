@@ -39,9 +39,7 @@ namespace PetProjectC_NeuroWeb.Models.CategoryModels
                     {
                         if (category.Name == categoryName)
                         {
-
                             categoryUrl = category.RelationRef;
-                            //Console.WriteLine(category.RelationRef);
 
                             //Получений подкатегорий путем просмотра количества слэшей и сравнивания присылаемых значений
                             gettingCategoryList = categoryList.Where(x => x.RelationRef.Split('/').Count() == categoryUrl.Split('/').Count() + 1).Where(x => x.RelationRef.Contains(categoryUrl)).ToList();
@@ -59,22 +57,14 @@ namespace PetProjectC_NeuroWeb.Models.CategoryModels
                     {
                         WildberriesCategoryModel categoryDTO = new WildberriesCategoryModel();
 
-                        Console.WriteLine(12345678);
-
                         categoryDTO.Name = category.Name;
                         categoryDTO.IsChildrenOnly = category.IsChildrenOnly;
                         categoryDTO.PictureUrl = "https://basket-12.wbbasket.ru/vol1731/part173167/173167093/images/big/1.webp";
-                        if (category.RelationRef.Split('/').Count() == 4)
-                        {
-                            Console.WriteLine(category.Name);
-                        }
 
 
-
-                        if (categoryDTO.IsChildrenOnly || category.RelationRef.Split('/').Count() == 4)
+                        if (category.RelationRef.Split('/', StringSplitOptions.RemoveEmptyEntries).Length == 4 || category.IsChildrenOnly) // categoryDTO.IsChildrenOnly || 
                         {
                             gettingCategoryList.Add(categoryDTO);
-                            //Console.WriteLine(111111);
                         }
                     }
                 }

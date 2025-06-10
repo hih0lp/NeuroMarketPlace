@@ -1,15 +1,20 @@
-//testArray = [{name:"huy", pictureUrl:"https://basket-12.wbbasket.ru/vol1731/part173167/173167093/images/big/1.webp"},{name:"huy", pictureUrl:"https://basket-12.wbbasket.ru/vol1731/part173167/173167093/images/big/1.webp"},{name:"huy", pictureUrl:"https://basket-12.wbbasket.ru/vol1731/part173167/173167093/images/big/1.webp"},{name:"huy", pictureUrl:"https://basket-12.wbbasket.ru/vol1731/part173167/173167093/images/big/1.webp"},{name:"huy", pictureUrl:"https://basket-12.wbbasket.ru/vol1731/part173167/173167093/images/big/1.webp"},{name:"huy", pictureUrl:"https://basket-12.wbbasket.ru/vol1731/part173167/173167093/images/big/1.webp"},{name:"huy", pictureUrl:"https://basket-12.wbbasket.ru/vol1731/part173167/173167093/images/big/1.webp"},{name:"huy", pictureUrl:"https://basket-12.wbbasket.ru/vol1731/part173167/173167093/images/big/1.webp"},{name:"huy", pictureUrl:"https://basket-12.wbbasket.ru/vol1731/part173167/173167093/images/big/1.webp"},{name:"huy", pictureUrl:"https://basket-12.wbbasket.ru/vol1731/part173167/173167093/images/big/1.webp"},{name:"huy", pictureUrl:"https://basket-12.wbbasket.ru/vol1731/part173167/173167093/images/big/1.webp"},{name:"huy", pictureUrl:"https://basket-12.wbbasket.ru/vol1731/part173167/173167093/images/big/1.webp"}]
 async function GetCategories(furl) {
     try {
         const response = await fetch(furl);
+        console.log(1234567890);
         if (!response.ok) {
             throw new Error(`Fetch Categories Err: ${response.status}`);
         }
         const data = await response.json();
-        if (data && Array.isArray(data.categories)) {
-            return data.categories;
+        if (data) {
+            if (isJsonObject(data)) {
+                return data;
+            }
+            else {
+                return response.status
+            }
         } else {
-            console.error("GetCategories Err: Invalid JSON format.  Missing 'categories' array.");
+            console.error("GetCategories Err: Invalid JSON format. Missing 'categories' array.");
             return [];
         }
     } catch (error) {

@@ -1,0 +1,11 @@
+wwwroot\css\CategoryPageStyle.css
+wwwroot\css\ProductsPageStyle.css
+wwwroot\documents\SecondPage.html
+wwwroot\images\Estate_House.svg
+wwwroot\images\Frame 2.svg
+wwwroot\images\детдом.svg
+wwwroot\js\Aboba.js
+wwwroot\js\CategoryPageCatalog.js
+wwwroot\js\FileName.js
+wwwroot\js\ttt.js
+wwwroot\js\aaa.js

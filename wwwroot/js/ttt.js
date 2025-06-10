@@ -1,20 +1,4 @@
-﻿// Массив тестовых данных
-let testArray = [
-    { name: "huy", pictureUrl: "https://basket-12.wbbasket.ru/vol1731/part173167/173167093/images/big/1.webp" },
-    { name: "huy", pictureUrl: "https://basket-12.wbbasket.ru/vol1731/part173167/173167093/images/big/1.webp" },
-    { name: "huy", pictureUrl: "https://basket-12.wbbasket.ru/vol1731/part173167/173167093/images/big/1.webp" },
-    { name: "huy", pictureUrl: "https://basket-12.wbbasket.ru/vol1731/part173167/173167093/images/big/1.webp" },
-    { name: "huy", pictureUrl: "https://basket-12.wbbasket.ru/vol1731/part173167/173167093/images/big/1.webp" },
-    { name: "huy", pictureUrl: "https://basket-12.wbbasket.ru/vol1731/part173167/173167093/images/big/1.webp" },
-    { name: "huy", pictureUrl: "https://basket-12.wbbasket.ru/vol1731/part173167/173167093/images/big/1.webp" },
-    { name: "huy", pictureUrl: "https://basket-12.wbbasket.ru/vol1731/part173167/173167093/images/big/1.webp" },
-    { name: "huy", pictureUrl: "https://basket-12.wbbasket.ru/vol1731/part173167/173167093/images/big/1.webp" },
-    { name: "huy", pictureUrl: "https://basket-12.wbbasket.ru/vol1731/part173167/173167093/images/big/1.webp" },
-    { name: "huy", pictureUrl: "https://basket-12.wbbasket.ru/vol1731/part173167/173167093/images/big/1.webp" },
-    { name: "huy", pictureUrl: "https://basket-12.wbbasket.ru/vol1731/part173167/173167093/images/big/1.webp" }
-];
-
-// Функция для отправки запроса на получение категорий
+﻿// Функция для отправки запроса на получение категорий
 async function GetCategories(furl) {
     try {
         const response = await fetch(furl);
@@ -22,8 +6,8 @@ async function GetCategories(furl) {
             throw new Error(`Fetch Categories Err: ${response.status}`);
         }
         const data = await response.json();
-        if (data && Array.isArray(data.categories)) {
-            return data.categories;
+        if (data) {
+            return data;
         } else {
             console.error("GetCategories Err: Invalid JSON format. Missing 'categories' array.");
             return [];
@@ -107,17 +91,9 @@ async function loadCategories(furl) {
         if (!furl) {
             throw new Error('Err loadCategories: not found a furl');
         }
-        const categories = await GetCategories(furl);
+        const categoriesJSON = await GetCategories(furl);
 
-        if (categories.products) {
-            try {
-                window.location.href = "Views/ProductsPage/ProductsPage.cshtml";
-            }
-            catch {
-                throw new Error('Porducts page connect err')
-            }
-        }
-        else if (categories.categories) {
+        if (categoriesJSON.categories) {
             const categoriesZone = document.getElementById('category-container');
             if (!categoriesZone) {
                 console.error("Err: category-container not found");
@@ -128,14 +104,27 @@ async function loadCategories(furl) {
                 categoriesZone.removeChild(categoriesZone.firstChild);
             }
 
-            for (const category of categories) {
+            for (const category of categoriesJSON.categories) {
                 await createHTMLcategory(category);
             }
-        } 
+        }
+        else if (categoriesJSON.products) {
+            try {
+                const response = await fetch("ProductsPage/ProductsPage");
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+
+                //const html = await response.text();
+                //document.getElementById("main-content").innerHTML = html; // Вставка HTML
+            } catch (error) {
+                console.error("Failed to load ProductsPage:", error);
+            }
+        }
     } catch (error) {
         console.error("Err loadCategories", error);
     }
 }
+
+
 
 // Функция для восстановления позиции прокрутки
 function restoreScrollPosition() {
@@ -172,5 +161,6 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(123);
     (async () => {
         await loadCategories(furl);
+        console.log(GetCategories(furl));
     })();
 });

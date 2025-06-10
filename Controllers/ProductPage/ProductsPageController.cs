@@ -20,14 +20,20 @@ namespace PetProjectC_NeuroWeb.Controllers.ProductPage
             return View();
         }
 
-        public async Task<ActionResult> GetProducts(string categoryName)
-        {
-            WildberriesProductsActionModel actionModel = new WildberriesProductsActionModel();
-            var products = await actionModel.GetProductsAsync(categoryName);
+        //    public async Task<ActionResult> GetProducts(string categoryName)
+        //    {
+        //        Console.WriteLine("запрос на получение продуктов");
+
+        //        WildberriesProductsActionModel actionModel = new WildberriesProductsActionModel();
+        //        var products = await actionModel.GetProductsAsync(categoryName);
+
+        //        foreach (var product in products)
+        //        {
+        //            Console.WriteLine(product.Name);
+        //        }
 
 
-
-            return Json(products, _jsonOptions);
-        }
+        //        return Json(products, _jsonOptions);
+        //    }
     }
 }

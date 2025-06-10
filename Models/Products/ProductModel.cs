@@ -58,7 +58,7 @@ public class WildberriesProductsActionModel
     {
         using (var db = new DataBase())
         {
-            var products = db.ProductModels.Include(x => x.CategoryName).Where(_ => _.CategoryName == categoryName).ToList();
+            var products = db.ProductModels.Include(x => x.Category).Where(_ => _.CategoryName == categoryName).ToList();
 
             return products;
         }

@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.DataProtection;
+using Microsoft.AspNetCore.Hosting.Server;
+using Microsoft.EntityFrameworkCore;
 using PetProjectC_NeuroWeb.Models.CategoryModels;
 using PetProjectC_NeuroWeb.Models.Products;
 using System.Data.Common;
@@ -18,8 +20,8 @@ namespace NeuroWeb
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseMySql("server=localhost; user=root; password=aternosru123; database=DBTEST;", 
-                ServerVersion.AutoDetect("server=localhost; user=root; password=aternosru123; database=DBTEST;"));
+            optionsBuilder.UseMySql("server=localhost; user=root; password=aternosru123; database=databasenahren", 
+                ServerVersion.AutoDetect("server=localhost; user=root; password=aternosru123; database=databasenahren;"));
         }
 
         protected override void OnModelCreating(ModelBuilder modelbuilder)
